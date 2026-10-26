@@ -38,7 +38,7 @@ function imperial_steaks_customize_register( $wp_customize ) {
 		),
 		'imperial_steaks_email'          => array(
 			'label'   => esc_html__( 'Email', 'imperial-steaks' ),
-			'default' => 'sales@imperialsteaks.com',
+			'default' => 'kougiek@gmail.com',
 			'sanitize' => 'sanitize_email',
 		),
 		'imperial_steaks_website'        => array(
@@ -99,7 +99,7 @@ function imperial_steaks_contact_shortcode( $atts ) {
 
 	$map = array(
 		'phone'    => array( 'imperial_steaks_phone', 'XXX-XXX-XXXX' ),
-		'email'    => array( 'imperial_steaks_email', 'sales@imperialsteaks.com' ),
+		'email'    => array( 'imperial_steaks_email', 'kougiek@gmail.com' ),
 		'website'  => array( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' ),
 		'location' => array( 'imperial_steaks_location', "Boucherville, QC J4B\xc2\xa08N4" ),
 		'offices'  => array( 'imperial_steaks_other_offices', 'USA and Middle East' ),

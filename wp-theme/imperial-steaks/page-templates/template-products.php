@@ -229,7 +229,7 @@ get_header();
       <p class="imperial-cta__text">Ideal for restaurants, pizza shops and sandwich shops.</p>
       <div class="btn-row" data-reveal="up">
         <a class="btn btn--accent" href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>">Contact us</a>
-        <a class="btn btn--outline" href="mailto:sales@imperialsteaks.com">Email sales</a>
+        <a class="btn btn--outline" href="mailto:kougiek@gmail.com">Email sales</a>
       </div>
     </div>
   </section>

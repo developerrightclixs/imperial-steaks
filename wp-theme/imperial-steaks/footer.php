@@ -86,7 +86,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 					 * Customizer without touching code. Defaults match the brief.
 					 */
 					$tel   = get_theme_mod( 'imperial_steaks_phone', 'XXX-XXX-XXXX' );
-					$email = get_theme_mod( 'imperial_steaks_email', 'sales@imperialsteaks.com' );
+					$email = get_theme_mod( 'imperial_steaks_email', 'kougiek@gmail.com' );
 					$web   = get_theme_mod( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' );
 					// The non-breaking space (U+00A0) before 8N4 keeps the postal code whole
 					// when the narrow footer column wraps: "Boucherville, QC" breaks,

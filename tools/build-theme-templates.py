@@ -43,7 +43,7 @@ PAGES = [
      'supply in the meantime.'),
     ('contact.html',  'template-contact.php',  'Imperial Steaks - Contact',
      'Contact Us', 'contact-us',
-     'Contact Imperial Steaks at sales@imperialsteaks.com. Based in Boucherville, QC, '
+     'Contact Imperial Steaks at kougiek@gmail.com. Based in Boucherville, QC, '
      'with offices in the USA and Middle East. Foodservice and retail enquiries.'),
 ]
 

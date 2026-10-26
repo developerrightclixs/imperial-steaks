@@ -124,6 +124,16 @@ get_header();
        Client revision (Oct 16): the beef and chicken cards carry live animal
        photography again - the cattle and poultry shots the old site used -
        and the four brand values sit under the cards, closing the section.
+
+       Client revision (Oct 23): the Chicken card is no longer photography. He
+       supplied a cuts diagram, which replaces the watermarked rooster shot
+       item 0 of docs/IMAGE_REPLACEMENT_LIST.md had flagged. It is artwork on a
+       transparent ground, so it takes the --mark treatment (white plate,
+       contained) the Halal seal uses.
+
+       Client revision (Oct 26): Beef now matches - a cuts diagram
+       (category-beef.webp) with the same --mark treatment. Both cards use the
+       WebP files the client supplied.
        ===================================================================== -->
   <section class="section imperial-categories" aria-labelledby="categories-heading">
     <div class="container">
@@ -137,7 +147,7 @@ get_header();
 
         <article class="imperial-card imperial-card--beef" data-reveal="up" data-reveal-delay="1">
           <div class="imperial-card__media">
-            <img class="imperial-card__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/category-beef.jpg" alt="Holstein cow standing in open pasture, with the herd grazing behind" width="1200" height="800">
+            <img class="imperial-card__image imperial-card__image--mark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/category-beef.webp" alt="Diagram of a cow with the beef cuts marked, the rib highlighted in red" width="600" height="418">
           </div>
           <div class="imperial-card__body">
             <h3 class="imperial-card__title">Beef</h3>
@@ -146,7 +156,7 @@ get_header();
 
         <article class="imperial-card imperial-card--chicken" data-reveal="up" data-reveal-delay="2">
           <div class="imperial-card__media">
-            <img class="imperial-card__image imperial-card__image--mark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/category-chicken.png" alt="Diagram of a chicken with the cuts marked in red: neck, back, wing, breast, thigh and drumstick" width="1200" height="1048">
+            <img class="imperial-card__image imperial-card__image--mark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/category-chicken.webp" alt="Diagram of a chicken with the cuts marked in red: neck, back, wing, breast, thigh and drumstick" width="600" height="512">
           </div>
           <div class="imperial-card__body">
             <h3 class="imperial-card__title">Chicken</h3>

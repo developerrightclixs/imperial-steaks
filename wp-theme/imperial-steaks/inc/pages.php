@@ -43,7 +43,7 @@ return array(
 		'title'       => 'Contact Us',
 		'slug'        => 'contact-us',
 		'template'    => 'page-templates/template-contact.php',
-		'description' => 'Contact Imperial Steaks at sales@imperialsteaks.com. Based in Boucherville, QC, with offices in the USA and Middle East. Foodservice and retail enquiries.',
+		'description' => 'Contact Imperial Steaks at kougiek@gmail.com. Based in Boucherville, QC, with offices in the USA and Middle East. Foodservice and retail enquiries.',
 		'front'       => false,
 	),
 );
