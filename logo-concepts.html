@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logo Concepts | Imperial Steaks</title>
+  <meta name="description" content="Three Imperial Steaks logo concepts for client selection, shown on matte black, brand red and white.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Oswald:wght@300;400;500&amp;family=Bodoni+Moda:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <!-- Page-specific layout. This is an internal review sheet, not a site page,
+       so it carries its own small stylesheet rather than adding components
+       that the live site would never use. -->
+  <style>
+    .lc-head { padding-block: var(--is-space-xl); border-bottom: 2px solid var(--is-red); }
+
+    .lc-concept { padding-block: var(--is-space-xl); border-bottom: 1px solid var(--is-hairline); }
+
+    .lc-concept__name {
+      margin: 0 0 var(--is-space-xs);
+      color: var(--is-white);
+      font-size: var(--is-size-h2);
+      letter-spacing: 2px;
+    }
+
+    .lc-concept__note { max-width: 70ch; margin-bottom: var(--is-space-lg); }
+
+    .lc-swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--is-gap-grid); }
+
+    .lc-plate {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 190px;
+      padding: var(--is-space-lg);
+      border-radius: var(--is-radius-sm);
+    }
+
+    .lc-plate img { width: 100%; max-width: 280px; }
+
+    .lc-plate--black { background-color: var(--is-black); border: 1px solid var(--is-hairline); }
+    .lc-plate--red   { background-color: var(--is-red); }
+    .lc-plate--white { background-color: var(--is-white); }
+
+    .lc-caption {
+      margin: var(--is-space-xs) 0 0;
+      color: var(--is-grey-muted);
+      font-size: var(--is-size-eyebrow);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Smallest real-world use: the site header, at 190px wide. */
+    .lc-small { margin-top: var(--is-space-lg); }
+    .lc-small img { width: 190px; }
+
+    @media (max-width: 767px) {
+      .lc-swatches { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<main id="main">
+
+  <section class="lc-head">
+    <div class="container">
+      <p class="imperial-intro__eyebrow">Imperial Steaks &mdash; for client selection</p>
+      <h1>Logo concepts</h1>
+      <p class="imperial-intro__text" style="max-width: 70ch;">Three directions. In all of them IMPERIAL is the
+        dominant word and STEAKS is the quiet one &mdash; the contrast the Tasty Steaks mark used, with the dominance
+        of the two words reversed. Each is shown on matte black, on the brand red and on white, plus at the actual
+        size it appears in the site header.</p>
+      <p class="imperial-intro__text" style="max-width: 70ch;">Pick one, or ask for changes to any of them. Every
+        concept is vector artwork, so it scales to a carton or a billboard without loss.</p>
+    </div>
+  </section>
+
+  <!-- Concept 1 -->
+  <section class="lc-concept">
+    <div class="container">
+      <h2 class="lc-concept__name">01 &mdash; Imperial Serif</h2>
+      <p class="lc-concept__note">Bodoni Moda Black over a red hairline, with STEAKS set small and widely tracked
+        underneath. The most traditional and the closest in feel to the original mark. Reads premium; needs a little
+        more clear space than the other two.</p>
+
+      <div class="lc-swatches">
+        <div>
+          <div class="lc-plate lc-plate--black"><img src="assets/images/logo-concept-1.svg" alt="Concept 1 on matte black" width="612" height="168"></div>
+          <p class="lc-caption">Matte black</p>
+        </div>
+        <div>
+          <div class="lc-plate lc-plate--red"><img src="assets/images/logo-concept-1-onred.svg" alt="Concept 1 on brand red" width="612" height="168"></div>
+          <p class="lc-caption">Brand red</p>
+        </div>
+        <div>
+          <div class="lc-plate lc-plate--white"><img src="assets/images/logo-concept-1-onlight.svg" alt="Concept 1 on white" width="612" height="168"></div>
+          <p class="lc-caption">White / print stock</p>
+        </div>
+      </div>
+
+      <div class="lc-small">
+        <p class="lc-caption">At header size (190px)</p>
+        <div class="lc-plate lc-plate--black" style="min-height: 0; justify-content: flex-start;">
+          <img src="assets/images/logo-concept-1.svg" alt="Concept 1 at header size" width="612" height="168">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept 2 -->
+  <section class="lc-concept">
+    <div class="container">
+      <h2 class="lc-concept__name">02 &mdash; Block</h2>
+      <p class="lc-concept__note">Oswald Bold at full width, with STEAKS reversed out of a solid red bar beneath it.
+        The most industrial of the three, and the one that survives being stamped on a carton or embroidered. Holds up
+        smallest. This is the concept currently in place on the review build.</p>
+
+      <div class="lc-swatches">
+        <div>
+          <div class="lc-plate lc-plate--black"><img src="assets/images/logo-concept-2.svg" alt="Concept 2 on matte black" width="462" height="178"></div>
+          <p class="lc-caption">Matte black</p>
+        </div>
+        <div>
+          <div class="lc-plate lc-plate--red"><img src="assets/images/logo-concept-2-onred.svg" alt="Concept 2 on brand red" width="462" height="178"></div>
+          <p class="lc-caption">Brand red</p>
+        </div>
+        <div>
+          <div class="lc-plate lc-plate--white"><img src="assets/images/logo-concept-2-onlight.svg" alt="Concept 2 on white" width="462" height="178"></div>
+          <p class="lc-caption">White / print stock</p>
+        </div>
+      </div>
+
+      <div class="lc-small">
+        <p class="lc-caption">At header size (190px)</p>
+        <div class="lc-plate lc-plate--black" style="min-height: 0; justify-content: flex-start;">
+          <img src="assets/images/logo-concept-2.svg" alt="Concept 2 at header size" width="462" height="178">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concept 3 -->
+  <section class="lc-concept">
+    <div class="container">
+      <h2 class="lc-concept__name">03 &mdash; Crest</h2>
+      <p class="lc-concept__note">A red crown above Bodoni Moda IMPERIAL, with STEAKS in small tracked Poppins below.
+        The most premium-looking, and the only one that gives the brand a standalone icon &mdash; the crown alone works
+        as a favicon, a social avatar or a seal on the box.</p>
+
+      <div class="lc-swatches">
+        <div>
+          <div class="lc-plate lc-plate--black"><img src="assets/images/logo-concept-3.svg" alt="Concept 3 on matte black" width="570" height="232"></div>
+          <p class="lc-caption">Matte black</p>
+        </div>
+        <div>
+          <div class="lc-plate lc-plate--red"><img src="assets/images/logo-concept-3-onred.svg" alt="Concept 3 on brand red" width="570" height="232"></div>
+          <p class="lc-caption">Brand red</p>
+        </div>
+        <div>
+          <div class="lc-plate lc-plate--white"><img src="assets/images/logo-concept-3-onlight.svg" alt="Concept 3 on white" width="570" height="232"></div>
+          <p class="lc-caption">White / print stock</p>
+        </div>
+      </div>
+
+      <div class="lc-small">
+        <p class="lc-caption">At header size (190px)</p>
+        <div class="lc-plate lc-plate--black" style="min-height: 0; justify-content: flex-start;">
+          <img src="assets/images/logo-concept-3.svg" alt="Concept 3 at header size" width="570" height="232">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Brand colours</h2>
+      <hr class="imperial-rule">
+      <p class="imperial-intro__text" style="max-width: 70ch;">Matte black and the brand red, with exact print values
+        for the box and the brochure, are set out in <strong>docs/BRAND_COLOURS.md</strong>. The short version:
+        matte black <strong>#1A1A1A</strong>, brand red <strong>#FF0000</strong> (pure red; outside the CMYK gamut and no exact Pantone — see docs/BRAND_COLOURS.md), chicken yellow
+        <strong>#F2A900</strong> (Pantone 130 C).</p>
+      <div class="btn-row btn-row--start u-mt-md">
+        <a class="btn btn--primary" href="index.html">Back to the site</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

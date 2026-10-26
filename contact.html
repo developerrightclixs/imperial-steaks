@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Imperial Steaks</title>
+  <meta name="description" content="Contact Imperial Steaks at sales@imperialsteaks.com. Based in Boucherville, QC, with offices in the USA and Middle East. Foodservice and retail enquiries.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Oswald:wght@300;400;500&amp;family=Bodoni+Moda:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ==========================================================================
+     Elementor template: Site Header  (Theme Builder > Header)
+     ======================================================================= -->
+<header class="imperial-header">
+  <div class="imperial-header__inner container">
+
+    <a class="imperial-header__brand" href="index.html" aria-label="Imperial Steaks - home">
+      <img class="imperial-header__logo" src="assets/images/logo-concept-2.svg" alt="Imperial Steaks" width="462" height="178">
+    </a>
+
+    <button class="imperial-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+      <span class="imperial-nav-toggle__bar"></span>
+      <span class="imperial-nav-toggle__bar"></span>
+      <span class="imperial-nav-toggle__bar"></span>
+      <span class="sr-only">Main menu</span>
+    </button>
+
+    <nav class="imperial-nav" aria-label="Primary">
+      <ul class="imperial-nav__list" id="primary-menu">
+        <li class="imperial-nav__item"><a class="imperial-nav__link" href="index.html">Home</a></li>
+        <li class="imperial-nav__item"><a class="imperial-nav__link" href="about.html">About Us</a></li>
+        <li class="imperial-nav__item"><a class="imperial-nav__link" href="products.html">Products</a></li>
+        <li class="imperial-nav__item"><a class="imperial-nav__link" href="retail.html">Retail</a></li>
+        <li class="imperial-nav__item"><a class="imperial-nav__link is-current" href="contact.html" aria-current="page">Contact Us</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ========================================================================
+       Elementor section: Contact Page Banner
+       Container (background Matte Black) > Heading widget
+       Client revision: title is just "Contact Us" and smaller, with the
+       subtitle "Sales & Inquiries".
+       ===================================================================== -->
+  <section class="imperial-banner imperial-banner--sm">
+    <div class="container">
+      <h1 class="imperial-banner__title" data-reveal="down">Contact Us</h1>
+      <p class="imperial-banner__subtitle">Sales &amp; Inquiries</p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Elementor section: Contact Details
+       Container (background Matte Black) > Container (grid, 2 columns)
+         > Icon Box widget per detail
+       ----------------------------------------------------------------------
+       Client revision: the old dark boxes with thin red lines are gone. The
+       section is matte black and every card is solid red with white text - one
+       uniform treatment. The "IS" monogram image on the right has been removed.
+       ===================================================================== -->
+  <section class="section" aria-labelledby="contact-details-heading">
+    <div class="container">
+
+      <div class="section__head" data-reveal="up">
+        <h2 class="section__title" id="contact-details-heading">Contact us now</h2>
+        <hr class="imperial-rule imperial-rule--center">
+      </div>
+
+      <div class="grid grid--2">
+
+        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="1">
+          <p class="imperial-contact-card__label">Phone</p>
+          <!-- PENDING CLIENT: new Imperial Steaks phone number. Shown in the
+               XXX-XXX-XXXX format so it reads as a slot waiting for a number
+               rather than as finished copy. Make it a tel: link once the real
+               number arrives. -->
+          <p class="imperial-contact-card__value">XXX-XXX-XXXX</p>
+        </div>
+
+        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
+          <p class="imperial-contact-card__label">Email</p>
+          <p class="imperial-contact-card__value"><a href="mailto:sales@imperialsteaks.com">sales@imperialsteaks.com</a></p>
+        </div>
+
+        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="3">
+          <p class="imperial-contact-card__label">Website</p>
+          <p class="imperial-contact-card__value"><a href="https://www.imperialsteaks.com/">www.imperialsteaks.com</a></p>
+        </div>
+
+        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="1">
+          <p class="imperial-contact-card__label">Warehouse</p>
+          <p class="imperial-contact-card__value">Boucherville, QC J4B&nbsp;8N4</p>
+        </div>
+
+        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
+          <p class="imperial-contact-card__label">Inquiries</p>
+          <p class="imperial-contact-card__value">Foodservice &amp; Retail</p>
+        </div>
+
+        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="3">
+          <p class="imperial-contact-card__label">Other offices</p>
+          <p class="imperial-contact-card__value">USA and Middle East</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Elementor section: Send Us a Message
+       Container (background Brand Red) > Heading + Text Editor + Button widgets
+       ----------------------------------------------------------------------
+       AUDIT NOTE: the old site shows a "send us a message" heading with no
+       working form behind it. No fake form has been built here. At migration,
+       drop an Elementor Form widget (Pro) or a WPForms/Contact Form 7 shortcode
+       into this Container and route submissions to sales@imperialsteaks.com.
+       ===================================================================== -->
+  <section class="section section--red" aria-labelledby="message-heading">
+    <div class="container container--narrow text-center">
+
+      <h2 class="imperial-cta__title" id="message-heading">Send us a message</h2>
+      <p class="imperial-cta__text">Email us and a member of the Imperial Steaks team will come back to you with
+        pricing, availability and samples for your operation.</p>
+
+      <div class="btn-row" data-reveal="up">
+        <a class="btn btn--primary" href="mailto:sales@imperialsteaks.com">Email sales</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================================================
+     Elementor template: Site Footer  (Theme Builder > Footer)
+     ======================================================================= -->
+<footer class="imperial-footer">
+
+  <div class="imperial-footer__top container">
+    <div class="imperial-footer__grid">
+
+      <div class="imperial-footer__col" data-reveal="up" data-reveal-delay="1">
+        <img class="imperial-footer__logo" src="assets/images/logo-concept-2.svg" alt="Imperial Steaks" width="462" height="178">
+        <p class="imperial-footer__blurb">Philly steak importer and distributor serving foodservice and retail customers.</p>
+      </div>
+
+      <div class="imperial-footer__col" data-reveal="up" data-reveal-delay="2">
+        <h2 class="imperial-footer__title">Company</h2>
+        <ul class="imperial-footer__list">
+          <li><a class="imperial-footer__link" href="index.html">Home</a></li>
+          <li><a class="imperial-footer__link" href="about.html">About Us</a></li>
+          <li><a class="imperial-footer__link" href="products.html">Products</a></li>
+          <li><a class="imperial-footer__link" href="retail.html">Retail</a></li>
+          <li><a class="imperial-footer__link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="imperial-footer__col" data-reveal="up" data-reveal-delay="3">
+        <h2 class="imperial-footer__title">Products</h2>
+        <ul class="imperial-footer__list">
+          <li><a class="imperial-footer__link" href="products.html#xls">House Blend &ndash; XLS</a></li>
+          <li><a class="imperial-footer__link" href="products.html#xl">Traditional Philly &ndash; XL</a></li>
+          <li><a class="imperial-footer__link" href="products.html#ns">Premium Philly &ndash; NS</a></li>
+          <li><a class="imperial-footer__link" href="products.html#re">Rib Eye &ndash; RE</a></li>
+          <li><a class="imperial-footer__link" href="products.html#epic">Signature Blend &ndash; EPIC</a></li>
+          <li><a class="imperial-footer__link" href="products.html#chx">Premium Chicken &ndash; CHX</a></li>
+        </ul>
+      </div>
+
+      <div class="imperial-footer__col" data-reveal="up" data-reveal-delay="4">
+        <h2 class="imperial-footer__title">Contact us now</h2>
+        <ul class="imperial-footer__contact">
+          <li class="imperial-footer__contact-item">
+            <span class="imperial-footer__contact-label">Tel</span>
+            <span>XXX-XXX-XXXX</span>
+          </li>
+          <li class="imperial-footer__contact-item">
+            <span class="imperial-footer__contact-label">Email</span>
+            <a href="mailto:sales@imperialsteaks.com">sales@imperialsteaks.com</a>
+          </li>
+          <li class="imperial-footer__contact-item">
+            <span class="imperial-footer__contact-label">Web</span>
+            <a href="https://www.imperialsteaks.com/">www.imperialsteaks.com</a>
+          </li>
+          <li class="imperial-footer__contact-item">
+            <span class="imperial-footer__contact-label">Warehouse</span>
+            <span>Boucherville, QC J4B&nbsp;8N4</span>
+          </li>
+          <li class="imperial-footer__contact-item">
+            <span class="imperial-footer__contact-label">Also</span>
+            <span>USA and Middle East</span>
+          </li>
+        </ul>
+
+        <div class="imperial-social" role="list" aria-label="Social profiles (coming soon)">
+          <span class="imperial-social__item" role="listitem">IG</span>
+          <span class="imperial-social__item" role="listitem">FB</span>
+          <span class="imperial-social__item" role="listitem">X</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="imperial-footer__bottom">
+    <div class="container">
+      <p class="imperial-footer__copyright">Copyright &copy; 2026 Imperial Steaks. All rights reserved.</p>
+    </div>
+  </div>
+
+</footer>
+
+<!-- Elementor widget: Back to Top -->
+<button class="imperial-to-top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+    <path d="M12 19 V6 M5.5 12.5 L12 6 L18.5 12.5" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

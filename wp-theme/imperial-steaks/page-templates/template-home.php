@@ -1,0 +1,360 @@
+<?php
+/**
+ * Template Name: Imperial Steaks - Home
+ *
+ * Generated from the static prototype (index.html) by
+ * tools/build-theme-templates.py - do not hand-edit. Change the prototype and
+ * re-run the generator, or rebuild this page in Elementor and switch the page's
+ * template to "Default".
+ *
+ * @package ImperialSteaks
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+get_header();
+?>
+
+<main id="main">
+
+  <!-- ========================================================================
+       SECTION 1 of 6 - Hero + beef / chicken photography
+       BACKGROUND: MATTE BLACK  (every homepage section now declares its own
+       background colour, so the eye can see where one ends and the next
+       begins: black / red / black / red / black / red down the page.)
+
+       Elementor: Container (background Matte Black, flex column)
+         > Container : Heading widget + Text widget   (top left, all caps)
+         > Container : Image widget x2                (chicken left, beef right)
+       ----------------------------------------------------------------------
+       Client revision (Oct 16): the hero copy sits top left and is all caps -
+       "Quality you can trust" with "Service you can rely on" underneath. The
+       "Philly steak importer & distributor." line is gone, the red hero
+       background is gone, and the CHICKEN / BEEF labels under the two photos
+       have been removed. The four brand values moved down to the Categories
+       section. Hero and photography are now one section, not two.
+
+       IMAGE SOURCE: the beef frame stays (client approved) and is still the
+       Ritter crop, so its rights question is open. The chicken frame was
+       REPLACED on 16 Oct with the chicken cheesesteak the client supplied -
+       same filename, same 880x520 slot, nothing else touched. It is an upscale
+       from a 560x420 original, so a higher-resolution copy is still worth
+       asking for - see docs/IMAGE_REPLACEMENT_LIST.md section 3.
+       ===================================================================== -->
+  <section class="section imperial-hero" aria-labelledby="hero-heading">
+    <div class="imperial-hero__inner container">
+
+      <div class="imperial-hero__text" data-reveal="down">
+        <h1 class="imperial-hero__title" id="hero-heading">Quality you can trust</h1>
+        <p class="imperial-hero__line">Service you can rely on</p>
+      </div>
+
+      <div class="imperial-duo">
+
+        <div class="imperial-duo__panel imperial-duo__panel--chicken" data-reveal="up">
+          <div class="imperial-duo__media">
+            <img class="imperial-duo__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-chicken-philly.jpg" alt="Chicken Philly cheesesteak on a toasted roll" width="880" height="520">
+          </div>
+        </div>
+
+        <div class="imperial-duo__panel imperial-duo__panel--beef" data-reveal="up" data-reveal-delay="1">
+          <div class="imperial-duo__media">
+            <img class="imperial-duo__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-beef-philly.jpg" alt="Beef Philly cheesesteak on a toasted roll" width="729" height="487">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2 of 6 - Introduction + the carton
+       BACKGROUND: BRAND RED
+       Elementor: Container (background Brand Red, flex row)
+         > Container : Heading + Text Editor x2
+         > Container : Image widget
+       ----------------------------------------------------------------------
+       Client revision (Oct 16): the carton is fully black now - the white
+       bottom panel and the white inner edges have been taken out of the
+       photograph - so this band is red, to keep a black box off a black
+       background. The untouched original is kept at
+       assets/images/_withdrawn/product-box-open-white-panels.png.
+       ===================================================================== -->
+  <section class="section section--red imperial-intro" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="split">
+
+        <div class="split__col" data-reveal="up">
+          <h2 class="imperial-intro__title" id="intro-heading">Imperial Steaks</h2>
+          <hr class="imperial-rule imperial-rule--white">
+
+          <p class="imperial-intro__text text-justify">As a Philly steak importer and distributor, our commitment is to provide
+            premium steak products to our clients. Imperial Steaks was established to build long-term relationships with
+            clients and provide unmatched products through quality and consistency that exceed our customers&rsquo;
+            expectations.</p>
+
+          <p class="imperial-intro__text text-justify">We welcome and appreciate the opportunity to meet with you to further
+            discuss who we are, our products, and how we can be of service to you.</p>
+        </div>
+
+        <div class="split__col" data-reveal="up">
+          <!-- Client-supplied photograph of the printed case, retouched to the
+               client's note: the box reads fully black, with the white bottom
+               panel and the white cut edges removed. WebP first; the PNG is
+               the fallback for old browsers. -->
+          <picture>
+            <source srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-box-open.webp" type="image/webp">
+            <img class="imperial-intro__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-box-open.png" alt="Open Imperial Steaks case showing vacuum-sealed packs of thin-sliced Philly steak" width="1161" height="1216">
+          </picture>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3 of 6 - Categories + brand values
+       BACKGROUND: MATTE BLACK
+       Elementor: Container (background Matte Black) > Heading + Container
+         (grid, 3 cols) > Image Box widget x3, then the four values underneath
+       ----------------------------------------------------------------------
+       Client revision (Oct 16): the beef and chicken cards carry live animal
+       photography again - the cattle and poultry shots the old site used -
+       and the four brand values sit under the cards, closing the section.
+       ===================================================================== -->
+  <section class="section imperial-categories" aria-labelledby="categories-heading">
+    <div class="container">
+
+      <div class="section__head" data-reveal="up">
+        <h2 class="section__title imperial-categories__title" id="categories-heading">Categories</h2>
+        <hr class="imperial-rule imperial-rule--center">
+      </div>
+
+      <div class="grid grid--3">
+
+        <article class="imperial-card imperial-card--beef" data-reveal="up" data-reveal-delay="1">
+          <div class="imperial-card__media">
+            <img class="imperial-card__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/category-beef.jpg" alt="Holstein cow standing in open pasture, with the herd grazing behind" width="1200" height="800">
+          </div>
+          <div class="imperial-card__body">
+            <h3 class="imperial-card__title">Beef</h3>
+          </div>
+        </article>
+
+        <article class="imperial-card imperial-card--chicken" data-reveal="up" data-reveal-delay="2">
+          <div class="imperial-card__media">
+            <img class="imperial-card__image imperial-card__image--mark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/category-chicken.png" alt="Diagram of a chicken with the cuts marked in red: neck, back, wing, breast, thigh and drumstick" width="1200" height="1048">
+          </div>
+          <div class="imperial-card__body">
+            <h3 class="imperial-card__title">Chicken</h3>
+          </div>
+        </article>
+
+        <article class="imperial-card imperial-card--halal" data-reveal="up" data-reveal-delay="3">
+          <div class="imperial-card__media">
+            <img class="imperial-card__image imperial-card__image--mark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/badge-halal.png" alt="Halal Food Certified mark" width="400" height="419">
+          </div>
+          <div class="imperial-card__body">
+            <h3 class="imperial-card__title">Halal</h3>
+            <!-- TODO: CLIENT REVIEW - confirm Imperial Steaks' Halal
+                 certification wording and evidence before this is published. -->
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Brand values. Moved out of the hero on the client's instruction;
+           they close the Categories section, under the photography. -->
+      <div class="imperial-values u-mt-xl" data-reveal="up">
+        <p class="imperial-values__item">Value.</p>
+        <p class="imperial-values__item">Quality.</p>
+        <p class="imperial-values__item">Service.</p>
+        <p class="imperial-values__item">Integrity.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4 of 6 - Foodservice
+       BACKGROUND: BRAND RED
+       Container (background Brand Red) > Heading + Container (grid, 2 cols)
+         > Icon Box widget x2
+       Left exactly as it was, at the client's instruction - only the red
+       behind it has changed value.
+       ===================================================================== -->
+  <section class="section section--red imperial-foodservice" id="foodservice" aria-labelledby="foodservice-heading">
+    <div class="container">
+
+      <div class="section__head" data-reveal="up">
+        <h2 class="section__title" id="foodservice-heading">Foodservice</h2>
+        <hr class="imperial-rule imperial-rule--center imperial-rule--white">
+      </div>
+
+      <div class="grid grid--2">
+
+        <article class="imperial-feature" data-reveal="up" data-reveal-delay="1">
+          <h3 class="imperial-feature__title">Built for busy kitchens</h3>
+          <p class="imperial-feature__text text-white">Restaurants, pizza shops and sandwich shops.</p>
+        </article>
+
+        <article class="imperial-feature" data-reveal="up" data-reveal-delay="2">
+          <h3 class="imperial-feature__title">Portion control</h3>
+          <p class="imperial-feature__text text-white">3&ndash;8 oz portions, individually layered in double paper.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 5 of 6 - Products
+       BACKGROUND: MATTE BLACK
+       Container (background Matte Black) > Heading + Image Carousel widget
+         + Button widget
+       The static prototype uses a scroll-snap row instead of a JS carousel so
+       all captions stay in the HTML. Swap it for the Image Carousel widget at
+       migration, or keep it as a Loop Grid.
+       ----------------------------------------------------------------------
+       PHOTOGRAPHY LANDED (Oct 16, second batch). The six dashed placeholder
+       tiles are gone; every slot now carries the client's own supplied
+       photograph at assets/images/product-<code>.jpg. The withdrawn SVGs are
+       kept at assets/images/_withdrawn/product-*.svg in case a slot has to go
+       back to a holder. Provenance, resolution and the two files still worth
+       chasing are logged in docs/IMAGE_REPLACEMENT_LIST.md section 4.
+       The product name still sits on the caption under each tile, in markup
+       rather than in the artwork.
+       ===================================================================== -->
+  <section class="section imperial-products" aria-labelledby="products-heading">
+    <div class="container">
+
+      <div class="section__head" data-reveal="up">
+        <h2 class="section__title" id="products-heading">Products</h2>
+        <hr class="imperial-rule imperial-rule--center">
+      </div>
+
+      <div class="imperial-products__carousel" data-carousel>
+
+        <div class="imperial-products__controls">
+          <button class="imperial-products__arrow" type="button"
+                  data-carousel-prev aria-controls="products-scroller" aria-label="Previous products">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M14.5 5.5 L8 12 L14.5 18.5" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="imperial-products__arrow" type="button"
+                  data-carousel-next aria-controls="products-scroller" aria-label="Next products">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M9.5 5.5 L16 12 L9.5 18.5" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="imperial-products__scroller" id="products-scroller" data-carousel-track
+             role="group" aria-label="Product range" tabindex="0">
+
+        <div class="imperial-products__slide">
+          <a class="imperial-product-tile" href="<?php echo esc_url( home_url( '/products/' ) ); ?>#xls">
+            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-xls.jpg" alt="House Blend XLS - a frozen portion of thinly sliced blended Philly steak" width="1000" height="667">
+            <span class="imperial-product-tile__caption">House Blend &ndash; XLS</span>
+          </a>
+        </div>
+
+        <div class="imperial-products__slide">
+          <a class="imperial-product-tile" href="<?php echo esc_url( home_url( '/products/' ) ); ?>#xl">
+            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-xl.jpg" alt="Traditional Philly XL - a frozen sheet of marinated sirloin tip Philly steak on parchment" width="1200" height="800">
+            <span class="imperial-product-tile__caption">Traditional Philly &ndash; XL</span>
+          </a>
+        </div>
+
+        <div class="imperial-products__slide">
+          <a class="imperial-product-tile" href="<?php echo esc_url( home_url( '/products/' ) ); ?>#ns">
+            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-ns.jpg" alt="Premium Philly NS - frozen sheets of sliced sirloin tip Philly steak, interleaved with parchment" width="1200" height="800">
+            <span class="imperial-product-tile__caption">Premium Philly &ndash; NS</span>
+          </a>
+        </div>
+
+        <div class="imperial-products__slide">
+          <a class="imperial-product-tile" href="<?php echo esc_url( home_url( '/products/' ) ); ?>#re">
+            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a case of whole-muscle rib eye rolls" width="1400" height="933">
+            <span class="imperial-product-tile__caption">Rib Eye &ndash; RE</span>
+          </a>
+        </div>
+
+        <div class="imperial-products__slide">
+          <a class="imperial-product-tile" href="<?php echo esc_url( home_url( '/products/' ) ); ?>#epic">
+            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-epic.jpg" alt="Signature Blend EPIC - a stack of frozen sliced Signature Blend Philly steak, interleaved with parchment" width="1800" height="1200">
+            <span class="imperial-product-tile__caption">Signature Blend &ndash; EPIC</span>
+          </a>
+        </div>
+
+        <div class="imperial-products__slide">
+          <a class="imperial-product-tile" href="<?php echo esc_url( home_url( '/products/' ) ); ?>#chx">
+            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-chx.jpg" alt="Premium Chicken CHX - a stack of frozen sliced chicken breast Philly steak, interleaved with parchment" width="900" height="600">
+            <span class="imperial-product-tile__caption">Premium Chicken &ndash; CHX</span>
+          </a>
+        </div>
+
+        </div><!-- /.imperial-products__scroller -->
+
+      </div><!-- /.imperial-products__carousel -->
+
+      <div class="imperial-callout imperial-callout--center u-mt-lg" data-reveal="up">
+        <p class="imperial-callout__text">All products come in 3&ndash;8 oz portions, individually layered in double paper.</p>
+      </div>
+
+      <!-- Elementor widget: Button.
+           TODO: CLIENT REVIEW - points to the Products page until the client
+           supplies a product guide PDF. -->
+      <div class="btn-row u-mt-md" data-reveal="up">
+        <a class="btn btn--primary" href="<?php echo esc_url( home_url( '/products/' ) ); ?>">Download Guide</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 6 of 6 - Standards
+       BACKGROUND: BRAND RED  (client revision, Oct 16)
+       Container (background Brand Red) > Container (grid, 3 columns)
+         > Image widget x3 + Heading/Text widget per column
+       ===================================================================== -->
+  <section class="section section--red imperial-badges" aria-labelledby="badges-heading">
+    <div class="container">
+
+      <h2 class="section__title text-center" id="badges-heading">Standards</h2>
+      <hr class="imperial-rule imperial-rule--center imperial-rule--white">
+
+      <div class="grid grid--3 u-mt-lg">
+
+        <div class="imperial-badge" data-reveal="up" data-reveal-delay="1">
+          <!-- Third-party marks. Confirm the right to display each one, and the
+               claim behind it, before launch. -->
+          <img class="imperial-badge__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/badge-usda-inspected.png" alt="USDA mark" width="500" height="325">
+          <p class="imperial-badge__label">USDA-inspected facilities</p>
+        </div>
+
+        <div class="imperial-badge" data-reveal="up" data-reveal-delay="2">
+          <img class="imperial-badge__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/badge-sqf-level-3.png" alt="SQF certification mark" width="318" height="158">
+          <p class="imperial-badge__label">SQF Certified &ndash; Level 3</p>
+        </div>
+
+        <div class="imperial-badge" data-reveal="up" data-reveal-delay="3">
+          <img class="imperial-badge__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/badge-halal.png" alt="Halal Food Certified mark" width="400" height="419">
+          <p class="imperial-badge__label">Halal</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<?php
+get_footer();

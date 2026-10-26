@@ -1,0 +1,24 @@
+/*
+Theme Name: Imperial Steaks
+Theme URI: https://imperialsteaks.com/
+Author: Internal team
+Author URI: https://imperialsteaks.com/
+Description: Minimal, Elementor-first WordPress theme for Imperial Steaks. It deliberately does almost nothing on its own - it registers Elementor Theme Builder locations, menus and the brand stylesheet, then gets out of Elementor's way. Modelled on the Hello Elementor approach: no opinionated layout, no page-level markup that Elementor would have to fight.
+Version: 1.4.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: imperial-steaks
+Tags: elementor, one-column, custom-menu, custom-logo, featured-images, translation-ready
+
+This file carries the theme header only. All real styling lives in:
+
+  assets/css/global.css      design tokens (:root), reset, typography, layout
+  assets/css/components.css  component classes
+  assets/css/animations.css  scroll reveals, sticky header, back-to-top
+
+Those three files are byte-identical to the static prototype in the project
+root, so the two stay in sync and docs/ELEMENTOR_MIGRATION.md applies to both.
+*/

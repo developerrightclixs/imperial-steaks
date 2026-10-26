@@ -1,0 +1,354 @@
+/* ============================================================================
+   Imperial Steaks - global.css
+   GLOBAL DESIGN TOKENS, RESET, TYPOGRAPHY, LAYOUT PRIMITIVES
+   ----------------------------------------------------------------------------
+   Every value in :root below is meant to be re-entered once in
+   Elementor > Site Settings (Global Colors / Global Fonts / Layout).
+   See docs/ELEMENTOR_MIGRATION.md for the token -> Elementor mapping table.
+
+   REVISION (Oct 2026): rebranded Tasty Steaks -> Imperial Steaks. The three
+   black variants are gone - the client asked for matte black only, with no
+   mixed dark/light grey sections. Depth now comes from hairlines and a single
+   translucent card surface, never from a second background colour.
+   ========================================================================== */
+
+:root {
+  /* --- Global Colours: matte black (the only black) ----------------------- */
+  --is-black:        #1A1A1A;  /* Every section background                    */
+
+  /* Card surface. Deliberately a translucent white rather than a second grey,
+     so cards read as cards and the page never splits into light/dark bands. */
+  --is-surface:      rgba(255, 255, 255, 0.045);
+  --is-surface-hi:   rgba(255, 255, 255, 0.075);
+
+  /* --- Global Colours: brand red ------------------------------------------
+     REVISION (20 Oct 2026, second pass): the client has specified pure red,
+     #FF0000 / rgb(255, 0, 0), for the whole site. This supersedes the
+     #ED1C24 set earlier the same day (and the #F21B26 / #EC3237 pair before
+     it). It is no longer tied to the Hormel / JBS reference marks - it is
+     the client's own call, given as a flat value. The hover is a darkened
+     step off it.
+
+     ACCESSIBILITY NOTE (measured, not estimated):
+       white   on #FF0000  = 4.00:1  - AA large text only
+       black   on #FF0000  = 4.35:1  - AA large text only
+       #FF0000 on #1A1A1A  = 4.35:1  - AA large text only
+     None of the three clears the 4.5:1 AA floor for type under 18.66px.
+     Headings, buttons and the values line are large or bold enough to
+     qualify at 3:1; the 16px paragraphs on the red bands are not, which is
+     why they stay at weight 400 rather than 300. Pure red is the hardest
+     red to pass contrast with - it cannot be darkened without ceasing to be
+     #FF0000. Applied as instructed; flagged in docs/BRAND_COLOURS.md, where
+     the options for closing the gap are set out. */
+  --is-red:          #FF0000;  /* Pure red - the one brand red                */
+  --is-red-dark:     #D40000;  /* Darkened step - hover / pressed             */
+  --is-red-bright:   #FF0000;  /* Link hover and focus rings                  */
+
+  /* --- Global Colours: chicken yellow --------------------------------------
+     Pantone 130 C. Used for every chicken product surface, as the beef range
+     uses red + black. Always carries black text, never white. */
+  --is-yellow:       #F2A900;
+  --is-yellow-dark:  #C98A00;
+
+  /* --- Global Colours: neutrals ------------------------------------------- */
+  --is-white:        #FFFFFF;
+  --is-off-white:    #F2F2F2;
+  --is-grey-text:    #C9C9C9;  /* Body copy on matte black                    */
+  --is-grey-muted:   #8C8C8C;  /* Labels and eyebrows                         */
+  --is-hairline:     rgba(255, 255, 255, 0.14);
+  --is-hairline-dk:  rgba(0, 0, 0, 0.22);   /* Hairline on red / yellow bands */
+
+  /* --- Global Fonts ------------------------------------------------------- */
+  --is-font-body:      "Poppins", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --is-font-display:   "Bodoni Moda", "Times New Roman", Georgia, serif;
+  --is-font-condensed: "Oswald", "Arial Narrow", Haettenschweiler, sans-serif;
+
+  /* --- Type scale (desktop) -----------------------------------------------
+     The hero is deliberately much smaller than the old 90px lockup (client:
+     "noticeably smaller than now"). As of 20 Oct both hero lines are set at
+     --is-size-hero: the client asked for them matched, so the separate
+     --is-size-hero-line step has been retired. */
+  --is-size-hero:        54px;
+  --is-size-values:      28px;
+  --is-size-h1:          40px;
+  --is-size-h2:          30px;
+  --is-size-h3:          20px;
+  --is-size-body:        16px;
+  --is-size-small:       14px;
+  --is-size-eyebrow:     13px;
+
+  /* --- Spacing ------------------------------------------------------------ */
+  --is-space-xs:   8px;
+  --is-space-sm:  16px;
+  --is-space-md:  24px;
+  --is-space-lg:  40px;
+  --is-space-xl:  56px;
+  --is-section-y: 80px;
+  --is-gap-grid:  30px;
+
+  /* --- Layout ------------------------------------------------------------- */
+  --is-container:        1140px;
+  --is-container-narrow:  900px;
+
+  /* --- Radii / borders / shadow ------------------------------------------- */
+  --is-radius-card:  25px;
+  --is-radius-media: 20px;
+  --is-radius-pill:  20px;
+  --is-radius-sm:     6px;
+  --is-border-width:  1px;
+  --is-shadow-card: 0 18px 40px rgba(0, 0, 0, 0.45);
+
+  /* --- Motion (kept deliberately minimal) --------------------------------- */
+  --is-transition: 0.3s ease;
+}
+
+/* ============================================================================
+   RESET / BASE
+   ========================================================================== */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--is-black);
+  color: var(--is-grey-text);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--is-white);
+  text-decoration: none;
+  transition: color var(--is-transition);
+}
+
+a:hover,
+a:focus-visible { color: var(--is-red-bright); }
+
+/* Visible, consistent keyboard focus on every interactive element. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--is-red-bright);
+  outline-offset: 3px;
+}
+
+/* On the red and yellow bands a red focus ring would disappear. */
+.section--red a:focus-visible,
+.section--red button:focus-visible,
+.section--yellow a:focus-visible,
+.section--yellow button:focus-visible { outline-color: var(--is-white); }
+
+.section--yellow a:focus-visible,
+.section--yellow button:focus-visible { outline-color: var(--is-black); }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+/* Keep anchored sections clear of the sticky header when linked to directly. */
+section[id],
+[id]:target { scroll-margin-top: 100px; }
+
+p { margin: 0 0 var(--is-space-sm); }
+p:last-child { margin-bottom: 0; }
+
+/* ============================================================================
+   HEADINGS - mapped to Elementor Global Fonts
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--is-space-sm);
+  color: var(--is-white);
+  font-family: var(--is-font-body);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--is-size-h1); }
+h2 { font-size: var(--is-size-h2); text-transform: uppercase; }
+h3 { font-size: var(--is-size-h3); }
+
+/* ============================================================================
+   LAYOUT PRIMITIVES
+   Flexbox / CSS grid only - no absolute positioning - so each wrapper maps
+   1:1 onto an Elementor Container.
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--is-container);
+  margin-inline: auto;
+  padding-inline: var(--is-space-md);
+}
+
+.container--narrow { max-width: var(--is-container-narrow); }
+
+.section { padding-block: var(--is-section-y); }
+
+/* Section backgrounds. Only three exist: matte black, brand red, and the
+   chicken yellow. Pages alternate black / red down the page. */
+.section--black  { background-color: var(--is-black); }
+.section--red    { background-color: var(--is-red); }
+.section--yellow { background-color: var(--is-yellow); }
+
+/* Body copy on the red band is set a step heavier than the 300 used on matte
+   black. White on the brand red measures 4.2:1, so the thin weight would read
+   as washed out at paragraph size; 400 holds the line. */
+.section--red p,
+.imperial-cta__text { font-weight: 400; }
+
+/* Every text colour inside the yellow band flips to black for contrast. */
+.section--yellow,
+.section--yellow h1,
+.section--yellow h2,
+.section--yellow h3,
+.section--yellow p,
+.section--yellow a { color: var(--is-black); }
+
+.section__head {
+  margin-bottom: var(--is-space-lg);
+  text-align: center;
+}
+
+.section__title {
+  margin-bottom: var(--is-space-xs);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section__intro {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+/* Two-column split (image + copy). Collapses to one column on tablet. */
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--is-space-xl);
+  align-items: center;
+}
+
+.split__col { flex: 1 1 320px; min-width: 0; }
+
+.split--reverse { flex-direction: row-reverse; }
+
+/* Equal-column grids. */
+.grid { display: grid; gap: var(--is-gap-grid); }
+
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Utilities - deliberately few and flat. */
+.text-center  { text-align: center; }
+.text-white   { color: var(--is-white); }
+.text-justify { text-align: justify; }
+.is-uppercase { text-transform: uppercase; }
+
+/* Spacing utilities - used instead of inline styles so the values stay
+   token-driven and map onto Elementor's margin controls. */
+.u-mt-sm { margin-top: var(--is-space-sm); }
+.u-mt-md { margin-top: var(--is-space-md); }
+.u-mt-lg { margin-top: var(--is-space-lg); }
+.u-mt-xl { margin-top: var(--is-space-xl); }
+
+/* Visually hidden but available to screen readers. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: var(--is-space-xs) var(--is-space-sm);
+  background-color: var(--is-red);
+  color: var(--is-white);
+}
+
+.skip-link:focus {
+  left: var(--is-space-sm);
+  top: var(--is-space-sm);
+  color: var(--is-white);
+}
+
+/* ============================================================================
+   RESPONSIVE - breakpoints match Elementor defaults (1024px / 767px)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --is-section-y: 56px;
+    --is-size-hero: 40px;
+    --is-size-values: 22px;
+    --is-size-h1: 32px;
+    --is-size-h2: 24px;
+  }
+
+  .grid--3,
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+
+  .split { gap: var(--is-space-lg); }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --is-section-y: 44px;
+    --is-size-hero: 30px;
+    --is-size-values: 18px;
+    --is-size-h1: 26px;
+    --is-size-h2: 20px;
+    --is-size-body: 15px;
+    --is-gap-grid: 20px;
+  }
+
+  body { line-height: 1.65; }
+
+  .grid--2,
+  .grid--3,
+  .grid--4 { grid-template-columns: 1fr; }
+
+  .split,
+  .split--reverse { flex-direction: column; }
+
+  .text-justify { text-align: left; }
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  .imperial-products__scroller { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

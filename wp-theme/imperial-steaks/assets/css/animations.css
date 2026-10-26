@@ -1,0 +1,179 @@
+/* ============================================================================
+   Imperial Steaks - animations.css
+   SCROLL REVEALS, STICKY-HEADER STATE, BACK-TO-TOP
+   ----------------------------------------------------------------------------
+   Why this file exists, and why it is deliberately restrained:
+
+   The reference site (the old tastysteaks.ca build) used Elementor entrance animations -
+   "fadeInDown" with a 200ms stagger on the hero headings. These reveals carry
+   that behaviour over to Imperial Steaks and extend it down the page. Every
+   effect here maps onto a stock Elementor control, so none of it needs custom
+   code after migration:
+
+     - element reveals  -> Advanced > Motion Effects > Entrance Animation
+                           (+ Animation Delay for the stagger)
+     - header on scroll -> Advanced > Motion Effects > Sticky + Scroll Effects
+     - back to top      -> Elementor "Back to Top" widget
+
+   Only `opacity` and `transform` are animated, so reveals run on the compositor
+   and never trigger layout. No parallax, no glassmorphism, no bounce - this is a
+   premium meat-trade brand, so the motion is confident and quiet rather than
+   showy.
+
+   SAFETY: the hidden state is scoped to `html.reveal-on`, a class added by
+   JavaScript. With JavaScript off (or if the script fails) that class is never
+   added and every element renders normally. Content is never hidden by CSS alone.
+   ========================================================================== */
+
+:root {
+  --is-reveal-distance: 32px;
+  --is-reveal-duration: 1.15s;
+  --is-reveal-ease: cubic-bezier(0.22, 0.61, 0.36, 1);   /* ease-out quint-ish */
+  --is-reveal-step: 150ms;                                /* stagger interval   */
+}
+
+/* ----------------------------------------------------------------------------
+   1. REVEAL BASE
+   -------------------------------------------------------------------------- */
+
+.reveal-on [data-reveal] {
+  opacity: 0;
+  transition: opacity var(--is-reveal-duration) var(--is-reveal-ease),
+              transform var(--is-reveal-duration) var(--is-reveal-ease);
+  will-change: opacity, transform;
+}
+
+/* Direction variants -------------------------------------------------------- */
+.reveal-on [data-reveal="up"]    { transform: translateY(var(--is-reveal-distance)); }
+.reveal-on [data-reveal="down"]  { transform: translateY(calc(var(--is-reveal-distance) * -1)); }
+.reveal-on [data-reveal="left"]  { transform: translateX(calc(var(--is-reveal-distance) * -1)); }
+.reveal-on [data-reveal="right"] { transform: translateX(var(--is-reveal-distance)); }
+.reveal-on [data-reveal="fade"]  { transform: none; }
+
+/* A slow, slight zoom for feature imagery - 1.05 is deliberately small. */
+.reveal-on [data-reveal="zoom"] {
+  transform: scale(1.05);
+  transition-duration: 1.5s;
+}
+
+/* Revealed state ------------------------------------------------------------ */
+.reveal-on [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Stagger: set with data-reveal-delay="1..6" on sibling elements. ------------ */
+.reveal-on [data-reveal-delay="1"] { transition-delay: calc(var(--is-reveal-step) * 1); }
+.reveal-on [data-reveal-delay="2"] { transition-delay: calc(var(--is-reveal-step) * 2); }
+.reveal-on [data-reveal-delay="3"] { transition-delay: calc(var(--is-reveal-step) * 3); }
+.reveal-on [data-reveal-delay="4"] { transition-delay: calc(var(--is-reveal-step) * 4); }
+.reveal-on [data-reveal-delay="5"] { transition-delay: calc(var(--is-reveal-step) * 5); }
+.reveal-on [data-reveal-delay="6"] { transition-delay: calc(var(--is-reveal-step) * 6); }
+
+/* ----------------------------------------------------------------------------
+   2. STICKY HEADER STATE
+   The header is already sticky; once the page scrolls it tightens up and gains
+   a shadow so it separates from imagery passing underneath.
+   Elementor: Motion Effects > Sticky > "Effects Offset" + a Scroll state.
+   -------------------------------------------------------------------------- */
+
+.imperial-header {
+  transition: padding-block var(--is-transition), box-shadow var(--is-transition),
+              background-color var(--is-transition);
+}
+
+.imperial-header.is-scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+.imperial-header.is-scrolled .imperial-header__inner {
+  padding-block: var(--is-space-xs);
+}
+
+.imperial-header__inner,
+.imperial-header__logo {
+  transition: padding-block var(--is-transition), width var(--is-transition);
+}
+
+.imperial-header.is-scrolled .imperial-header__logo { width: 120px; }
+
+/* ----------------------------------------------------------------------------
+   3. BACK TO TOP
+   The reference site had a "Scroll to Top" control; this restores it.
+   Elementor: "Back to Top" widget.
+   -------------------------------------------------------------------------- */
+
+.imperial-to-top {
+  position: fixed;
+  right: var(--is-space-md);
+  bottom: var(--is-space-md);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  background-color: var(--is-red);
+  border: 2px solid var(--is-red);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  color: var(--is-white);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  visibility: hidden;
+  transition: opacity var(--is-transition), transform var(--is-transition),
+              background-color var(--is-transition), visibility var(--is-transition);
+}
+
+.imperial-to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.imperial-to-top:hover,
+.imperial-to-top:focus-visible {
+  background-color: var(--is-black);
+  border-color: var(--is-white);
+  color: var(--is-white);
+}
+
+/* ----------------------------------------------------------------------------
+   4. SMALL SCREENS
+   Shorter travel so reveals never feel sluggish on a phone.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  :root {
+    --is-reveal-distance: 22px;
+    --is-reveal-duration: 0.9s;
+    --is-reveal-step: 110ms;
+  }
+
+  .imperial-to-top {
+    width: 42px;
+    height: 42px;
+    right: var(--is-space-sm);
+    bottom: var(--is-space-sm);
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   5. REDUCED MOTION
+   Anyone who has asked their system to limit motion gets the finished layout
+   with no movement at all - including the reveals, which simply start visible.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on [data-reveal],
+  .reveal-on [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .imperial-to-top { transition: opacity 0.01ms; }
+}

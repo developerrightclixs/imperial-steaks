@@ -1,0 +1,1102 @@
+/* ============================================================================
+   Imperial Steaks - components.css
+   REUSABLE COMPONENT CLASSES
+   ----------------------------------------------------------------------------
+   One block per component, one flat class per element. Each block is written
+   so the matching Elementor widget can reproduce it from its own style tab
+   (see docs/ELEMENTOR_MIGRATION.md). No deep selector nesting, no inline
+   styles, no absolute-positioning tricks.
+   ========================================================================== */
+
+/* ============================================================================
+   1. SITE HEADER + PRIMARY NAVIGATION
+   Elementor: Theme Builder > Header template
+   (Container > Site Logo widget + Nav Menu widget)
+   ========================================================================== */
+
+.imperial-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--is-black);
+  border-bottom: 2px solid var(--is-red);
+}
+
+.imperial-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--is-space-sm);
+  padding-block: var(--is-space-sm);
+}
+
+.imperial-header__brand { display: block; line-height: 0; }
+
+.imperial-header__logo { width: 190px; height: auto; }
+
+/* Mobile menu button - hidden on desktop, shown under 1024px. */
+.imperial-nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  background-color: transparent;
+  border: var(--is-border-width) solid var(--is-hairline);
+  border-radius: var(--is-radius-sm);
+  cursor: pointer;
+}
+
+.imperial-nav-toggle__bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--is-white);
+}
+
+.imperial-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--is-space-md);
+}
+
+/* The second selector matches WordPress: wp_nav_menu() emits plain <a> tags
+   with no custom class, so the WP theme needs this to style its nav at all. */
+.imperial-nav__link,
+.imperial-nav__list a {
+  display: inline-block;
+  padding-block: var(--is-space-xs);
+  color: var(--is-white);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-small);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.imperial-nav__link:hover,
+.imperial-nav__link:focus-visible,
+.imperial-nav__list a:hover,
+.imperial-nav__list a:focus-visible { color: var(--is-red-bright); }
+
+/* Current page: .is-current in the static prototype, WordPress's own
+   current-menu-item / current_page_item classes in the theme. */
+.imperial-nav__link.is-current,
+.imperial-nav__list .current-menu-item > a,
+.imperial-nav__list .current_page_item > a {
+  color: var(--is-white);
+  border-bottom: 2px solid var(--is-red);
+}
+
+@media (max-width: 1024px) {
+  .imperial-nav-toggle { display: flex; }
+
+  .imperial-nav {
+    flex-basis: 100%;
+    display: none;
+  }
+
+  .imperial-nav.is-open { display: block; }
+
+  .imperial-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: var(--is-space-sm);
+  }
+
+  .imperial-nav__item,
+  .imperial-nav__list > li { border-top: var(--is-border-width) solid var(--is-hairline); }
+
+  .imperial-nav__link,
+  .imperial-nav__list a {
+    display: block;
+    padding-block: var(--is-space-sm);
+  }
+
+  .imperial-nav__link.is-current,
+  .imperial-nav__list .current-menu-item > a,
+  .imperial-nav__list .current_page_item > a { border-bottom: 0; color: var(--is-red-bright); }
+}
+
+/* ============================================================================
+   2. BUTTONS
+   Elementor: Button widget (Normal / Hover style tabs)
+   ----------------------------------------------------------------------------
+   max-width + overflow-wrap are what stop long labels ("Call +1 514-...") from
+   being clipped out of the pill, which is the bug the client flagged on the
+   Products page "Talk to us about your menu" CTA.
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 30px;
+  border: 2px solid transparent;
+  border-radius: var(--is-radius-pill);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-small);
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  cursor: pointer;
+  transition: background-color var(--is-transition), color var(--is-transition),
+              border-color var(--is-transition);
+}
+
+/* Primary: white pill with a matte-black label. */
+.btn--primary {
+  background-color: var(--is-white);
+  border-color: var(--is-white);
+  color: var(--is-black);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background-color: var(--is-red);
+  border-color: var(--is-red);
+  color: var(--is-white);
+}
+
+/* Accent: solid brand red. */
+.btn--accent {
+  background-color: var(--is-red);
+  border-color: var(--is-red);
+  color: var(--is-white);
+}
+
+.btn--accent:hover,
+.btn--accent:focus-visible {
+  background-color: var(--is-red-dark);
+  border-color: var(--is-red-dark);
+  color: var(--is-white);
+}
+
+/* Outline: transparent with a white hairline. */
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--is-white);
+  color: var(--is-white);
+}
+
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  background-color: var(--is-white);
+  color: var(--is-black);
+}
+
+/* Dark outline, for the yellow chicken band where white would disappear. */
+.btn--dark {
+  background-color: var(--is-black);
+  border-color: var(--is-black);
+  color: var(--is-white);
+}
+
+.btn--dark:hover,
+.btn--dark:focus-visible {
+  background-color: transparent;
+  color: var(--is-black);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--is-space-sm);
+  justify-content: center;
+}
+
+/* Left-aligned variant, for a button row under left-aligned copy. */
+.btn-row--start { justify-content: flex-start; }
+
+/* ============================================================================
+   3. HOMEPAGE HERO + BEEF / CHICKEN PHOTOGRAPHY  (one section, matte black)
+   Elementor: Container (background Matte Black) > Heading + Text + 2 Images
+   ----------------------------------------------------------------------------
+   Client revision (Oct 16): the hero copy sits top left, all caps, two short
+   lines - "Quality you can trust" over "Service you can rely on". The red
+   hero background is gone (the page now alternates black / red section by
+   section, and this one is the first black band), the descriptor line is
+   gone, and the two sandwich photographs have moved up into this section with
+   their CHICKEN / BEEF labels removed.
+   ========================================================================== */
+
+.imperial-hero {
+  background-color: var(--is-black);
+  text-align: left;
+}
+
+.imperial-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--is-space-xl);
+}
+
+/* Top left, not centred: the block is only as wide as its longest line. */
+.imperial-hero__text { max-width: 100%; }
+
+/* REVISION (20 Oct 2026): the client asked for sentence case here - "first
+   letter capital, rest small" - and for the two lines to match. They are now
+   one lockup: same face, same size, same weight, same white. The uppercase
+   transform is gone (the markup was already sentence case), and so is the
+   red on line 2, which is what made the pair compete. Hierarchy now comes
+   from reading order alone, which is what the client asked for. */
+.imperial-hero__title {
+  margin: 0;
+  white-space: nowrap;
+  color: var(--is-white);
+  font-family: var(--is-font-condensed);
+  font-size: var(--is-size-hero);
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+/* The second line of the lockup - matched to the title per the client:
+   same face, same size, same weight, same white. */
+.imperial-hero__line {
+  margin: var(--is-space-xs) 0 0;
+  white-space: nowrap;
+  color: var(--is-white);
+  font-family: var(--is-font-condensed);
+  font-size: var(--is-size-hero);
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+/* Brand values - one short line, in the order the client corrected:
+   Value. Quality. Service. Integrity. They now close the Categories
+   section, under the cattle and poultry photography. */
+.imperial-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--is-space-md);
+}
+
+.imperial-values__item {
+  margin: 0;
+  color: var(--is-white);
+  font-family: var(--is-font-display);
+  font-size: var(--is-size-values);
+  font-weight: 800;
+  letter-spacing: 5px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+/* ============================================================================
+   3b. BEEF / CHICKEN SPLIT
+   Elementor: Container (flex row) > Image widget x2
+   ----------------------------------------------------------------------------
+   Sits inside the hero section now rather than on a red-to-black seam of its
+   own, since the hero band is matte black throughout. Chicken left, beef
+   right, each tilted so the cut ends angle toward one another. The pill
+   labels under the two frames were removed at the client's instruction.
+   ========================================================================== */
+
+.imperial-duo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--is-space-md);
+  width: 100%;
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.imperial-duo__panel {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+}
+
+.imperial-duo__media {
+  overflow: hidden;
+  border-radius: var(--is-radius-media);
+  box-shadow: var(--is-shadow-card);
+  transition: transform var(--is-transition);
+}
+
+.imperial-duo__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* The two ends meet in the middle: left panel tips up to the right, right
+   panel tips down to the left. */
+.imperial-duo__panel--chicken .imperial-duo__media { transform: rotate(-3.5deg); }
+.imperial-duo__panel--beef    .imperial-duo__media { transform: rotate(3.5deg); }
+
+.imperial-duo__panel--chicken:hover .imperial-duo__media { transform: rotate(-3.5deg) scale(1.02); }
+.imperial-duo__panel--beef:hover    .imperial-duo__media { transform: rotate(3.5deg) scale(1.02); }
+
+@media (max-width: 767px) {
+  .imperial-duo { flex-direction: column; gap: var(--is-space-lg); }
+
+  .imperial-duo__panel { width: 100%; }
+}
+
+/* ============================================================================
+   4. PAGE BANNER (inner pages)
+   Elementor: Container with background colour + Heading widget
+   ========================================================================== */
+
+.imperial-banner {
+  padding-block: var(--is-space-xl);
+  background-color: var(--is-black);
+  border-bottom: 2px solid var(--is-red);
+}
+
+.imperial-banner__title {
+  margin: 0;
+  font-size: var(--is-size-h1);
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.imperial-banner__subtitle {
+  margin-top: var(--is-space-xs);
+  color: var(--is-grey-text);
+  font-size: var(--is-size-small);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Compact variant - Contact Us, which the client asked to make smaller. */
+.imperial-banner--sm { padding-block: var(--is-space-lg); }
+
+.imperial-banner--sm .imperial-banner__title {
+  font-size: var(--is-size-h2);
+  letter-spacing: 3px;
+}
+
+/* ============================================================================
+   5. INTRO / TEXT + IMAGE BLOCK
+   Elementor: Container (flex row) + Heading + Text Editor + Image widgets
+   ========================================================================== */
+
+.imperial-intro__eyebrow {
+  margin: 0 0 var(--is-space-xs);
+  color: var(--is-red-bright);
+  font-size: var(--is-size-eyebrow);
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.imperial-intro__title {
+  margin-bottom: var(--is-space-md);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-h2);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.imperial-intro__text {
+  color: var(--is-white);
+  font-weight: 300;
+}
+
+.imperial-intro__image { border-radius: var(--is-radius-media); }
+
+/* Short red rule used under headings instead of a decorative divider image. */
+.imperial-rule {
+  width: 72px;
+  height: 3px;
+  margin: 0 0 var(--is-space-md);
+  background-color: var(--is-red);
+  border: 0;
+}
+
+.imperial-rule--center { margin-inline: auto; }
+
+.imperial-rule--white { background-color: var(--is-white); }
+
+.imperial-rule--black { background-color: var(--is-black); }
+
+/* ============================================================================
+   6. CATEGORY CARDS (Beef / Chicken / Halal)
+   Elementor: Container (grid, 3 columns) + Image Box widgets
+   ----------------------------------------------------------------------------
+   Beef carries red + black, chicken carries the yellow scheme, per the brief.
+   ========================================================================== */
+
+.imperial-categories__title { color: var(--is-white); }
+
+.imperial-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--is-surface);
+  border: var(--is-border-width) solid var(--is-hairline);
+  border-radius: var(--is-radius-card);
+  overflow: hidden;
+  text-align: center;
+  transition: border-color var(--is-transition), background-color var(--is-transition);
+}
+
+.imperial-card:hover { border-color: var(--is-red); }
+
+.imperial-card__media { background-color: var(--is-black); }
+
+.imperial-card__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Variant for a card whose "image" is artwork on a transparent ground rather
+   than photography — the Halal seal, and the Chicken cuts diagram the client
+   supplied on 23 Oct. Contained on a white plate so the artwork is never
+   cropped and stays legible; the diagram's bird is near-black and would
+   disappear against the media slot's default black. */
+.imperial-card__image--mark {
+  padding: var(--is-space-md);
+  background-color: var(--is-white);
+  object-fit: contain;
+}
+
+.imperial-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--is-space-xs);
+  flex-grow: 1;
+  padding: var(--is-space-md);
+}
+
+.imperial-card__title {
+  margin: 0;
+  color: var(--is-white);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-h3);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.imperial-card__text {
+  margin: 0;
+  color: var(--is-grey-text);
+  font-size: var(--is-size-small);
+}
+
+/* Beef: red + black. */
+.imperial-card--beef { border-top: 4px solid var(--is-red); }
+.imperial-card--beef:hover { border-color: var(--is-red); }
+
+/* Chicken: the yellow scheme. */
+.imperial-card--chicken { border-top: 4px solid var(--is-yellow); }
+.imperial-card--chicken:hover { border-color: var(--is-yellow); }
+.imperial-card--chicken .imperial-card__title { color: var(--is-yellow); }
+
+/* Halal: neutral, so the certification mark carries the card. */
+.imperial-card--halal { border-top: 4px solid var(--is-white); }
+.imperial-card--halal:hover { border-color: var(--is-white); }
+
+/* ============================================================================
+   7. FOODSERVICE / CHANNEL BLOCK
+   Elementor: Container (grid) + Icon Box or Image Box widgets
+   ========================================================================== */
+
+.imperial-feature {
+  display: flex;
+  flex-direction: column;
+  gap: var(--is-space-xs);
+  height: 100%;
+  padding: var(--is-space-lg) var(--is-space-md);
+  background-color: var(--is-surface);
+  border: var(--is-border-width) solid var(--is-hairline);
+  border-left: 3px solid var(--is-red);
+  border-radius: var(--is-radius-sm);
+}
+
+.imperial-feature__title {
+  margin: 0;
+  color: var(--is-white);
+  font-size: var(--is-size-h3);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.imperial-feature__text {
+  margin: 0;
+  color: var(--is-grey-text);
+}
+
+/* On the red band the cards need their own contrast. Solid matte black rather
+   than a black tint over the red, so they read as black boxes, not dark red. */
+.section--red .imperial-feature {
+  background-color: var(--is-black);
+  border-color: var(--is-hairline-dk);
+  border-left-color: var(--is-white);
+}
+
+/* ============================================================================
+   8. PRODUCTS - carousel-free horizontal scroller (homepage)
+   Elementor: Image Carousel widget, 3 slides, 20px radius, white captions
+   ========================================================================== */
+
+.imperial-products__scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  gap: var(--is-gap-grid);
+  padding-bottom: var(--is-space-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--is-red) transparent;
+}
+
+.imperial-products__scroller:focus-visible {
+  outline: 2px solid var(--is-red-bright);
+  outline-offset: 4px;
+}
+
+/* Arrows sit in their own right-aligned row ABOVE the track, never on top of
+   the product photography. */
+.imperial-products__controls {
+  display: flex;
+  gap: var(--is-space-xs);
+  justify-content: flex-end;
+  margin-bottom: var(--is-space-md);
+}
+
+.imperial-products__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: var(--is-border-width) solid var(--is-hairline);
+  border-radius: 50%;
+  color: var(--is-white);
+  cursor: pointer;
+  transition: background-color var(--is-transition), color var(--is-transition),
+              border-color var(--is-transition), opacity var(--is-transition);
+}
+
+.imperial-products__arrow:hover,
+.imperial-products__arrow:focus-visible {
+  background-color: var(--is-red);
+  border-color: var(--is-red);
+  color: var(--is-white);
+}
+
+/* Disabled at the start/end of the track, and hidden when nothing can scroll. */
+.imperial-products__arrow[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.imperial-products__arrow[hidden] { display: none; }
+
+.imperial-products__slide { scroll-snap-align: start; }
+
+.imperial-product-tile {
+  display: block;
+  text-align: center;
+}
+
+.imperial-product-tile__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--is-radius-media);
+  object-fit: cover;
+}
+
+.imperial-product-tile__caption {
+  display: block;
+  margin-top: var(--is-space-sm);
+  color: var(--is-white);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-h3);
+  font-weight: 600;
+}
+
+/* ============================================================================
+   9. PRODUCT DETAIL ROWS (products page)
+   Elementor: one Container per product (flex row, alternating direction)
+   + Heading + Icon List + Image widgets
+   ----------------------------------------------------------------------------
+   Backgrounds alternate matte black / brand red down the page, with the
+   chicken row on yellow.
+   ========================================================================== */
+
+.imperial-product-row { padding-block: var(--is-space-xl); }
+
+.imperial-product-row__title {
+  margin-bottom: var(--is-space-sm);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-h2);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* REVISION (20 Oct 2026): the client asked for the chip to carry black
+   rather than white type, and for the inversion on the red band to go to
+   black-on-red rather than white. Both now hold the same two colours and
+   simply swap which one is the ground, so the chip reads as one component
+   down the page instead of two. Black is also the better of the two on the
+   red: on #FF0000 it measures 4.35:1 against white's 4.00:1. Neither clears
+   the 4.5:1 AA floor at 13px - see docs/BRAND_COLOURS.md. */
+.imperial-product-row__code {
+  display: inline-block;
+  margin-bottom: var(--is-space-sm);
+  padding: 4px 12px;
+  background-color: var(--is-red);
+  border-radius: var(--is-radius-sm);
+  color: var(--is-black);
+  font-size: var(--is-size-eyebrow);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* On the red band the chip inverts to black ground, red type.
+   [FLAG] #FF0000 on #1A1A1A measures 4.35:1 - below the 4.5:1 AA floor for
+   type under 18.66px. The chip is a 13px label, so it does not clear it.
+   This is the client's explicit instruction and has been applied as given;
+   the code is also repeated in the adjacent <h2>, so no information is
+   carried by the chip alone. Noted in docs/BRAND_COLOURS.md. */
+.section--red .imperial-product-row__code {
+  background-color: var(--is-black);
+  color: var(--is-red);
+}
+
+/* On the yellow chicken band it goes matte black. */
+.section--yellow .imperial-product-row__code {
+  background-color: var(--is-black);
+  color: var(--is-yellow);
+}
+
+.imperial-product-row__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--is-radius-media);
+  object-fit: cover;
+}
+
+/* Spec list - Elementor Icon List widget with a check/square icon. */
+.imperial-speclist { display: grid; gap: var(--is-space-xs); }
+
+.imperial-speclist__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--is-space-xs);
+  color: var(--is-white);
+  font-size: var(--is-size-small);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.imperial-speclist__marker {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  background-color: var(--is-red);
+  transform: translateY(-2px);
+}
+
+.section--red .imperial-speclist__marker { background-color: var(--is-white); }
+
+.section--yellow .imperial-speclist__item { color: var(--is-black); }
+.section--yellow .imperial-speclist__marker { background-color: var(--is-black); }
+
+/* Shared statement callout (3-8 oz / double paper). */
+.imperial-callout {
+  padding: var(--is-space-md) var(--is-space-lg);
+  background-color: var(--is-surface);
+  border: var(--is-border-width) solid var(--is-hairline);
+  border-left: 4px solid var(--is-red);
+  border-radius: var(--is-radius-sm);
+}
+
+.imperial-callout__text {
+  margin: 0;
+  color: var(--is-white);
+  font-size: var(--is-size-h3);
+  font-weight: 500;
+}
+
+.imperial-callout--center { text-align: center; }
+
+/* ============================================================================
+   10. CHECKLIST (About page "Ideal for your establishment")
+   Elementor: Icon List widget with a tick icon
+   ========================================================================== */
+
+.imperial-checklist { display: grid; gap: var(--is-space-sm); }
+
+.imperial-checklist__item {
+  display: flex;
+  gap: var(--is-space-sm);
+  align-items: flex-start;
+  color: var(--is-white);
+  font-size: var(--is-size-small);
+  font-weight: 500;
+}
+
+.imperial-checklist__tick {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  background-color: var(--is-red);
+  border-radius: 50%;
+  color: var(--is-white);
+}
+
+.section--red .imperial-checklist__tick {
+  background-color: var(--is-white);
+  color: var(--is-red);
+}
+
+/* ============================================================================
+   11. BADGE / CERTIFICATION STRIP
+   Elementor: Container (grid, 3 columns) + Image widgets
+   ========================================================================== */
+
+.imperial-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--is-space-xs);
+  text-align: center;
+}
+
+/* The certification marks are dark artwork on transparent backgrounds, so on
+   matte black each one gets a white plate and is contained, not cropped. This
+   keeps third-party artwork untouched. */
+.imperial-badge__image {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  padding: var(--is-space-sm);
+  background-color: var(--is-white);
+  border-radius: var(--is-radius-sm);
+  object-fit: contain;
+}
+
+.imperial-badge__label {
+  margin: 0;
+  color: var(--is-white);
+  font-size: var(--is-size-eyebrow);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section--red .imperial-badge__label { color: var(--is-white); }
+
+/* ============================================================================
+   12. CONTACT DETAIL CARDS
+   Elementor: Icon Box widgets in a grid Container
+   ----------------------------------------------------------------------------
+   REVISION (20 Oct 2026): six solid red cards on one screen was "too much
+   red" (client). The red is now an accent, not the ground - these use the
+   same surface treatment every other card on the site already uses
+   (translucent white on matte black, hairline border) with a red left rule,
+   matching .imperial-feature. That drops the red from roughly half the
+   section's area to six 3px rules, keeps the cards legible as cards, and
+   introduces no new colour. It also removes the page's worst contrast
+   problem: white on red at 4.38:1 becomes white on matte black at 17.4:1.
+   ========================================================================== */
+
+.imperial-contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  padding: var(--is-space-md);
+  background-color: var(--is-surface);
+  border: var(--is-border-width) solid var(--is-hairline);
+  border-left: 3px solid var(--is-red);
+  border-radius: var(--is-radius-sm);
+  transition: border-color var(--is-transition), background-color var(--is-transition);
+}
+
+.imperial-contact-card:hover {
+  background-color: var(--is-surface-hi);
+  border-color: var(--is-hairline);
+  border-left-color: var(--is-red);
+}
+
+.imperial-contact-card__label {
+  margin: 0;
+  color: var(--is-grey-muted);
+  font-size: var(--is-size-eyebrow);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.imperial-contact-card__value {
+  margin: 0;
+  color: var(--is-white);
+  font-size: 17px;
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+
+.imperial-contact-card__value a { color: var(--is-white); }
+
+.imperial-contact-card__value a:hover,
+.imperial-contact-card__value a:focus-visible {
+  color: var(--is-red-bright);
+  text-decoration: underline;
+}
+
+.imperial-contact-card__note {
+  margin: 0;
+  color: var(--is-grey-text);
+  font-size: var(--is-size-eyebrow);
+}
+
+/* ============================================================================
+   13. CTA BAND
+   Elementor: Container with red background + Heading + Button widgets
+   ========================================================================== */
+
+.imperial-cta { background-color: var(--is-red); }
+
+.imperial-cta__title {
+  margin-bottom: var(--is-space-xs);
+  color: var(--is-white);
+  font-size: var(--is-size-h2);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.imperial-cta__text {
+  margin-bottom: var(--is-space-md);
+  color: var(--is-white);
+}
+
+/* ============================================================================
+   14. COMING SOON (Retail)
+   Elementor: Container (matte black, min-height 60vh, content centred)
+     > Heading widget
+   ----------------------------------------------------------------------------
+   Client revision (Oct 16): the Retail page is the words COMING SOON, set
+   large, and nothing else. The eyebrow pill, the body copy and the button are
+   gone, so the heading is free to carry the whole page - it fills the viewport
+   between the header and the footer and scales with it.
+   ========================================================================== */
+
+.imperial-soon-section {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  padding-block: var(--is-section-y);
+  background-color: var(--is-black);
+  text-align: center;
+}
+
+.imperial-soon__title {
+  margin: 0;
+  color: var(--is-white);
+  font-family: var(--is-font-condensed);
+  /* Fluid: 48px at 360px wide, capped at 150px - "COMING SOON IN BIG". */
+  font-size: clamp(48px, 13vw, 150px);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+/* ============================================================================
+   15. SITE FOOTER
+   Elementor: Theme Builder > Footer template
+   ========================================================================== */
+
+.imperial-footer {
+  background-color: var(--is-black);
+  border-top: 2px solid var(--is-red);
+}
+
+.imperial-footer__top { padding-block: var(--is-space-xl); }
+
+.imperial-footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+  gap: var(--is-gap-grid);
+}
+
+.imperial-footer__logo {
+  width: 190px;
+  height: auto;
+  margin-bottom: var(--is-space-sm);
+}
+
+.imperial-footer__blurb {
+  color: var(--is-grey-text);
+  font-size: var(--is-size-small);
+}
+
+.imperial-footer__title {
+  margin-bottom: var(--is-space-sm);
+  color: var(--is-white);
+  font-family: var(--is-font-body);
+  font-size: var(--is-size-h3);
+  font-weight: 600;
+  /* 3.9px (the old site's tracking) pushed "Contact us now" onto two lines. */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.imperial-footer__list { display: grid; gap: 6px; }
+
+/* Second selector again covers WordPress's own menu markup. */
+.imperial-footer__link,
+.imperial-footer__list a {
+  color: var(--is-white);
+  font-size: var(--is-size-small);
+}
+
+.imperial-footer__link:hover,
+.imperial-footer__link:focus-visible,
+.imperial-footer__list a:hover,
+.imperial-footer__list a:focus-visible { color: var(--is-red-bright); }
+
+/* wp_nav_menu() renders <li> children; keep the same rhythm as the prototype. */
+.imperial-footer__list li { margin-bottom: 6px; }
+
+.imperial-footer__contact { display: grid; gap: var(--is-space-xs); }
+
+.imperial-footer__contact-item {
+  display: flex;
+  gap: var(--is-space-xs);
+  align-items: baseline;
+  color: var(--is-white);
+  font-size: var(--is-size-small);
+}
+
+.imperial-footer__contact-item a { color: var(--is-white); }
+
+.imperial-footer__contact-label {
+  flex: 0 0 auto;
+  color: var(--is-grey-muted);
+  font-size: var(--is-size-eyebrow);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Social row: non-interactive until the client supplies profile URLs. */
+.imperial-social {
+  display: flex;
+  gap: var(--is-space-xs);
+  margin-top: var(--is-space-md);
+}
+
+.imperial-social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: transparent;
+  border: 2px dashed var(--is-white);
+  border-radius: 50%;
+  color: var(--is-white);
+  font-size: var(--is-size-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.imperial-footer__bottom {
+  padding-block: var(--is-space-sm);
+  background-color: var(--is-black);
+  border-top: var(--is-border-width) solid var(--is-hairline);
+  text-align: center;
+}
+
+.imperial-footer__copyright {
+  margin: 0;
+  color: var(--is-white);
+  font-size: var(--is-size-small);
+  font-weight: 400;
+}
+
+/* ============================================================================
+   16. BACK TO TOP
+   ========================================================================== */
+
+.imperial-to-top {
+  position: fixed;
+  right: var(--is-space-md);
+  bottom: var(--is-space-md);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-color: var(--is-red);
+  border: 0;
+  border-radius: 50%;
+  color: var(--is-white);
+  cursor: pointer;
+  transition: background-color var(--is-transition), opacity var(--is-transition);
+}
+
+.imperial-to-top:hover,
+.imperial-to-top:focus-visible { background-color: var(--is-red-dark); }
+
+/* ============================================================================
+   17. RESPONSIVE OVERRIDES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .imperial-footer__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .imperial-header__logo,
+  .imperial-footer__logo { width: 150px; }
+
+  .imperial-footer__grid { grid-template-columns: 1fr; }
+
+  .imperial-product-row { padding-block: var(--is-space-lg); }
+
+  .imperial-products__scroller { grid-auto-columns: minmax(240px, 1fr); }
+
+  .imperial-values { gap: var(--is-space-sm); }
+
+  .imperial-hero__title,
+  .imperial-hero__line { white-space: normal; }
+
+  /* Full-width pills on mobile, with tighter padding so a long label such as
+     "Call +1 000-000-0000" is never clipped. */
+  .btn {
+    width: 100%;
+    padding-inline: var(--is-space-sm);
+  }
+
+  .btn-row { flex-direction: column; }
+}
