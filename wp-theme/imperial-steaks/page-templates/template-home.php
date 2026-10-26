@@ -291,7 +291,7 @@ get_header();
 
         <div class="imperial-products__slide">
           <a class="imperial-product-tile" href="<?php echo esc_url( home_url( '/products/' ) ); ?>#re">
-            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a case of whole-muscle rib eye rolls" width="1400" height="933">
+            <img class="imperial-product-tile__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a stack of marbled rib eye steaks" width="1400" height="933">
             <span class="imperial-product-tile__caption">Rib Eye &ndash; RE</span>
           </a>
         </div>

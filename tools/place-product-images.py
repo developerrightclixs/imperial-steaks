@@ -89,10 +89,8 @@ print('assets/images/')
 save(src('philly steak raw frozen.jpg').crop((0, 141, 1000, 808)),
      'product-xls.jpg', (1000, 667))
 
-# XL - Traditional Philly. Phone screengrab of the client's dev site: lift the
-# page's own photo card (x 60-1224, y 1209-1749) then extend the grey ground.
-# 34 clean rows at the top of the card, 26 at the bottom.
-save(reflect_pad_to_ratio(src('Traditional Philly \u2013 XL.PNG').crop((60, 1209, 1224, 1749)), 34, 26),
+# XL - Traditional Philly. Client-supplied studio shot on white, already 3:2.
+save(src('Frozen Ground Meat Slab on Parchment.png'),
      'product-xl.jpg', (1200, 800))
 
 # NS - Premium Philly. Same screengrab treatment; the card is white, so plain
@@ -100,9 +98,9 @@ save(reflect_pad_to_ratio(src('Traditional Philly \u2013 XL.PNG').crop((60, 1209
 save(pad_to_ratio(src('Premium Philly \u2013 NS.PNG').crop((60, 715, 1224, 1255)), (255, 255, 255)),
      'product-ns.jpg', (1200, 800))
 
-# RE - Rib Eye. The client's own photograph, one of eight picks. Dropped to
-# 1400 wide to stay inside the 250 KB budget - it is a detailed, noisy frame.
-save(src('Picks for rib eye/IMG_3096.jpeg').crop((0, 126, 2016, 1470)),
+# RE - Rib Eye. Client-supplied studio shot on white, already 3:2.
+# Dropped to 1400 wide; ~265 KB, a touch over the 250 KB budget.
+save(src('Marbled Beef Steak Stack.png'),
      'product-re.jpg', (1400, 933), q=76)
 
 # EPIC - Signature Blend. Stacked sliced portions on white.

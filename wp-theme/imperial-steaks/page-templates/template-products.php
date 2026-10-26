@@ -157,7 +157,7 @@ get_header();
         </div>
 
         <div class="split__col" data-reveal="up">
-          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a case of whole-muscle rib eye rolls" width="1400" height="933">
+          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a stack of marbled rib eye steaks" width="1400" height="933">
         </div>
 
       </div>
