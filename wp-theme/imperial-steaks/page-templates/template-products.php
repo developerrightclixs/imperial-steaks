@@ -226,7 +226,7 @@ get_header();
   <section class="section" aria-labelledby="products-cta-heading">
     <div class="container container--narrow text-center">
       <h2 class="imperial-cta__title" id="products-cta-heading">Contact Us</h2>
-      <p class="imperial-cta__text">Collaborating with ..... supplier with over 100 years experience in the industry we are committed in establishing long-term relationship with all our customers by providing them exceptional value, quality, service, and integrity.</p>
+      <p class="imperial-cta__text">Collaborating with a supplier with over 100 years experience in the industry we are committed in establishing long-term relationship with all our customers by providing them exceptional value, quality, service, and integrity.</p>
       <div class="btn-row" data-reveal="up">
         <a class="btn btn--accent" href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>">Contact us</a>
         <a class="btn btn--outline" href="mailto:kougiek@gmail.com">Email sales</a>

@@ -79,7 +79,7 @@ get_header();
 
           <p class="text-white text-justify">We aim to offer competitive pricing while delivering dependable quality and
             service. Our supplier operates USDA-inspected facilities and holds SQF Level&nbsp;3 certification, which
-            gives us a strong foundation for product quality and consistency. Collaborating with ..... supplier with over 100 years experience in the industry we are committed in establishing long-term relationship with all our customers by providing them exceptional value, quality, service, and integrity.</p>
+            gives us a strong foundation for product quality and consistency. Collaborating with a supplier with over 100 years experience in the industry we are committed in establishing long-term relationship with all our customers by providing them exceptional value, quality, service, and integrity.</p>
         </div>
 
         <div class="split__col" data-reveal="up" data-reveal-delay="1">
@@ -95,7 +95,7 @@ get_header();
                         stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              Ease of Use
+              Ease of Use &mdash; exact cost per serving
             </li>
             <li class="imperial-checklist__item">
               <span class="imperial-checklist__tick" aria-hidden="true">
