@@ -33,7 +33,7 @@ function imperial_steaks_customize_register( $wp_customize ) {
 	$fields = array(
 		'imperial_steaks_phone'          => array(
 			'label'   => esc_html__( 'Phone', 'imperial-steaks' ),
-			'default' => 'XXX-XXX-XXXX',
+			'default' => '514-944-8628',
 			'sanitize' => 'sanitize_text_field',
 		),
 		'imperial_steaks_email'          => array(
@@ -47,14 +47,20 @@ function imperial_steaks_customize_register( $wp_customize ) {
 			'sanitize' => 'esc_url_raw',
 		),
 		'imperial_steaks_location'       => array(
-			'label'   => esc_html__( 'Warehouse', 'imperial-steaks' ),
-			// Non-breaking space (U+00A0) before 8N4 - see the note in footer.php.
-			'default' => "Boucherville, QC J4B\xc2\xa08N4",
+			'label'   => esc_html__( 'Facility (one line per row)', 'imperial-steaks' ),
+			// Non-breaking space (U+00A0) before 8W4 - see the note in footer.php.
+			'default' => "120 Rue T-A-Bombardier\nBoucherville, QC J4B\xc2\xa08W4\nCanada",
+			'sanitize' => 'sanitize_textarea_field',
+			'type'     => 'textarea',
+		),
+		'imperial_steaks_approved'       => array(
+			'label'   => esc_html__( 'Approvals', 'imperial-steaks' ),
+			'default' => "CFIA Approved \xe2\x80\x93 HACCP",
 			'sanitize' => 'sanitize_text_field',
 		),
 		'imperial_steaks_other_offices'  => array(
-			'label'   => esc_html__( 'Other offices', 'imperial-steaks' ),
-			'default' => 'USA and Middle East',
+			'label'   => esc_html__( 'Locations', 'imperial-steaks' ),
+			'default' => "Canada \xe2\x80\x93 USA \xe2\x80\x93 Middle East",
 			'sanitize' => 'sanitize_text_field',
 		),
 		'imperial_steaks_footer_blurb'   => array(
@@ -79,7 +85,7 @@ function imperial_steaks_customize_register( $wp_customize ) {
 			array(
 				'label'   => $field['label'],
 				'section' => 'imperial_steaks_contact',
-				'type'    => 'text',
+				'type'    => isset( $field['type'] ) ? $field['type'] : 'text',
 			)
 		);
 	}
@@ -98,11 +104,12 @@ function imperial_steaks_contact_shortcode( $atts ) {
 	$atts = shortcode_atts( array( 'field' => 'email' ), $atts, 'imperial_contact' );
 
 	$map = array(
-		'phone'    => array( 'imperial_steaks_phone', 'XXX-XXX-XXXX' ),
+		'phone'    => array( 'imperial_steaks_phone', '514-944-8628' ),
 		'email'    => array( 'imperial_steaks_email', 'kougiek@gmail.com' ),
 		'website'  => array( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' ),
-		'location' => array( 'imperial_steaks_location', "Boucherville, QC J4B\xc2\xa08N4" ),
-		'offices'  => array( 'imperial_steaks_other_offices', 'USA and Middle East' ),
+		'location' => array( 'imperial_steaks_location', "120 Rue T-A-Bombardier\nBoucherville, QC J4B\xc2\xa08W4\nCanada" ),
+		'approved' => array( 'imperial_steaks_approved', "CFIA Approved \xe2\x80\x93 HACCP" ),
+		'offices'  => array( 'imperial_steaks_other_offices', "Canada \xe2\x80\x93 USA \xe2\x80\x93 Middle East" ),
 	);
 
 	$key = strtolower( $atts['field'] );
@@ -123,6 +130,10 @@ function imperial_steaks_contact_shortcode( $atts ) {
 
 	if ( 'website' === $key ) {
 		return '<a href="' . esc_url( $value ) . '">' . esc_html( preg_replace( '#^https?://|/$#', '', $value ) ) . '</a>';
+	}
+
+	if ( 'location' === $key ) {
+		return nl2br( esc_html( $value ), false );
 	}
 
 	return esc_html( $value );

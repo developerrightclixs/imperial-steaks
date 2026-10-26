@@ -615,11 +615,14 @@
   text-align: center;
 }
 
+/* Product shots sit on a white card on every band, so each pack reads the same. */
 .imperial-product-tile__image {
   width: 100%;
   aspect-ratio: 3 / 2;
+  padding: var(--is-space-xs);
+  background-color: var(--is-white);
   border-radius: var(--is-radius-media);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .imperial-product-tile__caption {
@@ -661,13 +664,14 @@
 .imperial-product-row__code {
   display: inline-block;
   margin-bottom: var(--is-space-sm);
-  padding: 4px 12px;
+  padding: 10px 24px;
   background-color: var(--is-red);
   border-radius: var(--is-radius-sm);
   color: var(--is-black);
-  font-size: var(--is-size-eyebrow);
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
@@ -691,8 +695,10 @@
 .imperial-product-row__image {
   width: 100%;
   aspect-ratio: 3 / 2;
+  padding: var(--is-space-sm);
+  background-color: var(--is-white);
   border-radius: var(--is-radius-media);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Spec list - Elementor Icon List widget with a check/square icon. */
@@ -844,6 +850,9 @@
   border-color: var(--is-hairline);
   border-left-color: var(--is-red);
 }
+
+/* Spans both columns so an odd card count doesn't leave a hole in the grid. */
+.imperial-contact-card--wide { grid-column: 1 / -1; }
 
 .imperial-contact-card__label {
   margin: 0;

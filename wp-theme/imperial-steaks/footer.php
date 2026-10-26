@@ -85,22 +85,21 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 					 * Contact details are theme-mod driven so the client can edit them in
 					 * Customizer without touching code. Defaults match the brief.
 					 */
-					$tel   = get_theme_mod( 'imperial_steaks_phone', 'XXX-XXX-XXXX' );
+					$tel   = get_theme_mod( 'imperial_steaks_phone', '514-944-8628' );
 					$email = get_theme_mod( 'imperial_steaks_email', 'kougiek@gmail.com' );
 					$web   = get_theme_mod( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' );
-					// The non-breaking space (U+00A0) before 8N4 keeps the postal code whole
-					// when the narrow footer column wraps: "Boucherville, QC" breaks,
-					// "J4B 8N4" never does.
-					$place = get_theme_mod( 'imperial_steaks_location', "Boucherville, QC J4B\xc2\xa08N4" );
-					$also  = get_theme_mod( 'imperial_steaks_other_offices', 'USA and Middle East' );
+					// One address line per row. The non-breaking space (U+00A0) before 8W4
+					// keeps the postal code whole when the narrow footer column wraps.
+					$place    = get_theme_mod( 'imperial_steaks_location', "120 Rue T-A-Bombardier\nBoucherville, QC J4B\xc2\xa08W4\nCanada" );
+					$approved = get_theme_mod( 'imperial_steaks_approved', "CFIA Approved \xe2\x80\x93 HACCP" );
+					$also     = get_theme_mod( 'imperial_steaks_other_offices', "Canada \xe2\x80\x93 USA \xe2\x80\x93 Middle East" );
 					?>
 					<ul class="imperial-footer__contact">
 						<li class="imperial-footer__contact-item">
 							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Tel', 'imperial-steaks' ); ?></span>
 							<?php
-							// The new Imperial Steaks number is still outstanding, so the
-							// default is placeholder text. Only link it once it is a number;
-							// a tel: link with no digits in it is worse than plain text.
+							// Only link it when it is a number; a tel: link with no digits in it
+							// is worse than plain text.
 							$tel_digits = preg_replace( '/[^0-9+]/', '', $tel );
 							if ( strlen( preg_replace( '/[^0-9]/', '', $tel_digits ) ) >= 7 ) :
 								?>
@@ -118,11 +117,15 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 							<a href="<?php echo esc_url( $web ); ?>"><?php echo esc_html( preg_replace( '#^https?://|/$#', '', $web ) ); ?></a>
 						</li>
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Warehouse', 'imperial-steaks' ); ?></span>
-							<span><?php echo esc_html( $place ); ?></span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Facility', 'imperial-steaks' ); ?></span>
+							<span><?php echo nl2br( esc_html( $place ), false ); ?></span>
 						</li>
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Also', 'imperial-steaks' ); ?></span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Approved', 'imperial-steaks' ); ?></span>
+							<span><?php echo esc_html( $approved ); ?></span>
+						</li>
+						<li class="imperial-footer__contact-item">
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Locations', 'imperial-steaks' ); ?></span>
 							<span><?php echo esc_html( $also ); ?></span>
 						</li>
 					</ul>

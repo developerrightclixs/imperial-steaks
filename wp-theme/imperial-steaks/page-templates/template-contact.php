@@ -53,11 +53,7 @@ get_header();
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="1">
           <p class="imperial-contact-card__label">Phone</p>
-          <!-- PENDING CLIENT: new Imperial Steaks phone number. Shown in the
-               XXX-XXX-XXXX format so it reads as a slot waiting for a number
-               rather than as finished copy. Make it a tel: link once the real
-               number arrives. -->
-          <p class="imperial-contact-card__value">XXX-XXX-XXXX</p>
+          <p class="imperial-contact-card__value"><a href="tel:+15149448628">514-944-8628</a></p>
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
@@ -71,8 +67,8 @@ get_header();
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="1">
-          <p class="imperial-contact-card__label">Warehouse</p>
-          <p class="imperial-contact-card__value">Boucherville, QC J4B&nbsp;8N4</p>
+          <p class="imperial-contact-card__label">Facility</p>
+          <p class="imperial-contact-card__value">120 Rue T-A-Bombardier<br>Boucherville, QC J4B&nbsp;8W4<br>Canada</p>
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
@@ -81,8 +77,13 @@ get_header();
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="3">
-          <p class="imperial-contact-card__label">Other offices</p>
-          <p class="imperial-contact-card__value">USA and Middle East</p>
+          <p class="imperial-contact-card__label">Locations</p>
+          <p class="imperial-contact-card__value">Canada &ndash; USA &ndash; Middle East</p>
+        </div>
+
+        <div class="imperial-contact-card imperial-contact-card--wide" data-reveal="up" data-reveal-delay="1">
+          <p class="imperial-contact-card__label">Approved</p>
+          <p class="imperial-contact-card__value">CFIA Approved &ndash; HACCP</p>
         </div>
 
       </div>
