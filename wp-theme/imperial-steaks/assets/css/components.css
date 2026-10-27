@@ -396,6 +396,9 @@
   text-transform: uppercase;
 }
 
+/* The eyebrow's bright red disappears on the red band - white there. */
+.section--red .imperial-intro__eyebrow { color: var(--is-white); }
+
 .imperial-intro__title {
   margin-bottom: var(--is-space-md);
   font-family: var(--is-font-body);
@@ -410,6 +413,13 @@
 }
 
 .imperial-intro__image { border-radius: var(--is-radius-media); }
+
+/* Client asked for the "Collaborating" statement in bold capitals. */
+.imperial-intro__statement {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 
 /* Short red rule used under headings instead of a decorative divider image. */
 .imperial-rule {

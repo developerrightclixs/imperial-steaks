@@ -38,7 +38,7 @@ get_header();
   <section class="section">
     <div class="container">
       <div class="imperial-callout imperial-callout--center" data-reveal="up">
-        <p class="imperial-callout__text">All products come in 3&ndash;8 oz portions, individually layered in double paper.</p>
+        <p class="imperial-callout__text">All products come in 3&ndash;8 oz portions, individually layered in double paper &ndash; chopped, formed and thinly sliced.</p>
       </div>
     </div>
   </section>
