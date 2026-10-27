@@ -46,6 +46,7 @@ get_header();
        Client revision (Oct 27): replaced with the client's own About Us text,
        word for word except two typo fixes ("adverse" -> "diverse",
        "who's" -> "whose"). One paragraph, justified, as the client sent it.
+       Client revision (Oct 27, later): new wording; the 25-years sentence dropped.
        ===================================================================== -->
   <section class="section imperial-intro" aria-labelledby="about-intro-heading">
     <div class="container container--narrow">
@@ -53,12 +54,11 @@ get_header();
 
       <p class="imperial-intro__text text-justify" data-reveal="up">Imperial Steaks is an independent importer /
         distributor whose aim is to be the leading provider of top quality raw thin-sliced beef and chicken Philly
-        steaks. Built on 25 years of restaurant-industry experience, Imperial Steaks and its team are dedicated to
-        transferring their knowledge and expertise. Our vision is to work closely and partner with a diverse range of
-        customers, including distributors, restaurants, retail, institutions and food service operators across Canada.
-        Our commitment is to provide them with premium steak products that will help their business grow. We also
-        offer Halal certified Philly steaks for the ever-changing demographics of our country, which in turn reaches a
-        wider target market.</p>
+        steaks in Canada. Our vision is to work closely and partner with a diverse range of customers, including
+        distributors, restaurants, retail, institutions, and food service operators across Canada. Our commitment is to
+        provide them with premium steak products that will help their business grow. Imperial Steaks also offers Halal
+        certified Philly steaks for the ever-changing demographics of our country, which in turn reaches a wider
+        target market.</p>
     </div>
   </section>
 
@@ -92,7 +92,9 @@ get_header();
 
           <p class="text-white text-justify u-mt-md">Collaborating and being the exclusive importer / distributor in
             Canada and abroad with a trusted and dominant USA-based protein supplier that has served the industry for
-            more than 100 years will enable us to build and differentiate ourselves from other brands.</p>
+            more than 100 years will enable us to build and differentiate ourselves from other brands. We are committed
+            to establishing long-term relationships with our customers and providing them exceptional value and
+            services, which exceed their expectations.</p>
         </div>
 
         <div class="split__col" data-reveal="up" data-reveal-delay="1">
