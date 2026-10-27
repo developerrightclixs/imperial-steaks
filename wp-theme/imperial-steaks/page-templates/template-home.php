@@ -83,8 +83,9 @@ get_header();
        background. The untouched original is kept at
        assets/images/_withdrawn/product-box-open-white-panels.png.
 
-       Client revision (Oct 27): "Premium Philly Steaks" added above the
-       heading and the first paragraph replaced with the client's wording. The
+       Client revision (Oct 27): the "Imperial Steaks" heading is gone;
+       "Premium Philly Steaks" replaces it, in black, at the same size. The
+       first paragraph is replaced with the client's wording. The
        welcome paragraph stays as it was ("paragraph good").
        ===================================================================== -->
   <section class="section section--red imperial-intro" aria-labelledby="intro-heading">
@@ -92,8 +93,7 @@ get_header();
       <div class="split">
 
         <div class="split__col" data-reveal="up">
-          <p class="imperial-intro__eyebrow">Premium Philly Steaks</p>
-          <h2 class="imperial-intro__title" id="intro-heading">Imperial Steaks</h2>
+          <h2 class="imperial-intro__title imperial-intro__title--black" id="intro-heading">Premium Philly Steaks</h2>
           <hr class="imperial-rule imperial-rule--white">
 
           <p class="imperial-intro__text text-justify">Imperial Steaks was established to provide premium beef and chicken
@@ -182,8 +182,10 @@ get_header();
       </div>
 
       <!-- Brand values. Moved out of the hero on the client's instruction;
-           they close the Categories section, under the photography. -->
+           they close the Categories section, under the photography.
+           Client revision (Oct 27): "Partners." leads the line. -->
       <div class="imperial-values u-mt-xl" data-reveal="up">
+        <p class="imperial-values__item">Partners.</p>
         <p class="imperial-values__item">Value.</p>
         <p class="imperial-values__item">Quality.</p>
         <p class="imperial-values__item">Service.</p>
@@ -208,7 +210,7 @@ get_header();
 
       <div class="section__head" data-reveal="up">
         <h2 class="section__title" id="sandwich-steaks-heading">Sandwich Steaks</h2>
-        <hr class="imperial-rule imperial-rule--center imperial-rule--white">
+        <hr class="imperial-rule imperial-rule--center imperial-rule--black">
       </div>
 
       <div class="grid grid--3">

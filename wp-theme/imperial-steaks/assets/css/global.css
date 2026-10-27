@@ -48,6 +48,11 @@
      Pantone 130 C. Used for every chicken product surface, as the beef range
      uses red + black. Always carries black text, never white. */
   --is-yellow:       #F2A900;
+
+  /* --- Global Colours: halal green -----------------------------------------
+     Client, Oct 27. A brighter step of the Halal seal's green (#184F32), so
+     the card title stays legible on the dark card body. */
+  --is-green:        #1F9D55;
   --is-yellow-dark:  #C98A00;
 
   /* --- Global Colours: neutrals ------------------------------------------- */
@@ -68,7 +73,7 @@
      "noticeably smaller than now"). As of 20 Oct both hero lines are set at
      --is-size-hero: the client asked for them matched, so the separate
      --is-size-hero-line step has been retired. */
-  --is-size-hero:        54px;
+  --is-size-hero:        44px;  /* client, Oct 27: 10px smaller */
   --is-size-values:      28px;
   --is-size-h1:          40px;
   --is-size-h2:          30px;

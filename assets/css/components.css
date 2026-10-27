@@ -239,8 +239,14 @@
   gap: var(--is-space-xl);
 }
 
-/* Top left, not centred: the block is only as wide as its longest line. */
-.imperial-hero__text { max-width: 100%; }
+/* Top left, not centred: the block is only as wide as its longest line.
+   Client, Oct 27: lifted 20px. Relative offset moves only the text, so the
+   gap down to the photos grows by the same 20px. */
+.imperial-hero__text {
+  position: relative;
+  top: -20px;
+  max-width: 100%;
+}
 
 /* REVISION (20 Oct 2026): the client asked for sentence case here - "first
    letter capital, rest small" - and for the two lines to match. They are now
@@ -396,9 +402,6 @@
   text-transform: uppercase;
 }
 
-/* The eyebrow's bright red disappears on the red band - white there. */
-.section--red .imperial-intro__eyebrow { color: var(--is-white); }
-
 .imperial-intro__title {
   margin-bottom: var(--is-space-md);
   font-family: var(--is-font-body);
@@ -406,6 +409,9 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+/* Client, Oct 27: "Premium Philly Steaks" heading in black on the red band. */
+.imperial-intro__title--black { color: var(--is-black); }
 
 .imperial-intro__text {
   color: var(--is-white);
@@ -505,15 +511,17 @@
 /* Beef: red + black. */
 .imperial-card--beef { border-top: 4px solid var(--is-red); }
 .imperial-card--beef:hover { border-color: var(--is-red); }
+.imperial-card--beef .imperial-card__title { color: var(--is-red); }
 
 /* Chicken: the yellow scheme. */
 .imperial-card--chicken { border-top: 4px solid var(--is-yellow); }
 .imperial-card--chicken:hover { border-color: var(--is-yellow); }
 .imperial-card--chicken .imperial-card__title { color: var(--is-yellow); }
 
-/* Halal: neutral, so the certification mark carries the card. */
-.imperial-card--halal { border-top: 4px solid var(--is-white); }
-.imperial-card--halal:hover { border-color: var(--is-white); }
+/* Halal: green, taken from the certification mark (client, Oct 27). */
+.imperial-card--halal { border-top: 4px solid var(--is-green); }
+.imperial-card--halal:hover { border-color: var(--is-green); }
+.imperial-card--halal .imperial-card__title { color: var(--is-green); }
 
 /* ============================================================================
    7. FOODSERVICE / CHANNEL BLOCK
