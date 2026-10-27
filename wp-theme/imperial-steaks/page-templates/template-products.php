@@ -83,7 +83,7 @@ get_header();
         <div class="split__col" data-reveal="up">
           <div class="imperial-product-row__media">
             <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-xls.jpg" alt="House Blend XLS - a frozen portion of thinly sliced blended Philly steak" width="1000" height="667">
-            <p class="imperial-product-row__code imperial-product-row__code--tr">XLS</p>
+            <p class="imperial-product-row__code imperial-product-row__code--tl">XLS</p>
           </div>
         </div>
 
@@ -137,7 +137,7 @@ get_header();
         <div class="split__col" data-reveal="up">
           <div class="imperial-product-row__media">
             <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-ns.jpg" alt="Premium Philly NS - frozen sheets of sliced sirloin tip Philly steak, interleaved with parchment" width="1200" height="800">
-            <p class="imperial-product-row__code imperial-product-row__code--bl">NS</p>
+            <p class="imperial-product-row__code imperial-product-row__code--tl">NS</p>
           </div>
         </div>
 
@@ -163,7 +163,7 @@ get_header();
         <div class="split__col" data-reveal="up">
           <div class="imperial-product-row__media">
             <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a stack of marbled rib eye steaks" width="1400" height="933">
-            <p class="imperial-product-row__code imperial-product-row__code--tr">RE</p>
+            <p class="imperial-product-row__code imperial-product-row__code--tl">RE</p>
           </div>
         </div>
 
@@ -189,7 +189,7 @@ get_header();
         <div class="split__col" data-reveal="up">
           <div class="imperial-product-row__media">
             <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-epic.jpg" alt="Signature Blend EPIC - a stack of frozen sliced Signature Blend Philly steak, interleaved with parchment" width="1800" height="1200">
-            <p class="imperial-product-row__code imperial-product-row__code--br">EPIC</p>
+            <p class="imperial-product-row__code imperial-product-row__code--tl">EPIC</p>
           </div>
         </div>
 
