@@ -816,9 +816,10 @@
   color: var(--is-white);
 }
 
+/* Client, Oct 28: inverted - black circle, red tick. */
 .section--red .imperial-checklist__tick {
-  background-color: var(--is-white);
-  color: var(--is-black);  /* client, Oct 27: black check marks */
+  background-color: var(--is-black);
+  color: var(--is-red);
 }
 
 /* ============================================================================
