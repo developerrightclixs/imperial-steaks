@@ -286,7 +286,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--is-space-md);
+  gap: var(--is-space-sm);  /* client, Oct 27: words a little closer */
 }
 
 .imperial-values__item {
