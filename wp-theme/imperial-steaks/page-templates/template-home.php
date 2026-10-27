@@ -94,7 +94,7 @@ get_header();
 
         <div class="split__col" data-reveal="up">
           <h2 class="imperial-intro__title imperial-intro__title--black" id="intro-heading">Premium Philly Steaks</h2>
-          <hr class="imperial-rule imperial-rule--white">
+          <hr class="imperial-rule imperial-rule--black">
 
           <p class="imperial-intro__text text-justify">Imperial Steaks was established to provide premium beef and chicken
             products that will exceed our customers&rsquo; expectations. Our goal and commitment is to establish long-term
