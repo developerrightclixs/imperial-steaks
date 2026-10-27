@@ -198,12 +198,13 @@ get_header();
   <!-- ========================================================================
        SECTION 4 of 6 - Sandwich Steaks
        BACKGROUND: BRAND RED
-       Container (background Brand Red) > Heading + Container (grid, 3 cols)
-         > Icon Box widget x3
+       Container (background Brand Red) > Heading + Container (grid, 2 cols)
+         > Icon Box widget x2
        ----------------------------------------------------------------------
        Client revision (Oct 27): "Foodservice" replaced by "Sandwich Steaks";
-       institutions added to the customer list; Serving Suggestions added; the
-       portion card now carries the full "All products" list.
+       institutions added to the customer list; Serving Suggestions added.
+       The "All products" card was removed at the client's request - the same
+       portion details stay in the callout under the Products carousel.
        ===================================================================== -->
   <section class="section section--red imperial-foodservice" id="sandwich-steaks" aria-labelledby="sandwich-steaks-heading">
     <div class="container">
@@ -213,7 +214,7 @@ get_header();
         <hr class="imperial-rule imperial-rule--center imperial-rule--black">
       </div>
 
-      <div class="grid grid--3">
+      <div class="grid grid--2">
 
         <article class="imperial-feature" data-reveal="up" data-reveal-delay="1">
           <h3 class="imperial-feature__title">Built for busy kitchens</h3>
@@ -223,12 +224,6 @@ get_header();
         <article class="imperial-feature" data-reveal="up" data-reveal-delay="2">
           <h3 class="imperial-feature__title">Serving suggestions</h3>
           <p class="imperial-feature__text text-white">Salads, tacos, sandwiches and pizza toppings.</p>
-        </article>
-
-        <article class="imperial-feature" data-reveal="up" data-reveal-delay="3">
-          <h3 class="imperial-feature__title">All products</h3>
-          <p class="imperial-feature__text text-white">3&ndash;8 oz portions, individually layered in double paper.
-            Chopped, formed and thinly sliced.</p>
         </article>
 
       </div>

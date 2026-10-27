@@ -24,9 +24,8 @@ get_header();
        Container (background Matte Black, red bottom border) > Heading widget
        ===================================================================== -->
   <section class="imperial-banner">
-    <div class="container">
+    <div class="container text-center">
       <h1 class="imperial-banner__title" data-reveal="down">About Us</h1>
-      <p class="imperial-banner__subtitle">Philly steak importer &amp; distributor</p>
     </div>
   </section>
 

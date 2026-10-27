@@ -76,7 +76,9 @@ add_action( 'after_setup_theme', 'imperial_steaks_content_width', 0 );
  * @return string
  */
 function imperial_steaks_default_blurb() {
-	return __( 'Philly steak importer and distributor serving foodservice and retail customers.', 'imperial-steaks' );
+	// Client, Oct 27: the line under the footer logo is removed. Empty means
+	// footer.php prints nothing; it can still be set in the Customizer.
+	return '';
 }
 
 /**
