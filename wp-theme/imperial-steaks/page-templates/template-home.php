@@ -348,7 +348,7 @@ get_header();
     <div class="container">
 
       <h2 class="section__title text-center" id="badges-heading">Standards</h2>
-      <hr class="imperial-rule imperial-rule--center imperial-rule--white">
+      <hr class="imperial-rule imperial-rule--center imperial-rule--black">
 
       <div class="grid grid--3 u-mt-lg">
 

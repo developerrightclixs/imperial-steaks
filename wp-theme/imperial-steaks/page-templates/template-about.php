@@ -79,7 +79,7 @@ get_header();
   <section class="section section--red" aria-labelledby="about-split-heading">
     <div class="container">
       <h2 class="sr-only" id="about-split-heading">Quality, pricing and fit</h2>
-      <div class="split">
+      <div class="split split--top">
 
         <div class="split__col" data-reveal="up">
           <h3 class="imperial-intro__title text-white">Quality &amp; pricing</h3>

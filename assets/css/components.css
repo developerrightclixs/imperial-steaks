@@ -443,6 +443,10 @@
 
 .imperial-rule--black { background-color: var(--is-black); }
 
+/* The rule under the values line. .imperial-rule's margin shorthand would
+   otherwise zero the gap and sit the rule on the letters. */
+.imperial-values + .imperial-rule { margin-top: var(--is-space-md); }
+
 /* ============================================================================
    6. CATEGORY CARDS (Beef / Chicken / Halal)
    Elementor: Container (grid, 3 columns) + Image Box widgets
@@ -665,7 +669,8 @@
 .imperial-product-row { padding-block: var(--is-space-xl); }
 
 .imperial-product-row__title {
-  margin-bottom: var(--is-space-sm);
+  /* Oct 28: every heading sits 24px above its rule, site-wide */
+  margin-bottom: var(--is-space-md);
   font-family: var(--is-font-body);
   font-size: var(--is-size-h2);
   font-weight: 600;
@@ -929,7 +934,8 @@
 .imperial-cta { background-color: var(--is-red); }
 
 .imperial-cta__title {
-  margin-bottom: var(--is-space-xs);
+  /* Oct 28: every heading sits 24px above its rule, site-wide */
+  margin-bottom: var(--is-space-md);
   color: var(--is-white);
   font-size: var(--is-size-h2);
   font-weight: 600;
