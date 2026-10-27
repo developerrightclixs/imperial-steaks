@@ -710,6 +710,23 @@
   color: var(--is-yellow);
 }
 
+/* Client, Oct 27: the code chip sits small inside the photo, one corner per
+   product, instead of above the title. */
+.imperial-product-row__media { position: relative; }
+
+.imperial-product-row__media .imperial-product-row__code {
+  position: absolute;
+  margin: 0;
+  padding: 5px 12px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.imperial-product-row__code--tl { top: var(--is-space-md); left: var(--is-space-md); }
+.imperial-product-row__code--tr { top: var(--is-space-md); right: var(--is-space-md); }
+.imperial-product-row__code--bl { bottom: var(--is-space-md); left: var(--is-space-md); }
+.imperial-product-row__code--br { bottom: var(--is-space-md); right: var(--is-space-md); }
+
 .imperial-product-row__image {
   width: 100%;
   aspect-ratio: 3 / 2;
@@ -795,7 +812,7 @@
 
 .section--red .imperial-checklist__tick {
   background-color: var(--is-white);
-  color: var(--is-red);
+  color: var(--is-black);  /* client, Oct 27: black check marks */
 }
 
 /* ============================================================================

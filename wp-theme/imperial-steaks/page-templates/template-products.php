@@ -26,7 +26,6 @@ get_header();
   <section class="imperial-banner">
     <div class="container">
       <h1 class="imperial-banner__title" data-reveal="down">Products</h1>
-      <p class="imperial-banner__subtitle">Thin-sliced beef &amp; chicken steak</p>
     </div>
   </section>
 
@@ -71,7 +70,6 @@ get_header();
       <div class="split">
 
         <div class="split__col" data-reveal="up">
-          <p class="imperial-product-row__code">XLS</p>
           <h2 class="imperial-product-row__title" id="xls-heading">House Blend &ndash; XLS</h2>
           <hr class="imperial-rule">
           <ul class="imperial-speclist">
@@ -83,7 +81,10 @@ get_header();
         </div>
 
         <div class="split__col" data-reveal="up">
-          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-xls.jpg" alt="House Blend XLS - a frozen portion of thinly sliced blended Philly steak" width="1000" height="667">
+          <div class="imperial-product-row__media">
+            <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-xls.jpg" alt="House Blend XLS - a frozen portion of thinly sliced blended Philly steak" width="1000" height="667">
+            <p class="imperial-product-row__code imperial-product-row__code--tr">XLS</p>
+          </div>
         </div>
 
       </div>
@@ -96,9 +97,8 @@ get_header();
       <div class="split split--reverse">
 
         <div class="split__col" data-reveal="up">
-          <p class="imperial-product-row__code">XL</p>
           <h2 class="imperial-product-row__title" id="xl-heading">Traditional Philly &ndash; XL</h2>
-          <hr class="imperial-rule imperial-rule--white">
+          <hr class="imperial-rule imperial-rule--black">
           <ul class="imperial-speclist">
             <li class="imperial-speclist__item"><span class="imperial-speclist__marker" aria-hidden="true"></span>100% sirloin tip (peeled knuckles)</li>
             <li class="imperial-speclist__item"><span class="imperial-speclist__marker" aria-hidden="true"></span>Marinated whole muscle</li>
@@ -107,7 +107,10 @@ get_header();
         </div>
 
         <div class="split__col" data-reveal="up">
-          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-xl.jpg" alt="Traditional Philly XL - a frozen sheet of marinated sirloin tip Philly steak on parchment" width="1200" height="800">
+          <div class="imperial-product-row__media">
+            <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-xl.jpg" alt="Traditional Philly XL - a frozen sheet of marinated sirloin tip Philly steak on parchment" width="1200" height="800">
+            <p class="imperial-product-row__code imperial-product-row__code--tl">XL</p>
+          </div>
         </div>
 
       </div>
@@ -120,7 +123,6 @@ get_header();
       <div class="split">
 
         <div class="split__col" data-reveal="up">
-          <p class="imperial-product-row__code">NS</p>
           <h2 class="imperial-product-row__title" id="ns-heading">Premium Philly &ndash; NS</h2>
           <hr class="imperial-rule">
           <ul class="imperial-speclist">
@@ -133,7 +135,10 @@ get_header();
         </div>
 
         <div class="split__col" data-reveal="up">
-          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-ns.jpg" alt="Premium Philly NS - frozen sheets of sliced sirloin tip Philly steak, interleaved with parchment" width="1200" height="800">
+          <div class="imperial-product-row__media">
+            <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-ns.jpg" alt="Premium Philly NS - frozen sheets of sliced sirloin tip Philly steak, interleaved with parchment" width="1200" height="800">
+            <p class="imperial-product-row__code imperial-product-row__code--bl">NS</p>
+          </div>
         </div>
 
       </div>
@@ -146,9 +151,8 @@ get_header();
       <div class="split split--reverse">
 
         <div class="split__col" data-reveal="up">
-          <p class="imperial-product-row__code">RE</p>
           <h2 class="imperial-product-row__title" id="re-heading">Rib Eye &ndash; RE</h2>
-          <hr class="imperial-rule imperial-rule--white">
+          <hr class="imperial-rule imperial-rule--black">
           <ul class="imperial-speclist">
             <li class="imperial-speclist__item"><span class="imperial-speclist__marker" aria-hidden="true"></span>Whole-muscle ribeye rolls</li>
             <li class="imperial-speclist__item"><span class="imperial-speclist__marker" aria-hidden="true"></span>Sliced very thin</li>
@@ -157,7 +161,10 @@ get_header();
         </div>
 
         <div class="split__col" data-reveal="up">
-          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a stack of marbled rib eye steaks" width="1400" height="933">
+          <div class="imperial-product-row__media">
+            <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-re.jpg" alt="Rib Eye RE - a stack of marbled rib eye steaks" width="1400" height="933">
+            <p class="imperial-product-row__code imperial-product-row__code--tr">RE</p>
+          </div>
         </div>
 
       </div>
@@ -170,7 +177,6 @@ get_header();
       <div class="split">
 
         <div class="split__col" data-reveal="up">
-          <p class="imperial-product-row__code">EPIC</p>
           <h2 class="imperial-product-row__title" id="epic-heading">Signature Blend &ndash; EPIC</h2>
           <hr class="imperial-rule">
           <ul class="imperial-speclist">
@@ -181,7 +187,10 @@ get_header();
         </div>
 
         <div class="split__col" data-reveal="up">
-          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-epic.jpg" alt="Signature Blend EPIC - a stack of frozen sliced Signature Blend Philly steak, interleaved with parchment" width="1800" height="1200">
+          <div class="imperial-product-row__media">
+            <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-epic.jpg" alt="Signature Blend EPIC - a stack of frozen sliced Signature Blend Philly steak, interleaved with parchment" width="1800" height="1200">
+            <p class="imperial-product-row__code imperial-product-row__code--br">EPIC</p>
+          </div>
         </div>
 
       </div>
@@ -196,7 +205,6 @@ get_header();
       <div class="split split--reverse">
 
         <div class="split__col" data-reveal="up">
-          <p class="imperial-product-row__code">CHX</p>
           <h2 class="imperial-product-row__title" id="chx-heading">Premium Chicken &ndash; CHX</h2>
           <hr class="imperial-rule imperial-rule--black">
           <ul class="imperial-speclist">
@@ -207,7 +215,10 @@ get_header();
         </div>
 
         <div class="split__col" data-reveal="up">
-          <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-chx.jpg" alt="Premium Chicken CHX - a stack of frozen sliced chicken breast Philly steak, interleaved with parchment" width="900" height="600">
+          <div class="imperial-product-row__media">
+            <img class="imperial-product-row__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-chx.jpg" alt="Premium Chicken CHX - a stack of frozen sliced chicken breast Philly steak, interleaved with parchment" width="900" height="600">
+            <p class="imperial-product-row__code imperial-product-row__code--tl">CHX</p>
+          </div>
         </div>
 
       </div>
@@ -225,7 +236,7 @@ get_header();
   <section class="section" aria-labelledby="products-cta-heading">
     <div class="container container--narrow text-center">
       <h2 class="imperial-cta__title" id="products-cta-heading">Contact Us</h2>
-      <p class="imperial-cta__text">Collaborating with a supplier with over 100 years experience in the industry we are committed in establishing long-term relationship with all our customers by providing them exceptional value, quality, service, and integrity.</p>
+      <hr class="imperial-rule imperial-rule--center">
       <div class="btn-row" data-reveal="up">
         <a class="btn btn--accent" href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>">Contact us</a>
         <a class="btn btn--outline" href="mailto:kougiek@gmail.com">Email sales</a>
