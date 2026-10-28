@@ -43,8 +43,8 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 				<a class="imperial-header__brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"
 				   aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) . ' - home' ); ?>">
 					<img class="imperial-header__logo"
-					     src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-concept-2.svg' ); ?>"
-					     alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="462" height="178">
+					     src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>"
+					     alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="970" height="343">
 				</a>
 			<?php endif; ?>
 

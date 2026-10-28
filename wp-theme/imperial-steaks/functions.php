@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // No direct access.
 }
 
-define( 'IMPERIAL_STEAKS_VERSION', '1.4.0' );
+define( 'IMPERIAL_STEAKS_VERSION', '1.5.0' );
 
 /**
  * Theme supports and menus.
@@ -33,7 +33,7 @@ function imperial_steaks_setup() {
 		array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' )
 	);
 
-	// The supplied logo is 150x79; flex sizing lets the client swap in a larger one.
+	// The supplied logo is 970x343 (logo.png); flex sizing lets the client swap in a larger one.
 	add_theme_support(
 		'custom-logo',
 		array(

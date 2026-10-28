@@ -27,8 +27,8 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 						<?php the_custom_logo(); ?>
 					<?php else : ?>
 						<img class="imperial-footer__logo"
-						     src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-concept-2.svg' ); ?>"
-						     alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="462" height="178">
+						     src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>"
+						     alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="970" height="343">
 					<?php endif; ?>
 					<?php
 					/*
