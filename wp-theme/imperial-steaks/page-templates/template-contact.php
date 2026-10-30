@@ -53,11 +53,12 @@ get_header();
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="1">
           <p class="imperial-contact-card__label">Phone</p>
-          <p class="imperial-contact-card__value"><a href="tel:+15149448628">514-944-8628</a></p>
+          <p class="imperial-contact-card__value"><a href="tel:+15149448628">514.944.8628</a></p>
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
           <p class="imperial-contact-card__label">Email</p>
+          <p class="imperial-contact-card__value"><a href="mailto:info@imperialsteaks.com">info@imperialsteaks.com</a></p>
           <p class="imperial-contact-card__value"><a href="mailto:kougiek@gmail.com">kougiek@gmail.com</a></p>
         </div>
 
@@ -97,7 +98,7 @@ get_header();
        AUDIT NOTE: the old site shows a "send us a message" heading with no
        working form behind it. No fake form has been built here. At migration,
        drop an Elementor Form widget (Pro) or a WPForms/Contact Form 7 shortcode
-       into this Container and route submissions to kougiek@gmail.com.
+       into this Container and route submissions to info@imperialsteaks.com.
        ===================================================================== -->
   <section class="section section--red" aria-labelledby="message-heading">
     <div class="container container--narrow text-center">
@@ -108,7 +109,7 @@ get_header();
         pricing, availability and samples for your operation.</p>
 
       <div class="btn-row" data-reveal="up">
-        <a class="btn btn--primary" href="mailto:kougiek@gmail.com">Email sales</a>
+        <a class="btn btn--primary" href="mailto:info@imperialsteaks.com">Email sales</a>
       </div>
 
     </div>

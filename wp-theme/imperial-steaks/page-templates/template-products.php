@@ -239,7 +239,7 @@ get_header();
       <hr class="imperial-rule imperial-rule--center">
       <div class="btn-row" data-reveal="up">
         <a class="btn btn--accent" href="<?php echo esc_url( home_url( '/contact-us/' ) ); ?>">Contact us</a>
-        <a class="btn btn--outline" href="mailto:kougiek@gmail.com">Email sales</a>
+        <a class="btn btn--outline" href="mailto:info@imperialsteaks.com">Email sales</a>
       </div>
     </div>
   </section>

@@ -88,7 +88,7 @@ Plus, not imagery: the new phone number.
 | `logo-concept-1.svg` / `-onred` / `-onlight` | `logo-concepts.html` | Concept 1, three backgrounds |
 | `logo-concept-2.svg` / `-onred` / `-onlight` | Site header + footer, `logo-concepts.html` | **Concept 2 is the one currently live on the review build** |
 | `logo-concept-3.svg` / `-onred` / `-onlight` | `logo-concepts.html` | Concept 3, three backgrounds |
-| `product-box-open.webp` / `.png` | Home intro | **Client-supplied photograph of the printed case**, supplied Oct 15. Open case on transparency, so it sits straight on the matte black. WebP is served first, the PNG is the old-browser fallback |
+| `product-box-open.webp` / `.png` | Home intro | **Client-supplied photograph of the printed case**, supplied Oct 15. Open case on transparency, so it sits straight on the matte black. WebP is served first, the PNG is the old-browser fallback. **Regenerated 30 Oct by `tools/fix-box-image.py`** from the untouched original — rerun the script, do not hand-edit the PNG. Two things that round: the front panel is now redrawn as one quad (the previous patch did not line up and showed a seam), and the printed wordmark is replaced by `logo.png`, so **the picture no longer matches a carton printed with the old mark** |
 | `favicon.svg` | All pages | Matte black tile, brand red frame |
 
 All logo artwork is vector with the type converted to outlines, so it scales to
@@ -375,7 +375,7 @@ Kept on disk only so the decision is reversible.
 | `product-xl.jpg`, `product-ns.jpg`, `product-re.jpg` | Recovered from the old site. **Not** the same photographs as the live `product-xl/ns/re.jpg` — these are generic cooked-steak stock at 768 × 512 |
 | `product-puck.jpg` | Recovered from the old site, and Puck is removed from the range |
 | `category-beef.jpg`, `category-chicken.jpg` | **Restored to the live set on 16 Oct** — the client asked for the cattle and poultry shots back. The copies here are the originals; see §2a |
-| `product-box-open-white-panels.png` / `.webp` | The carton photograph **before** the 16 Oct retouch, with the white bottom panel and white cut edges still on it. Keep: it is the only copy of the untouched original |
+| `product-box-open-white-panels.png` / `.webp` | The carton photograph **before** any retouch, with the unprinted white panels still on it. **Keep — `tools/fix-box-image.py` reads it every time**, so it is a build input, not just an archive copy |
 | `hero-philly-steak.png` | The hero no longer carries an image at all |
 | `home-intro-steak.png` | Old-brand carton; replaced by `product-box-mockup.svg` |
 | `product-box-mockup.svg` | Drawn stand-in carton; replaced Oct 15 by the client's `product-box-open` photograph |

@@ -183,13 +183,14 @@ get_header();
 
       <!-- Brand values. Moved out of the hero on the client's instruction;
            they close the Categories section, under the photography.
-           Client revision (Oct 27): "Partners." leads the line. -->
+           Client revision (Oct 27): "Partners." leads the line.
+           Client revision (Oct 30): each word trails off - five dots, not one. -->
       <div class="imperial-values u-mt-xl" data-reveal="up">
-        <p class="imperial-values__item">Partners.</p>
-        <p class="imperial-values__item">Value.</p>
-        <p class="imperial-values__item">Quality.</p>
-        <p class="imperial-values__item">Service.</p>
-        <p class="imperial-values__item">Integrity.</p>
+        <p class="imperial-values__item">Partners<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Value<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Quality<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Service<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Integrity<span class="imperial-values__dots">.....</span></p>
       </div>
 
     </div>
@@ -223,7 +224,7 @@ get_header();
 
         <article class="imperial-feature" data-reveal="up" data-reveal-delay="2">
           <h3 class="imperial-feature__title">Serving suggestions</h3>
-          <p class="imperial-feature__text text-white">Salads, tacos, sandwiches and pizza toppings.</p>
+          <p class="imperial-feature__text text-white">Subs, salads, tacos, sandwiches, pizza toppings, and&nbsp;/&nbsp;or hoagies.</p>
         </article>
 
       </div>

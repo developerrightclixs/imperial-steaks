@@ -47,18 +47,27 @@ get_header();
        word for word except two typo fixes ("adverse" -> "diverse",
        "who's" -> "whose"). One paragraph, justified, as the client sent it.
        Client revision (Oct 27, later): new wording; the 25-years sentence dropped.
+
+       Client revision (Oct 30): the single block is split into the client's
+       three paragraphs - Imperial / Our vision / Our commitment - each with a
+       first-line indent, and the Halal sentence moves up to sit directly after
+       the first sentence, the one ending "in Canada".
        ===================================================================== -->
   <section class="section imperial-intro" aria-labelledby="about-intro-heading">
     <div class="container container--narrow">
       <h2 class="sr-only" id="about-intro-heading">About Imperial Steaks</h2>
 
-      <p class="imperial-intro__text text-justify" data-reveal="up">Imperial Steaks is an independent importer /
-        distributor whose aim is to be the leading provider of top quality raw thin-sliced beef and chicken Philly
-        steaks in Canada. Our vision is to work closely and partner with a diverse range of customers, including
-        distributors, restaurants, retail, institutions, and food service operators across Canada. Our commitment is to
-        provide them with premium steak products that will help their business grow. Imperial Steaks also offers Halal
-        certified Philly steaks for the ever-changing demographics of our country, which in turn reaches a wider
-        target market.</p>
+      <p class="imperial-intro__text text-justify text-indent" data-reveal="up">Imperial Steaks is an independent
+        importer / distributor whose aim is to be the leading provider of top quality raw thin-sliced beef and chicken
+        Philly steaks in Canada. Imperial Steaks also offers Halal certified Philly steaks for the ever-changing
+        demographics of our country, which in turn reaches a wider target market.</p>
+
+      <p class="imperial-intro__text text-justify text-indent" data-reveal="up">Our vision is to work closely and
+        partner with a diverse range of customers, including distributors, restaurants, retail, institutions, and food
+        service operators across Canada.</p>
+
+      <p class="imperial-intro__text text-justify text-indent" data-reveal="up">Our commitment is to provide them with
+        premium steak products that will help their business grow.</p>
     </div>
   </section>
 
@@ -187,6 +196,7 @@ get_header();
        Elementor section: Values Band + CTA
        Container (background Brand Red) > 4 Heading widgets + Button widget
        Values corrected per the client: Quality was missing from the build.
+       Client revision (Oct 30): the dots match the home page's values line.
        ===================================================================== -->
   <section class="section section--red" aria-labelledby="values-heading">
     <div class="container container--narrow text-center">
@@ -194,10 +204,10 @@ get_header();
       <h2 class="sr-only" id="values-heading">Our values</h2>
 
       <div class="imperial-values" data-reveal="down">
-        <p class="imperial-values__item">Value.</p>
-        <p class="imperial-values__item">Quality.</p>
-        <p class="imperial-values__item">Service.</p>
-        <p class="imperial-values__item">Integrity.</p>
+        <p class="imperial-values__item">Value<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Quality<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Service<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Integrity<span class="imperial-values__dots">.....</span></p>
       </div>
       <hr class="imperial-rule imperial-rule--center imperial-rule--black u-mt-md">
 

@@ -16,7 +16,7 @@ later WordPress + Elementor rebuild.
 > **Three things to confirm before launch:**
 > 1. The old reference site is **tastysteaks.ca**, but the new brand was given as
 >    `imperialsteaks.com`. Verify the business actually owns that domain.
-> 2. `sales@imperialsteaks.com` must be a mailbox that exists before launch.
+> 2. `info@imperialsteaks.com` must be a mailbox that exists before launch.
 > 3. **White body copy on the new red measures 4.2:1 — just under WCAG AA.**
 >    It was 5.9:1 on the previous red. Headings and buttons are fine; the 16px
 >    paragraphs on the red bands are not. Detail and the three ways out:
@@ -103,6 +103,66 @@ all extraction filtered it out explicitly.
 The client should be told the reference site appears compromised, and the host
 should audit the install. It is also an additional reason not to restore a
 backup. Full detail: `docs/SITE_AUDIT.md` §3.
+
+---
+
+## What changed in this round (30 Oct 2026 — client website changes)
+
+Seven items off the client's notes. Six are done; the brochure is held.
+
+* **The carton on the home page was rebuilt from the untouched original.**
+  The client's note was "fix the clean as it shows broken", and he was right:
+  the earlier retouch had pasted a black rectangle over the unprinted left half
+  of the front panel, and it did not line up with the printed label beside it,
+  so the panel showed a step and a vertical seam. `tools/fix-box-image.py` now
+  regenerates the file from
+  `assets/images/_withdrawn/product-box-open-white-panels.png`: it finds the
+  unprinted half and the printed label as connected regions, takes the convex
+  hull of the two — which is the carton's real front quad — and fills it with
+  the label's own black, so there is nothing left to misalign. The lid strip is
+  recoloured in place, keeping its rounded corner. Rerun the script rather than
+  hand-editing the PNG.
+* **The wordmark on the carton is the brand logo.** The condensed sans
+  "IMPERIAL / STEAKS" that was printed on the box is replaced by `logo.png`,
+  centred on the now-uniform panel. **This means the photograph no longer shows
+  the carton as it is actually printed** — if the cartons on the floor still
+  carry the old mark, the picture is ahead of the product. Flagged, not fixed.
+* **The five brand values trail off in dots.** "PARTNERS….. VALUE….. QUALITY…..
+  SERVICE….. INTEGRITY….." The dots are a span of their own, set at 0.8em with
+  no tracking, so the run reads as one ellipsis rather than five separate
+  marks. `--is-size-values` came down 28px → 24px so the line still holds one
+  row at full width; at 28px it broke, leaving INTEGRITY stranded underneath.
+* **Serving suggestions take the client's wording.** "Subs, salads, tacos,
+  sandwiches, pizza toppings, and / or hoagies."
+* **About Us is three indented paragraphs.** Imperial / Our vision / Our
+  commitment, each with the first-line indent he asked for (`.text-indent`,
+  2.5em). The Halal sentence moved out of the tail and now sits directly after
+  the first sentence, the one ending "in Canada", as instructed. No wording
+  changed.
+* **The product code chips are readable.** 14px → 22px, with the padding and
+  tracking stepped up to match. They sit in the same corner of the same photo.
+* **Contact details.** The phone is written `514.944.8628` — dots, not hyphens
+  — everywhere it is displayed; the `tel:` href keeps the dialable `+1` form.
+  `info@imperialsteaks.com` is added alongside `kougiek@gmail.com` in every
+  footer and on the Contact page, and it is what the "Email sales" buttons and
+  the Contact meta description now use. In the WordPress theme the second
+  address is its own Customizer field (`imperial_steaks_email_alt`) and the
+  footer hides the row when it is blank.
+  **`info@imperialsteaks.com` must be a live mailbox before launch** — it joins
+  the domain-ownership question already open at the top of this file.
+
+**Held:** the print brochure. The client asked for it finished for Monday, but
+nothing has been started in this repo — the only brochure artefact is
+`tastysteaksbrochure_copy.docx`, which is the previous company's document,
+carries the old Tasty Steaks item numbers and spec sheet, and ends on
+`www.tastysteaks.ca`. Format, page count, fold and whether the legacy item list
+applies to the six-product Imperial range are all unanswered, so it is being
+scoped separately rather than guessed at.
+
+**Answered for the client:** yes — the logo sets the I and the L of IMPERIAL,
+and the first and last S of STEAKS, larger than the letters between them. That
+is the drawing as supplied and it is what the site, the theme and now the
+carton all use.
 
 ---
 
@@ -283,7 +343,7 @@ section now sets its own background and the page alternates
 ### Site-wide
 * **Rebrand:** Tasty Steaks → Imperial Steaks everywhere — logo, header, footer,
   copyright, body copy, product box, `imperialsteaks.com`,
-  `sales@imperialsteaks.com`.
+  `info@imperialsteaks.com`.
 * **Three logo concepts** delivered for selection at **`logo-concepts.html`**,
   each on matte black, brand red and white. IMPERIAL dominates, STEAKS is the
   quiet word. Concept 2 is in place on the review build.

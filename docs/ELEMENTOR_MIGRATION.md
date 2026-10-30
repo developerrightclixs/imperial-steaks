@@ -173,7 +173,7 @@ five pages.
 | Column 1: logo + `.imperial-footer__blurb` | **Site Logo** + **Text Editor** | Logo 200px · Text: Body Grey 14px |
 | Column 2 heading + list | **Heading** + **Nav Menu** | Heading: Poppins 20/600, 2px tracking, uppercase, white · Menu: WP menu **"Footer — Company"** (Home, About Us, Products, Retail, Contact Us), vertical |
 | Column 3 heading + list | **Heading** + **Nav Menu** | WP menu **"Footer — Products"** — **6** custom links to `/products/#xls`, `#xl`, `#ns`, `#re`, `#epic`, `#chx`. Puck is removed from the range |
-| Column 4 heading + contact list | **Heading** + **Icon List** | 5 items: Tel (**plain text `XXX-XXX-XXXX` until the client supplies the new number — do not link it**), Email (`mailto:sales@imperialsteaks.com`), Web (`https://imperialsteaks.com/`), **Warehouse** (Boucherville, QC J4B 8N4), Also (USA and Middle East) · Icons white · Text white 14px |
+| Column 4 heading + contact list | **Heading** + **Icon List** | 5 items: Tel (**plain text `XXX-XXX-XXXX` until the client supplies the new number — do not link it**), Email (`mailto:info@imperialsteaks.com`), Web (`https://imperialsteaks.com/`), **Warehouse** (Boucherville, QC J4B 8N4), Also (USA and Middle East) · Icons white · Text white 14px |
 | `.imperial-social` | **Social Icons** widget | Instagram / Facebook / X · Shape: Circle · Background transparent · Border 2px **dashed** white · **URLs pending from client** |
 | `.imperial-footer__bottom` | **Container** | Background: Matte Black · Border-top hairline · Padding block 16px · Centered **Heading/Text**: Poppins 14/400 white |
 
@@ -270,7 +270,7 @@ or the other.
 | 1 | `.imperial-banner.imperial-banner--sm` | Container + **Heading** (H1 "Contact Us") + **Text Editor** | **Smaller than the other banners**, per the client. Title is just "Contact Us"; subtitle "Sales & Inquiries" |
 | 2 | Contact details | Container: Matte Black → **Heading** + **Divider** + 2-column grid of 6 cards | **Client revision: the dark boxes with thin red lines are gone.** Every card is now solid Brand Red with white text — one uniform treatment. The "IS" monogram image on the right has been removed. **16 Oct:** the "Location" card is now labelled **Warehouse** and reads **Boucherville, QC J4B 8N4** |
 | | Phone card | **Icon Box** | Same solid red card as the other five — the client asked for one uniform treatment. Reads `XXX-XXX-XXXX` **pending the client's new number**; add the `tel:` link once it arrives |
-| | Email / Website | Must stay real links | `mailto:sales@imperialsteaks.com` · `https://imperialsteaks.com/` |
+| | Email / Website | Must stay real links | `mailto:info@imperialsteaks.com` · `https://imperialsteaks.com/` |
 | 3 | `.section--red` (Send us a message) | Container: Brand Red, narrow, centred → **Heading** + **Text Editor** + **Button** | **Add the Elementor Form widget here.** The prototype ships no fake form; the old site's "send us message" heading has no form behind it either. Confirm fields + destination inbox with the client |
 
 ---
@@ -357,7 +357,7 @@ prototype with a `TODO: CLIENT REVIEW` or `PENDING CLIENT` HTML comment.
 - [ ] Build Home, About Us, Products, Retail, Contact Us — one Container per prototype `<section>` (§4)
 - [ ] Set Container **CSS IDs** for the 6 product anchors and `#foodservice`
 - [ ] Upload final imagery per `IMAGE_REPLACEMENT_LIST.md`; keep the listed aspect ratios
-- [ ] Add the Elementor Form widget to the Contact page and route it to `sales@imperialsteaks.com`
+- [ ] Add the Elementor Form widget to the Contact page and route it to `info@imperialsteaks.com`
 - [ ] Replace the two Ritter-sourced photographs (`IMAGE_REPLACEMENT_LIST.md` §3)
 - [ ] Swap in the client's chosen logo concept
 - [ ] Add the new phone number and restore the `tel:` links

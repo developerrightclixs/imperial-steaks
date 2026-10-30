@@ -85,8 +85,9 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 					 * Contact details are theme-mod driven so the client can edit them in
 					 * Customizer without touching code. Defaults match the brief.
 					 */
-					$tel   = get_theme_mod( 'imperial_steaks_phone', '514-944-8628' );
-					$email = get_theme_mod( 'imperial_steaks_email', 'kougiek@gmail.com' );
+					$tel       = get_theme_mod( 'imperial_steaks_phone', '514.944.8628' );
+					$email     = get_theme_mod( 'imperial_steaks_email', 'info@imperialsteaks.com' );
+					$email_alt = get_theme_mod( 'imperial_steaks_email_alt', 'kougiek@gmail.com' );
 					$web   = get_theme_mod( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' );
 					// One address line per row. The non-breaking space (U+00A0) before 8W4
 					// keeps the postal code whole when the narrow footer column wraps.
@@ -112,6 +113,12 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email', 'imperial-steaks' ); ?></span>
 							<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
 						</li>
+						<?php if ( $email_alt ) : ?>
+						<li class="imperial-footer__contact-item">
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email', 'imperial-steaks' ); ?></span>
+							<a href="mailto:<?php echo esc_attr( $email_alt ); ?>"><?php echo esc_html( $email_alt ); ?></a>
+						</li>
+						<?php endif; ?>
 						<li class="imperial-footer__contact-item">
 							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Web', 'imperial-steaks' ); ?></span>
 							<a href="<?php echo esc_url( $web ); ?>"><?php echo esc_html( preg_replace( '#^https?://|/$#', '', $web ) ); ?></a>

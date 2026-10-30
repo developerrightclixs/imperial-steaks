@@ -74,7 +74,8 @@
      --is-size-hero: the client asked for them matched, so the separate
      --is-size-hero-line step has been retired. */
   --is-size-hero:        38px;  /* client, Oct 27: 54 -> 44 -> 38px */
-  --is-size-values:      28px;
+  --is-size-values:      24px;   /* Oct 30: trimmed so the five values, now
+                                    trailing in dots, still hold one line. */
   --is-size-h1:          40px;
   --is-size-h2:          30px;
   --is-size-h3:          20px;
@@ -270,6 +271,9 @@ h3 { font-size: var(--is-size-h3); }
 .text-white   { color: var(--is-white); }
 .text-justify { text-align: justify; }
 .is-uppercase { text-transform: uppercase; }
+
+/* First-line indent - the client's "tab" on the About Us paragraphs. */
+.text-indent { text-indent: 2.5em; }
 
 /* Spacing utilities - used instead of inline styles so the values stay
    token-driven and map onto Elementor's margin controls. */
