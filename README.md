@@ -106,7 +106,7 @@ backup. Full detail: `docs/SITE_AUDIT.md` §3.
 
 ---
 
-## What changed in this round (30 Oct 2026 — client website changes)
+## What changed in this round (30–31 Oct 2026 — client website changes)
 
 Seven items off the client's notes. Six are done; the brochure is held.
 
@@ -127,18 +127,23 @@ Seven items off the client's notes. Six are done; the brochure is held.
   centred on the now-uniform panel. **This means the photograph no longer shows
   the carton as it is actually printed** — if the cartons on the floor still
   carry the old mark, the picture is ahead of the product. Flagged, not fixed.
-* **The five brand values trail off in dots.** "PARTNERS….. VALUE….. QUALITY…..
-  SERVICE….. INTEGRITY….." The dots are a span of their own, set at 0.8em with
-  no tracking, so the run reads as one ellipsis rather than five separate
-  marks. `--is-size-values` came down 28px → 24px so the line still holds one
-  row at full width; at 28px it broke, leaving INTEGRITY stranded underneath.
+* **Partners trails off in dots.** "PARTNERS…. VALUE. QUALITY. SERVICE.
+  INTEGRITY." Four dots after Partners alone; the other four keep the single
+  full stop they always had. The run sits in a `.imperial-values__dots` span at
+  0.8em with no tracking, so it reads as one trailing ellipsis rather than four
+  separate marks, and the line still holds one row at 28px. The values band on
+  About Us carries no Partners, so it is unchanged.
 * **Serving suggestions take the client's wording.** "Subs, salads, tacos,
   sandwiches, pizza toppings, and / or hoagies."
-* **About Us is three indented paragraphs.** Imperial / Our vision / Our
-  commitment, each with the first-line indent he asked for (`.text-indent`,
-  2.5em). The Halal sentence moved out of the tail and now sits directly after
-  the first sentence, the one ending "in Canada", as instructed. No wording
-  changed.
+* **About Us is three centred paragraphs.** Imperial / Our vision / Our
+  commitment. The Halal sentence moved out of the tail and now sits directly
+  after the first sentence, the one ending "in Canada", as instructed. No
+  wording changed. They were first built justified with a 2.5em first-line
+  indent, reading his "Tab (indent)" literally; he came back on 31 Oct and
+  asked for **centred**, so the indent came out — it has nothing to key off
+  once the lines are centred — and `.text-indent` was removed from
+  `global.css` with it, having no other user. Centring also ends the stretched
+  word gaps that justifying this measure was producing.
 * **The product code chips are readable.** 14px → 22px, with the padding and
   tracking stepped up to match. They sit in the same corner of the same photo.
 * **Contact details.** The phone is written `514.944.8628` — dots, not hyphens

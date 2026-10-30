@@ -300,10 +300,9 @@
   text-transform: uppercase;
 }
 
-/* Client, Oct 30: each value trails off in dots. They are set smaller and
-   tighter than the word itself, so the run reads as one trailing ellipsis
-   rather than five separate marks - and so the five values still fit on one
-   line at full width. */
+/* Client, Oct 30: four dots after Partners, one after each of the others.
+   The run is set smaller and tighter than the word it follows, so it reads as
+   one trailing ellipsis rather than four separate marks. */
 .imperial-values__dots {
   font-size: 0.8em;
   letter-spacing: 0;

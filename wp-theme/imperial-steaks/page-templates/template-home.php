@@ -184,13 +184,14 @@ get_header();
       <!-- Brand values. Moved out of the hero on the client's instruction;
            they close the Categories section, under the photography.
            Client revision (Oct 27): "Partners." leads the line.
-           Client revision (Oct 30): each word trails off - five dots, not one. -->
+           Client revision (Oct 30): four dots after Partners alone; the rest
+           keep the single full stop they always had. -->
       <div class="imperial-values u-mt-xl" data-reveal="up">
-        <p class="imperial-values__item">Partners<span class="imperial-values__dots">.....</span></p>
-        <p class="imperial-values__item">Value<span class="imperial-values__dots">.....</span></p>
-        <p class="imperial-values__item">Quality<span class="imperial-values__dots">.....</span></p>
-        <p class="imperial-values__item">Service<span class="imperial-values__dots">.....</span></p>
-        <p class="imperial-values__item">Integrity<span class="imperial-values__dots">.....</span></p>
+        <p class="imperial-values__item">Partners<span class="imperial-values__dots">....</span></p>
+        <p class="imperial-values__item">Value.</p>
+        <p class="imperial-values__item">Quality.</p>
+        <p class="imperial-values__item">Service.</p>
+        <p class="imperial-values__item">Integrity.</p>
       </div>
 
     </div>
