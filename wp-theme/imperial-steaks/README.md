@@ -126,9 +126,9 @@ content and the footer never drift apart:
 All five live under **Appearance → Customize → Contact details**, alongside
 **Footer blurb (under the logo)** — the line of copy beneath the footer logo.
 
-> The Warehouse field ships with a **non-breaking space** inside the postal
-> code (`J4B 8N4`) so the footer column can wrap after "QC" without
-> splitting `J4B` from `8N4`. If you retype that field in Customizer with an
+> The Facility field ships with a **non-breaking space** inside the postal
+> code (`H4N 2T2`) so the footer column can wrap after "QC" without
+> splitting `H4N` from `2T2`. If you retype that field in Customizer with an
 > ordinary space, the postcode can break across two lines again.
 
 ---
@@ -205,8 +205,9 @@ static prototype, pixel by pixel.
   wants far shorter wording.
 - **Postal code split across lines.** "Warehouse" is a wider label than the
   "Office" it replaced, which squeezed the footer's value column enough to
-  wrap `Boucherville, QC J4B` / `8N4`. The default now carries a non-breaking
-  space inside the postcode.
+  wrap the address line. The default carries a non-breaking space inside the
+  postcode. (The address became 191-9150 Boul. de L'Acadie, Montreal on 31 Oct;
+  the wrapping note still applies.)
 - Dropped the `Aleo:wght@800` font request: nothing has used Aleo since the
   two-font hero lockup was removed. The dead `--is-font-slab` token went with
   it.

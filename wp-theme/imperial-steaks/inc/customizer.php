@@ -42,11 +42,6 @@ function imperial_steaks_customize_register( $wp_customize ) {
 			'default' => 'info@imperialsteaks.com',
 			'sanitize' => 'sanitize_email',
 		),
-		'imperial_steaks_email_alt'      => array(
-			'label'   => esc_html__( 'Email (second address, optional)', 'imperial-steaks' ),
-			'default' => 'kougiek@gmail.com',
-			'sanitize' => 'sanitize_email',
-		),
 		'imperial_steaks_website'        => array(
 			'label'   => esc_html__( 'Website', 'imperial-steaks' ),
 			'default' => 'https://www.imperialsteaks.com/',
@@ -54,8 +49,8 @@ function imperial_steaks_customize_register( $wp_customize ) {
 		),
 		'imperial_steaks_location'       => array(
 			'label'   => esc_html__( 'Facility (one line per row)', 'imperial-steaks' ),
-			// Non-breaking space (U+00A0) before 8W4 - see the note in footer.php.
-			'default' => "120 Rue T-A-Bombardier\nBoucherville, QC J4B\xc2\xa08W4\nCanada",
+			// Non-breaking space (U+00A0) before 2T2 - see the note in footer.php.
+			'default' => "191-9150 Boul. de L\xe2\x80\x99Acadie\nMontreal, QC, H4N\xc2\xa02T2\nCanada",
 			'sanitize' => 'sanitize_textarea_field',
 			'type'     => 'textarea',
 		),
@@ -112,9 +107,8 @@ function imperial_steaks_contact_shortcode( $atts ) {
 	$map = array(
 		'phone'    => array( 'imperial_steaks_phone', '514.944.8628' ),
 		'email'    => array( 'imperial_steaks_email', 'info@imperialsteaks.com' ),
-		'email_alt' => array( 'imperial_steaks_email_alt', 'kougiek@gmail.com' ),
 		'website'  => array( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' ),
-		'location' => array( 'imperial_steaks_location', "120 Rue T-A-Bombardier\nBoucherville, QC J4B\xc2\xa08W4\nCanada" ),
+		'location' => array( 'imperial_steaks_location', "191-9150 Boul. de L\xe2\x80\x99Acadie\nMontreal, QC, H4N\xc2\xa02T2\nCanada" ),
 		'approved' => array( 'imperial_steaks_approved', "CFIA Approved \xe2\x80\x93 HACCP" ),
 		'offices'  => array( 'imperial_steaks_other_offices', "Canada \xe2\x80\x93 USA \xe2\x80\x93 Middle East" ),
 	);
@@ -127,7 +121,7 @@ function imperial_steaks_contact_shortcode( $atts ) {
 
 	$value = get_theme_mod( $map[ $key ][0], $map[ $key ][1] );
 
-	if ( 'email' === $key || 'email_alt' === $key ) {
+	if ( 'email' === $key ) {
 		return '<a href="mailto:' . esc_attr( $value ) . '">' . esc_html( $value ) . '</a>';
 	}
 

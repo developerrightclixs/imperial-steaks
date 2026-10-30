@@ -59,7 +59,6 @@ get_header();
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
           <p class="imperial-contact-card__label">Email</p>
           <p class="imperial-contact-card__value"><a href="mailto:info@imperialsteaks.com">info@imperialsteaks.com</a></p>
-          <p class="imperial-contact-card__value"><a href="mailto:kougiek@gmail.com">kougiek@gmail.com</a></p>
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="3">
@@ -69,7 +68,7 @@ get_header();
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="1">
           <p class="imperial-contact-card__label">Facility</p>
-          <p class="imperial-contact-card__value">120 Rue T-A-Bombardier<br>Boucherville, QC J4B&nbsp;8W4<br>Canada</p>
+          <p class="imperial-contact-card__value">191-9150 Boul. de L&rsquo;Acadie<br>Montreal, QC, H4N&nbsp;2T2<br>Canada</p>
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">

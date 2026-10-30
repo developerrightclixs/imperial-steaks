@@ -146,15 +146,22 @@ Seven items off the client's notes. Six are done; the brochure is held.
   word gaps that justifying this measure was producing.
 * **The product code chips are readable.** 14px → 22px, with the padding and
   tracking stepped up to match. They sit in the same corner of the same photo.
-* **Contact details.** The phone is written `514.944.8628` — dots, not hyphens
-  — everywhere it is displayed; the `tel:` href keeps the dialable `+1` form.
-  `info@imperialsteaks.com` is added alongside `kougiek@gmail.com` in every
-  footer and on the Contact page, and it is what the "Email sales" buttons and
-  the Contact meta description now use. In the WordPress theme the second
-  address is its own Customizer field (`imperial_steaks_email_alt`) and the
-  footer hides the row when it is blank.
-  **`info@imperialsteaks.com` must be a live mailbox before launch** — it joins
-  the domain-ownership question already open at the top of this file.
+* **Contact details.** Three changes, the last two on 31 Oct.
+  * The phone is written `514.944.8628` — dots, not hyphens — everywhere it is
+    displayed; the `tel:` href keeps the dialable `+1` form.
+  * **`info@imperialsteaks.com` is now the only address on the site.** It went
+    up alongside `kougiek@gmail.com` on 30 Oct; the client then asked to keep
+    the info address only, so the gmail is off every footer, off the Contact
+    page, and out of the theme — the second Customizer field added for it
+    (`imperial_steaks_email_alt`) has been removed again.
+    **It must be a live mailbox before launch** — it joins the
+    domain-ownership question already open at the top of this file.
+  * **New facility address**, replacing Boucherville on all five pages, on the
+    Contact page card and as the Customizer default:
+    **191-9150 Boul. de L'Acadie, Montreal, QC, H4N 2T2, Canada.** The
+    non-breaking space moved with it, now inside `H4N 2T2`, so the postcode
+    does not split across lines in the narrow footer column. The Contact page
+    meta description reads "Facility in Montreal, QC" to match.
 
 **Held:** the print brochure. The client asked for it finished for Monday, but
 nothing has been started in this repo — the only brochure artefact is
