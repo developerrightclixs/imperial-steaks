@@ -112,7 +112,7 @@ get_header();
                the fallback for old browsers. -->
           <picture>
             <source srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-box-open.webp" type="image/webp">
-            <img class="imperial-intro__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-box-open.png" alt="Open Imperial Steaks case showing vacuum-sealed packs of thin-sliced Philly steak" width="1161" height="1216">
+            <img class="imperial-intro__image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/product-box-open.png" alt="Open Imperial Steaks case showing vacuum-sealed packs of thin-sliced Philly steak" width="1208" height="1302">
           </picture>
         </div>
 
