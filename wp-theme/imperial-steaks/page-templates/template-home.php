@@ -96,12 +96,12 @@ get_header();
           <h2 class="imperial-intro__title imperial-intro__title--black" id="intro-heading">Premium Philly Steaks</h2>
           <hr class="imperial-rule imperial-rule--black">
 
-          <p class="imperial-intro__text text-justify">Imperial Steaks was established to provide premium beef and chicken
+          <p class="imperial-intro__text imperial-intro__text--indent text-justify">Imperial Steaks was established to provide premium beef and chicken
             products that will exceed our customers&rsquo; expectations. Our goal and commitment is to establish long-term
             relationships with customers by providing them with unmatched steak products through quality, taste, and
             consistency.</p>
 
-          <p class="imperial-intro__text text-justify">We welcome and appreciate the opportunity to meet with you to further
+          <p class="imperial-intro__text imperial-intro__text--indent text-justify">We welcome and appreciate the opportunity to meet with you to further
             discuss who we are, our products, and how we can be of service to you.</p>
         </div>
 

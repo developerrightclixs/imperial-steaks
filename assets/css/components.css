@@ -427,6 +427,9 @@
   font-weight: 300;
 }
 
+/* Client, Nov 3: "Premium Philly Steaks" paragraphs open with a first-line indent. */
+.imperial-intro__text--indent { text-indent: 2em; }
+
 .imperial-intro__image { border-radius: var(--is-radius-media); }
 
 /* Client asked for the "Collaborating" statement in bold capitals. */
