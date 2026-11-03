@@ -72,16 +72,11 @@ get_header();
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
-          <p class="imperial-contact-card__label">Inquiries</p>
-          <p class="imperial-contact-card__value">Foodservice &amp; Retail</p>
-        </div>
-
-        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="3">
           <p class="imperial-contact-card__label">Offices</p>
           <p class="imperial-contact-card__value">USA, Middle East</p>
         </div>
 
-        <div class="imperial-contact-card imperial-contact-card--wide" data-reveal="up" data-reveal-delay="1">
+        <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="3">
           <p class="imperial-contact-card__label">Approved</p>
           <p class="imperial-contact-card__value">CFIA Approved &ndash; HACCP</p>
         </div>
@@ -108,7 +103,7 @@ get_header();
         pricing, availability and samples for your operation.</p>
 
       <div class="btn-row" data-reveal="up">
-        <a class="btn btn--primary" href="mailto:sales@imperialsteaks.com">Contact sales</a>
+        <a class="btn btn--primary" href="mailto:sales@imperialsteaks.com">Contact us</a>
       </div>
 
     </div>
