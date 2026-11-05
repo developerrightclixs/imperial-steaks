@@ -106,6 +106,18 @@ backup. Full detail: `docs/SITE_AUDIT.md` §3.
 
 ---
 
+## What changed in this round (6 Nov 2026 — warehouse address)
+
+* **Full warehouse address**, on all five pages, on the Contact page card and as
+  the Customizer default:
+  **130 Rue J.-A.-Bombardier, Boucherville, QC J4B 8N4, Canada.** It replaces
+  the short "Boucherville, QC J4B 8N4" line, and supersedes the Montreal address
+  recorded in the 31 Oct notes below.
+* `wp-theme/imperial-steaks.zip` was rebuilt. The old zip dated from 28 Oct and
+  still held an earlier address.
+* A value already saved in **Customizer › Warehouse** overrides the new default,
+  so check that field on any live install.
+
 ## What changed in this round (30–31 Oct 2026 — client website changes)
 
 Seven items off the client's notes. Six are done; the brochure is held.

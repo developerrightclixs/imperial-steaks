@@ -55,7 +55,7 @@ function imperial_steaks_customize_register( $wp_customize ) {
 		'imperial_steaks_location'       => array(
 			'label'   => esc_html__( 'Warehouse (one line per row)', 'imperial-steaks' ),
 			// Non-breaking space (U+00A0) before 8N4 - see the note in footer.php.
-			'default' => "Boucherville, QC J4B\xc2\xa08N4",
+			'default' => "130 Rue J.-A.-Bombardier,\nBoucherville, QC J4B\xc2\xa08N4,\nCanada",
 			'sanitize' => 'sanitize_textarea_field',
 			'type'     => 'textarea',
 		),
@@ -114,7 +114,7 @@ function imperial_steaks_contact_shortcode( $atts ) {
 		'email'    => array( 'imperial_steaks_email', 'info@imperialsteaks.com' ),
 		'sales'    => array( 'imperial_steaks_email_sales', 'sales@imperialsteaks.com' ),
 		'website'  => array( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' ),
-		'location' => array( 'imperial_steaks_location', "Boucherville, QC J4B\xc2\xa08N4" ),
+		'location' => array( 'imperial_steaks_location', "130 Rue J.-A.-Bombardier,\nBoucherville, QC J4B\xc2\xa08N4,\nCanada" ),
 		'approved' => array( 'imperial_steaks_approved', "CFIA Approved \xe2\x80\x93 HACCP" ),
 		'offices'  => array( 'imperial_steaks_other_offices', "USA, Middle East" ),
 	);

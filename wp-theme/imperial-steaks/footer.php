@@ -91,7 +91,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 					$web   = get_theme_mod( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' );
 					// One address line per row. The non-breaking space (U+00A0) before 8N4
 					// keeps the postal code whole when the narrow footer column wraps.
-					$place    = get_theme_mod( 'imperial_steaks_location', "Boucherville, QC J4B\xc2\xa08N4" );
+					$place    = get_theme_mod( 'imperial_steaks_location', "130 Rue J.-A.-Bombardier,\nBoucherville, QC J4B\xc2\xa08N4,\nCanada" );
 					$approved = get_theme_mod( 'imperial_steaks_approved', "CFIA Approved \xe2\x80\x93 HACCP" );
 					$also     = get_theme_mod( 'imperial_steaks_other_offices', "USA, Middle East" );
 					?>

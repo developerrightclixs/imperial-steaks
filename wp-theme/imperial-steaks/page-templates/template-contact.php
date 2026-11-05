@@ -68,7 +68,7 @@ get_header();
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="1">
           <p class="imperial-contact-card__label">Warehouse</p>
-          <p class="imperial-contact-card__value">Boucherville, QC J4B&nbsp;8N4</p>
+          <p class="imperial-contact-card__value">130 Rue J.-A.-Bombardier,<br>Boucherville, QC J4B&nbsp;8N4,<br>Canada</p>
         </div>
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
