@@ -23,6 +23,7 @@ Provenance and the open flags on these files: docs/IMAGE_REPLACEMENT_LIST.md §4
 """
 
 import os
+import shutil
 from PIL import Image, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -98,10 +99,10 @@ save(src('Frozen Ground Meat Slab on Parchment.png'),
 save(pad_to_ratio(src('Premium Philly \u2013 NS.PNG').crop((60, 715, 1224, 1255)), (255, 255, 255)),
      'product-ns.jpg', (1200, 800))
 
-# RE - Rib Eye. Client-supplied studio shot on white, already 3:2.
-# Dropped to 1400 wide; ~265 KB, a touch over the 250 KB budget.
-save(src('Marbled Beef Steak Stack.png'),
-     'product-re.jpg', (1400, 933), q=76)
+# RE - Rib Eye. Client-supplied JPEG, already 1400x933 with the steaks set smaller
+# on white. Copied byte for byte: re-encoding would only soften it. ~280 KB, a
+# touch over the 250 KB budget.
+shutil.copyfile(os.path.join(SRC, 'ribeye-small.jpg'), os.path.join(OUT, 'product-re.jpg'))
 
 # EPIC - Signature Blend. Stacked sliced portions on white.
 save(src('philly steak raw frozen 1.jpg').crop((0, 349, 2000, 1682)),

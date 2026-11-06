@@ -306,7 +306,7 @@ the 250 KB budget, and lives in both `assets/images/` and
 | `product-xls.jpg` | House Blend — XLS | 1000 × 667 | `philly steak raw frozen.jpg` | **[ASSIGNED, NOT LABELLED]** single frozen portion on white. Native resolution, no upscale |
 | `product-xl.jpg` | Traditional Philly — XL | 1200 × 800 | `Traditional Philly – XL.PNG` | **Phone screengrab** of the client's dev site, cropped to the page's own photo card (1164 × 540) and extended top and bottom to reach 3:2 |
 | `product-ns.jpg` | Premium Philly — NS | 1200 × 800 | `Premium Philly – NS.PNG` | **Phone screengrab**, same treatment. White ground, so the padding is invisible |
-| `product-re.jpg` | Rib Eye — RE | 1400 × 933 | `Picks for rib eye/IMG_3096.jpeg` | **The client's own photograph** — a lined case of whole-muscle rib eye rolls. The strongest file in the set |
+| `product-re.jpg` | Rib Eye — RE | 1400 × 933 | `ribeye-small.jpg` | Client-supplied studio shot on white, steaks set smaller in the frame (6 Nov 2026). Copied unchanged. Replaces `Marbled Beef Steak Stack.png`, which replaced `Picks for rib eye/IMG_3096.jpeg` |
 | `product-epic.jpg` | Signature Blend — EPIC | 1800 × 1200 | `philly steak raw frozen 1.jpg` | **[ASSIGNED, NOT LABELLED]** stacked sliced portions interleaved with parchment, on white |
 | `product-chx.jpg` | Premium Chicken — CHX | 900 × 600 | `Philly Chicken Cheese Steak Meat (1 lb.) – Diamond State Meats.webp` | Stacked sliced chicken. Transparent PNG flattened onto white |
 

@@ -106,6 +106,14 @@ backup. Full detail: `docs/SITE_AUDIT.md` §3.
 
 ---
 
+## What changed in this round (6 Nov 2026 — Rib Eye photo)
+
+* **Rib Eye – RE has a new photo:** the client's `ribeye-small.jpg`, the same
+  steaks set smaller on white. It shows on Home and Products. Same 1400 × 933
+  size, so no markup changed.
+* `tools/place-product-images.py` now copies this file, and
+  `wp-theme/imperial-steaks.zip` was updated to match.
+
 ## What changed in this round (6 Nov 2026 — client photo notes)
 
 * **About Us intro stays centred, about 3% wider** (900px to 925px, via
