@@ -207,7 +207,8 @@ static prototype, pixel by pixel.
   "Office" it replaced, which squeezed the footer's value column enough to
   wrap the address line. The default carries a non-breaking space inside the
   postcode. (The address became 191-9150 Boul. de L'Acadie, Montreal on 31 Oct;
-  the wrapping note still applies.)
+  the wrapping note still applies. On 6 Nov the label became "Facility" and
+  `.imperial-footer__address` now holds each address row on one line.)
 - Dropped the `Aleo:wght@800` font request: nothing has used Aleo since the
   two-font hero lockup was removed. The dead `--is-font-slab` token went with
   it.

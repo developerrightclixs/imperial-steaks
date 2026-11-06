@@ -87,17 +87,15 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 					 */
 					$tel   = get_theme_mod( 'imperial_steaks_phone', '514-944-8628' );
 					$email = get_theme_mod( 'imperial_steaks_email', 'info@imperialsteaks.com' );
-					$sales = get_theme_mod( 'imperial_steaks_email_sales', 'sales@imperialsteaks.com' );
 					$web   = get_theme_mod( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' );
-					// One address line per row. The non-breaking space (U+00A0) before 8N4
-					// keeps the postal code whole when the narrow footer column wraps.
-					$place    = get_theme_mod( 'imperial_steaks_location', "130 Rue J.-A.-Bombardier,\nBoucherville, QC J4B\xc2\xa08N4,\nCanada" );
+					// One address line per row; .imperial-footer__address keeps each row unbroken.
+					$place    = get_theme_mod( 'imperial_steaks_location', "130 Rue J.-A.-Bombardier\nBoucherville, QC J4B\xc2\xa08N4\nCanada" );
 					$approved = get_theme_mod( 'imperial_steaks_approved', "CFIA Approved \xe2\x80\x93 HACCP" );
-					$also     = get_theme_mod( 'imperial_steaks_other_offices', "USA, Middle East" );
+					$also     = get_theme_mod( 'imperial_steaks_other_offices', "Canada, USA, Middle East" );
 					?>
 					<ul class="imperial-footer__contact">
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Tel', 'imperial-steaks' ); ?></span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Tel:', 'imperial-steaks' ); ?></span>
 							<?php
 							// Only link it when it is a number; a tel: link with no digits in it
 							// is worse than plain text.
@@ -110,28 +108,23 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 							<?php endif; ?>
 						</li>
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email', 'imperial-steaks' ); ?></span>
-							<span>
-								<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
-								<?php if ( $sales ) : ?>
-									<br><a href="mailto:<?php echo esc_attr( $sales ); ?>"><?php echo esc_html( $sales ); ?></a>
-								<?php endif; ?>
-							</span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email:', 'imperial-steaks' ); ?></span>
+							<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
 						</li>
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Web', 'imperial-steaks' ); ?></span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Web:', 'imperial-steaks' ); ?></span>
 							<a href="<?php echo esc_url( $web ); ?>"><?php echo esc_html( preg_replace( '#^https?://|/$#', '', $web ) ); ?></a>
 						</li>
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Warehouse', 'imperial-steaks' ); ?></span>
-							<span><?php echo nl2br( esc_html( $place ), false ); ?></span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Facility:', 'imperial-steaks' ); ?></span>
+							<span class="imperial-footer__address"><?php echo nl2br( esc_html( $place ), false ); ?></span>
 						</li>
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Approved', 'imperial-steaks' ); ?></span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Approved:', 'imperial-steaks' ); ?></span>
 							<span><?php echo esc_html( $approved ); ?></span>
 						</li>
 						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Offices', 'imperial-steaks' ); ?></span>
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Offices:', 'imperial-steaks' ); ?></span>
 							<span><?php echo esc_html( $also ); ?></span>
 						</li>
 					</ul>

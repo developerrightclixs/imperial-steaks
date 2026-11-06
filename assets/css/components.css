@@ -427,7 +427,7 @@
   font-weight: 300;
 }
 
-/* Client, Nov 3: "Premium Philly Steaks" paragraphs open with a first-line indent. */
+/* Client, Nov 3 and 6: Home "Premium Philly Steaks" and About paragraphs open with a first-line indent. */
 .imperial-intro__text--indent { text-indent: 2em; }
 
 .imperial-intro__image { border-radius: var(--is-radius-media); }
@@ -1060,6 +1060,9 @@
 }
 
 .imperial-footer__contact-item a { color: var(--is-white); }
+
+/* Each address row stays on one line; the street used to break at its hyphens. */
+.imperial-footer__address { white-space: nowrap; }
 
 .imperial-footer__contact-label {
   flex: 0 0 auto;

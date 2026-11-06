@@ -43,8 +43,8 @@ PAGES = [
      'supply in the meantime.'),
     ('contact.html',  'template-contact.php',  'Imperial Steaks - Contact',
      'Contact Us', 'contact-us',
-     'Contact Imperial Steaks at info@imperialsteaks.com or sales@imperialsteaks.com. Based in Boucherville, QC, '
-     'with offices in the USA and Middle East. Foodservice and retail enquiries.'),
+     'Contact Imperial Steaks at info@imperialsteaks.com. Based in Boucherville, QC, '
+     'with offices in Canada, the USA and the Middle East. Foodservice and retail enquiries.'),
 ]
 
 # prototype href -> WordPress path

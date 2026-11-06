@@ -225,7 +225,7 @@ get_header();
 
         <article class="imperial-feature" data-reveal="up" data-reveal-delay="2">
           <h3 class="imperial-feature__title">Serving suggestions</h3>
-          <p class="imperial-feature__text text-white">Subs, salads, tacos, sandwiches, pizza toppings, and&nbsp;/&nbsp;or hoagies.</p>
+          <p class="imperial-feature__text text-white">Subs, salads, tacos, egg rolls, sandwiches, pizza toppings, and&nbsp;/&nbsp;or hoagies.</p>
         </article>
 
       </div>

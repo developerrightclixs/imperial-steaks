@@ -55,21 +55,23 @@ get_header();
        Client revision (Oct 31): the three are centred. They were justified with
        a first-line indent; the indent is gone, since it has nothing to key off
        once the lines are centred.
+       Client revision (Nov 6): back to a first-line indent, left-aligned, as in
+       indent.png. Left rather than justified, which stretched the word gaps here.
        ===================================================================== -->
   <section class="section imperial-intro" aria-labelledby="about-intro-heading">
     <div class="container container--narrow">
       <h2 class="sr-only" id="about-intro-heading">About Imperial Steaks</h2>
 
-      <p class="imperial-intro__text text-center" data-reveal="up">Imperial Steaks is an independent
+      <p class="imperial-intro__text imperial-intro__text--indent" data-reveal="up">Imperial Steaks is an independent
         importer / distributor whose aim is to be the leading provider of top quality raw thin-sliced beef and chicken
         Philly steaks in Canada. Imperial Steaks also offers Halal certified Philly steaks for the ever-changing
         demographics of our country, which in turn reaches a wider target market.</p>
 
-      <p class="imperial-intro__text text-center" data-reveal="up">Our vision is to work closely and
+      <p class="imperial-intro__text imperial-intro__text--indent" data-reveal="up">Our vision is to work closely and
         partner with a diverse range of customers, including distributors, restaurants, retail, institutions, and food
         service operators across Canada.</p>
 
-      <p class="imperial-intro__text text-center" data-reveal="up">Our commitment is to provide them with
+      <p class="imperial-intro__text imperial-intro__text--indent" data-reveal="up">Our commitment is to provide them with
         premium steak products that will help their business grow.</p>
     </div>
   </section>
@@ -97,12 +99,12 @@ get_header();
           <h3 class="imperial-intro__title text-white">Quality &amp; pricing</h3>
           <hr class="imperial-rule imperial-rule--black">
 
-          <p class="text-white text-justify">Imperial Steaks is dedicated to offering competitive pricing and premium
+          <p class="text-white text-justify imperial-intro__text--indent">Imperial Steaks is dedicated to offering competitive pricing and premium
             quality that will help us establish long-term relationships with our customers. Our aim is to work
             side-by-side with our customers, treat them as partners, and address all their needs and
             specifications.</p>
 
-          <p class="text-white text-justify u-mt-md">Collaborating and being the exclusive importer / distributor in
+          <p class="text-white text-justify u-mt-md imperial-intro__text--indent">Collaborating and being the exclusive importer / distributor in
             Canada and abroad with a trusted and dominant USA-based protein supplier that has served the industry for
             more than 100 years will enable us to build and differentiate ourselves from other brands. We are committed
             to establishing long-term relationships with our customers and providing them exceptional value and
@@ -153,7 +155,7 @@ get_header();
             </li>
           </ul>
 
-          <p class="text-white text-justify u-mt-md">Whether you already serve thin-sliced beef or chicken or are
+          <p class="text-white text-justify u-mt-md imperial-intro__text--indent">Whether you already serve thin-sliced beef or chicken or are
             thinking of adding it, we can work with you to enhance your menu and show you the profit-building
             potential of our products.</p>
         </div>

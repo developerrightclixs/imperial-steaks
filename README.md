@@ -106,6 +106,31 @@ backup. Full detail: `docs/SITE_AUDIT.md` §3.
 
 ---
 
+## What changed in this round (6 Nov 2026 — client photo notes)
+
+* **About Us text is indented again.** The three intro paragraphs are
+  left-aligned with a 2em first-line indent, as in `indent.png`, replacing the
+  31 Oct centring. The three paragraphs in the red band take the same indent
+  and stay justified.
+
+* **`info@imperialsteaks.com` is the only email on the site.** `sales@` is off
+  every footer, the Contact page card and meta description, and the "Send us a
+  message" button. The "Contact sales" button on Products is gone. The Customizer
+  field and `[imperial_contact field="sales"]` were removed with it.
+* **Warehouse is now Facility**, in every footer and on the Contact card. The
+  address sits on three rows, street on one line:
+  130 Rue J.-A.-Bombardier / Boucherville, QC J4B 8N4 / Canada.
+  `.imperial-footer__address` stops the street breaking at its hyphens.
+* **Footer labels end in a colon** (TEL:, EMAIL:, WEB:, FACILITY:, APPROVED:,
+  OFFICES:).
+* **Offices read "Canada, USA, Middle East"** in the footer and on Contact.
+* **Egg rolls** added to Serving Suggestions, after tacos.
+* **The carton's lid flap is plain black.** The small print is gone, via
+  `tools/clean-box-lid.py`, which works on the client's red-background file.
+* Theme templates and `wp-theme/imperial-steaks.zip` were rebuilt.
+* Values saved in **Customizer › Facility** or **Offices** override the new
+  defaults, so check both fields on any live install.
+
 ## What changed in this round (6 Nov 2026 — warehouse address)
 
 * **Full warehouse address**, on all five pages, on the Contact page card and as
@@ -161,7 +186,8 @@ Seven items off the client's notes. Six are done; the brochure is held.
 * **Contact details.** Three changes, the last two on 31 Oct.
   * The phone is written `514.944.8628` — dots, not hyphens — everywhere it is
     displayed; the `tel:` href keeps the dialable `+1` form.
-  * **`info@imperialsteaks.com` is now the only address on the site.** It went
+  * **`info@imperialsteaks.com` is now the only address on the site** (`sales@`
+    came back afterwards and was removed again on 6 Nov). It went
     up alongside `kougiek@gmail.com` on 30 Oct; the client then asked to keep
     the info address only, so the gmail is off every footer, off the Contact
     page, and out of the theme — the second Customizer field added for it
