@@ -108,10 +108,9 @@ backup. Full detail: `docs/SITE_AUDIT.md` §3.
 
 ## What changed in this round (6 Nov 2026 — client photo notes)
 
-* **About Us text is indented again.** The three intro paragraphs are
-  left-aligned with a 2em first-line indent, as in `indent.png`, replacing the
-  31 Oct centring. The three paragraphs in the red band take the same indent
-  and stay justified.
+* **About Us intro stays centred, about 3% wider** (900px to 925px, via
+  `.imperial-intro__column`). An indented, left-aligned version was tried on
+  6 Nov and reversed the same day; the red-band paragraphs stay justified.
 
 * **`info@imperialsteaks.com` is the only email on the site.** `sales@` is off
   every footer, the Contact page card and meta description, and the "Send us a

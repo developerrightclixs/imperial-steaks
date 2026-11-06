@@ -427,8 +427,11 @@
   font-weight: 300;
 }
 
-/* Client, Nov 3 and 6: Home "Premium Philly Steaks" and About paragraphs open with a first-line indent. */
+/* Client, Nov 3: "Premium Philly Steaks" paragraphs open with a first-line indent. */
 .imperial-intro__text--indent { text-indent: 2em; }
+
+/* Client, Nov 6: the centred About intro runs about 3% wider than --narrow. */
+.container.imperial-intro__column { max-width: 925px; }
 
 .imperial-intro__image { border-radius: var(--is-radius-media); }
 
