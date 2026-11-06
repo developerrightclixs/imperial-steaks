@@ -106,6 +106,20 @@ backup. Full detail: `docs/SITE_AUDIT.md` §3.
 
 ---
 
+## What changed in this round (6 Nov 2026 — About intro and footer screenshots)
+
+* **About intro matched to the client's screenshot.** Two left-aligned paragraphs
+  with a first-line indent and no gap, replacing the three centred ones. The
+  closing sentence now reads "Our commitment and our passion for excellence will
+  be to provide premium steak products that will help their business grow."
+* **Footer contact list matched to the client's screenshot.** Labels sit in one
+  column and values in the next, and both emails share one Email: label. The
+  fourth footer column is a fixed 300px so Offices stays on one line.
+* **The IG / FB / X placeholders are gone**, because the screenshot has none.
+* The rules in the screenshot look darker than `#FF0000`. The brand red was left
+  as it is.
+* Theme templates and `wp-theme/imperial-steaks.zip` were rebuilt.
+
 ## What changed in this round (6 Nov 2026 — second email, Rib Eye photo)
 
 * **`kougiek@gmail.com` is back, listed first.** It sits above

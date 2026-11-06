@@ -430,8 +430,17 @@
 /* Client, Nov 3: "Premium Philly Steaks" paragraphs open with a first-line indent. */
 .imperial-intro__text--indent { text-indent: 2em; }
 
-/* Client, Nov 6: the centred About intro runs about 3% wider than --narrow. */
+/* Client, Nov 6: the About intro runs about 3% wider than --narrow. Left-aligned
+   with a first-line indent and no gap, so the paragraphs read as one block. */
 .container.imperial-intro__column { max-width: 925px; }
+
+.imperial-intro--about { padding-top: calc(var(--is-section-y) * 0.75); }
+
+.imperial-intro__column .imperial-intro__text {
+  margin-bottom: 0;
+  line-height: 1.75;
+  text-indent: 1.5em;
+}
 
 .imperial-intro__image { border-radius: var(--is-radius-media); }
 
@@ -1009,7 +1018,8 @@
 
 .imperial-footer__grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+  /* The contact column is fixed so its longest value stays on one line. */
+  grid-template-columns: 1.2fr 0.9fr 1fr 300px;
   gap: var(--is-gap-grid);
 }
 
@@ -1052,11 +1062,16 @@
 /* wp_nav_menu() renders <li> children; keep the same rhythm as the prototype. */
 .imperial-footer__list li { margin-bottom: 6px; }
 
-.imperial-footer__contact { display: grid; gap: var(--is-space-xs); }
+.imperial-footer__contact {
+  display: grid;
+  gap: 12px;
+  margin-top: 21px;
+}
 
+/* Labels in one column, values in the next. */
 .imperial-footer__contact-item {
-  display: flex;
-  gap: var(--is-space-xs);
+  display: grid;
+  grid-template-columns: 120px 1fr;
   align-items: baseline;
   color: var(--is-white);
   font-size: var(--is-size-small);
@@ -1064,38 +1079,18 @@
 
 .imperial-footer__contact-item a { color: var(--is-white); }
 
+/* Several values under one label, such as the two email addresses. */
+.imperial-footer__values { display: grid; }
+
 /* Each address row stays on one line; the street used to break at its hyphens. */
 .imperial-footer__address { white-space: nowrap; }
 
 .imperial-footer__contact-label {
-  flex: 0 0 auto;
   color: var(--is-grey-muted);
   font-size: var(--is-size-eyebrow);
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-}
-
-/* Social row: non-interactive until the client supplies profile URLs. */
-.imperial-social {
-  display: flex;
-  gap: var(--is-space-xs);
-  margin-top: var(--is-space-md);
-}
-
-.imperial-social__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  background-color: transparent;
-  border: 2px dashed var(--is-white);
-  border-radius: 50%;
-  color: var(--is-white);
-  font-size: var(--is-size-eyebrow);
-  font-weight: 600;
-  letter-spacing: 0;
 }
 
 .imperial-footer__bottom {
@@ -1151,6 +1146,9 @@
   .imperial-footer__logo { width: 150px; }
 
   .imperial-footer__grid { grid-template-columns: 1fr; }
+
+  /* 120px would push the values past the edge of a 320px phone. */
+  .imperial-footer__contact-item { grid-template-columns: 90px 1fr; }
 
   .imperial-product-row { padding-block: var(--is-space-lg); }
 

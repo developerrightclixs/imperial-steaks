@@ -22,7 +22,6 @@ pending asset before publishing
 | Primary nav | `.imperial-nav`, `__list`, `__link` | Nav Menu widget | **[SAME]** Home / About Us / Products / Retail / Contact Us — structure unchanged, as briefed |
 | Mobile toggle | `.imperial-nav-toggle` | Nav Menu mobile dropdown | **[SAME]** |
 | Site footer | `.imperial-footer` + `__grid`, `__title`, `__list`, `__contact`, `__bottom` | Theme Builder › Footer | **[CLIENT]** matte black throughout · Imperial Steaks logo · Puck **[REMOVED]** from the product list · email/web updated · phone replaced with `XXX-XXX-XXXX` · copyright now © 2026 Imperial Steaks · **[CLIENT 16 Oct]** the **Office** label is now **Facility** and the address carries the postal code. **[CLIENT 31 Oct]** the address was **191-9150 Boul. de L&rsquo;Acadie, Montreal, QC, H4N&nbsp;2T2, Canada** (**[CLIENT 6 Nov]** now **130 Rue J.-A.-Bombardier, Boucherville, QC J4B&nbsp;8N4, Canada**) and the only e-mail is **info@imperialsteaks.com** — `kougiek@gmail.com` is off the site (same change on the Contact page cards, and in the theme Customizer defaults) |
-| Social row | `.imperial-social` | Social Icons widget | **[FLAG]** still non-interactive; URLs pending |
 | Back to top | `.imperial-to-top` | Back to Top widget | **[SAME]** |
 
 ---
@@ -51,7 +50,7 @@ Rebuilt to follow the structure of the old `tastysteaks.ca/about-us-2` page.
 | # | Section | Class(es) | Change |
 |---|---|---|---|
 | 1 | Banner | `.imperial-banner` | **[REBRAND]** matte black |
-| 2 | Intro paragraph | `.imperial-intro`, `.container--narrow` | **[CLIENT]** the separate "Who We Are" heading is **[REMOVED]** — the page opens on the paragraph, as the old About page did. **[CLIENT 27 Oct]** replaced with the client's own wording. **[CLIENT 30 Oct]** split into his three paragraphs — Imperial / Our vision / Our commitment — with the Halal sentence moved up behind the first sentence, the one ending "in Canada". **[CLIENT 31 Oct]** **centred**; the justification and the first-line indent both came out with it |
+| 2 | Intro paragraph | `.imperial-intro`, `.container--narrow` | **[CLIENT]** the separate "Who We Are" heading is **[REMOVED]** — the page opens on the paragraph, as the old About page did. **[CLIENT 27 Oct]** replaced with the client's own wording. **[CLIENT 30 Oct]** split into his three paragraphs — Imperial / Our vision / Our commitment — with the Halal sentence moved up behind the first sentence, the one ending "in Canada". **[CLIENT 31 Oct]** **centred**; the justification and the first-line indent both came out with it · **[CLIENT 6 Nov]** now two left-aligned paragraphs with a first-line indent and no gap, matching the client's screenshot; the commitment sentence is reworded and joins the vision paragraph |
 | 3 | Two-column split | `.section--red`, `.split` | **[CLIENT]** **[NEW]** left: quality/pricing paragraph + the SQF badge. Right: the "Ideal for your establishment" checklist + the closing paragraph. Replaces the old numbered icon-box list |
 | 3b | Checklist | `.imperial-checklist` + `__item`, `__tick` | **[CLIENT]** **[NEW]** bullets instead of sentences, per the brief |
 | 4 | Supplier standards | `.imperial-badge` grid | **[CLIENT]** ⚠️ **urgent fix applied:** the sentence ending *"according to the information provided by our client"* — an internal note visible on the page — has been removed. SQF now reads Level 3 |

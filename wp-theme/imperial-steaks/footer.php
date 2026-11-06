@@ -108,15 +108,14 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 								<span><?php echo esc_html( $tel ); ?></span>
 							<?php endif; ?>
 						</li>
-						<?php if ( $email_alt ) : ?>
 						<li class="imperial-footer__contact-item">
 							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email:', 'imperial-steaks' ); ?></span>
-							<a href="mailto:<?php echo esc_attr( $email_alt ); ?>"><?php echo esc_html( $email_alt ); ?></a>
-						</li>
-						<?php endif; ?>
-						<li class="imperial-footer__contact-item">
-							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email:', 'imperial-steaks' ); ?></span>
-							<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
+							<span class="imperial-footer__values">
+								<?php if ( $email_alt ) : ?>
+								<a href="mailto:<?php echo esc_attr( $email_alt ); ?>"><?php echo esc_html( $email_alt ); ?></a>
+								<?php endif; ?>
+								<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>
+							</span>
 						</li>
 						<li class="imperial-footer__contact-item">
 							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Web:', 'imperial-steaks' ); ?></span>
@@ -135,22 +134,6 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 							<span><?php echo esc_html( $also ); ?></span>
 						</li>
 					</ul>
-
-					<?php
-					/*
-					 * Social row. Matches the static prototype, which the theme
-					 * footer was missing. Rendered as non-interactive placeholders
-					 * until the client supplies profile URLs - at which point
-					 * replace this with an Elementor Social Icons widget, or wire
-					 * each item to a real link.
-					 */
-					?>
-					<div class="imperial-social" role="list"
-					     aria-label="<?php esc_attr_e( 'Social profiles (coming soon)', 'imperial-steaks' ); ?>">
-						<span class="imperial-social__item" role="listitem">IG</span>
-						<span class="imperial-social__item" role="listitem">FB</span>
-						<span class="imperial-social__item" role="listitem">X</span>
-					</div>
 				</div>
 
 			</div>

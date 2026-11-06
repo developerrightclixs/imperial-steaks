@@ -173,8 +173,7 @@ five pages.
 | Column 1: logo + `.imperial-footer__blurb` | **Site Logo** + **Text Editor** | Logo 200px · Text: Body Grey 14px |
 | Column 2 heading + list | **Heading** + **Nav Menu** | Heading: Poppins 20/600, 2px tracking, uppercase, white · Menu: WP menu **"Footer — Company"** (Home, About Us, Products, Retail, Contact Us), vertical |
 | Column 3 heading + list | **Heading** + **Nav Menu** | WP menu **"Footer — Products"** — **6** custom links to `/products/#xls`, `#xl`, `#ns`, `#re`, `#epic`, `#chx`. Puck is removed from the range |
-| Column 4 heading + contact list | **Heading** + **Icon List** | 6 items: Tel (**plain text `XXX-XXX-XXXX` until the client supplies the new number — do not link it**), Email (`mailto:kougiek@gmail.com`), Email (`mailto:info@imperialsteaks.com`), Web (`https://imperialsteaks.com/`), **Facility** (130 Rue J.-A.-Bombardier / Boucherville, QC J4B 8N4 / Canada, one row each, no wrapping), Offices (Canada, USA, Middle East). Every label ends in a colon · Icons white · Text white 14px |
-| `.imperial-social` | **Social Icons** widget | Instagram / Facebook / X · Shape: Circle · Background transparent · Border 2px **dashed** white · **URLs pending from client** |
+| Column 4 heading + contact list | **Heading** + **Icon List** | 5 items: Tel (**plain text `XXX-XXX-XXXX` until the client supplies the new number — do not link it**), Email (one label, two stacked links: `mailto:kougiek@gmail.com` then `mailto:info@imperialsteaks.com`), Web (`https://imperialsteaks.com/`), **Facility** (130 Rue J.-A.-Bombardier / Boucherville, QC J4B 8N4 / Canada, one row each, no wrapping), Offices (Canada, USA, Middle East). Every label ends in a colon · Labels in a 120px column, values beside them, no icons (90px on phones) · 12px between rows · Text white 14px |
 | `.imperial-footer__bottom` | **Container** | Background: Matte Black · Border-top hairline · Padding block 16px · Centered **Heading/Text**: Poppins 14/400 white |
 
 **Display condition:** Entire Site.
@@ -232,7 +231,7 @@ Rebuilt to follow the old `tastysteaks.ca/about-us-2` structure, as briefed.
 | # | Prototype section | Elementor build | Notes |
 |---|---|---|---|
 | 1 | `.imperial-banner` | Container: Matte Black, border-bottom 2px Brand Red, padding block 56px → **Heading** (H1) + **Text Editor** | H1 "About Us", 4px tracking, uppercase |
-| 2 | `.imperial-intro` | Container (narrow, 900px) → **Text Editor** only | **Intro paragraph with no "Who We Are" heading above it** — that heading was dropped at the client's request. ⚠️ Corrected About copy is still coming from the client |
+| 2 | `.imperial-intro` | Container (narrow, 900px) → **Text Editor** only | **Intro paragraph with no "Who We Are" heading above it** — that heading was dropped at the client's request. ⚠️ Corrected About copy is still coming from the client · **6 Nov:** two left-aligned paragraphs, 1.5em first-line indent, no gap, 925px wide, 60px top padding |
 | 3 | `.section--red` (two-column split) | Container: **background Brand Red**, Direction Row | |
 | 3a | Left column | **Heading** + white **Divider** + **Text Editor** + **Image** | Quality / pricing paragraph, then the SQF mark on a white plate |
 | 3b | Right column | **Heading** + white **Divider** + **Icon List** + **Text Editor** | "Ideal for your establishment" as a **tick checklist** — bullets, not sentences — then the closing paragraph. Tick icon: white circle, red check |
@@ -319,7 +318,6 @@ Custom CSS* (Elementor Pro) or in *Site Settings › Custom CSS*:
 | 1 | Tilting the beef and chicken panels toward each other | Elementor has no rotate control on a Container or Image | `selector .imperial-duo__media{transform:rotate(-3.5deg)}` on the chicken panel and `rotate(3.5deg)` on the beef one. Dropping this leaves two flat panels — acceptable, but it loses the "two ends meeting" effect the client asked for |
 | 2 | Hard-stop red → black gradient behind that band | Elementor's gradient control does support colour stops, so this is usually achievable in the UI | Background › Gradient, Type Linear, Angle 180°, first colour Brand Red at **42%**, second Matte Black at **42%**. Equal stops are what give a hard seam rather than a blend |
 | 3 | `aspect-ratio` on card and product images | Elementor has no aspect-ratio control on the Image widget | `selector img{aspect-ratio:3/2;object-fit:cover}` — **or** set WordPress image sizes / use the Image Box "Image Size: custom 900×600" crop, which avoids CSS |
-| 4 | Dashed social-icon border | Social Icons widget border style offers solid only in some versions | `selector .elementor-social-icon{border-style:dashed}` |
 | 5 | Certification marks on a white plate | The marks are dark artwork on transparent backgrounds and vanish on the dark sections | Set the Image widget's **Background colour: White** + **Padding** + **Border radius 6px** in the style tab — no CSS needed. Only the `object-fit: contain` needs CSS if the widget crops: `selector img{object-fit:contain}` |
 
 Nothing in this build requires a custom Elementor widget, a plugin, or
@@ -362,7 +360,6 @@ prototype with a `TODO: CLIENT REVIEW` or `PENDING CLIENT` HTML comment.
 - [ ] Swap in the client's chosen logo concept
 - [ ] Add the new phone number and restore the `tel:` links
 - [ ] Add the product guide PDF and repoint the "Download Guide" button
-- [ ] Add social profile URLs to the Social Icons widget
 - [ ] Set unique page titles + meta descriptions (copy them from each prototype `<head>`)
 - [ ] Re-test: keyboard navigation, mobile menu, `tel:`/`mailto:` links, all anchors, contrast
 - [ ] Confirm every item in §6 is approved before going live

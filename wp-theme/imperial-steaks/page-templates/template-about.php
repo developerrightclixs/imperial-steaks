@@ -56,22 +56,23 @@ get_header();
        a first-line indent; the indent is gone, since it has nothing to key off
        once the lines are centred.
        Client revision (Nov 6): the centred block is about 3% wider.
+       Client revision (Nov 6, later): matched to the client's screenshot - two
+       left-aligned paragraphs, first-line indent, no gap between them, and the
+       commitment sentence reworded and folded into the vision paragraph.
        ===================================================================== -->
-  <section class="section imperial-intro" aria-labelledby="about-intro-heading">
+  <section class="section imperial-intro imperial-intro--about" aria-labelledby="about-intro-heading">
     <div class="container container--narrow imperial-intro__column">
       <h2 class="sr-only" id="about-intro-heading">About Imperial Steaks</h2>
 
-      <p class="imperial-intro__text text-center" data-reveal="up">Imperial Steaks is an independent
-        importer / distributor whose aim is to be the leading provider of top quality raw thin-sliced beef and chicken
-        Philly steaks in Canada. Imperial Steaks also offers Halal certified Philly steaks for the ever-changing
-        demographics of our country, which in turn reaches a wider target market.</p>
+      <p class="imperial-intro__text" data-reveal="up">Imperial Steaks is an independent importer / distributor whose
+        aim is to be the leading provider of top quality raw thin-sliced beef and chicken Philly steaks in Canada.
+        Imperial Steaks also offers Halal certified Philly steaks for the ever-changing demographics of our country,
+        which in turn reaches a wider target market.</p>
 
-      <p class="imperial-intro__text text-center" data-reveal="up">Our vision is to work closely and
-        partner with a diverse range of customers, including distributors, restaurants, retail, institutions, and food
-        service operators across Canada.</p>
-
-      <p class="imperial-intro__text text-center" data-reveal="up">Our commitment is to provide them with
-        premium steak products that will help their business grow.</p>
+      <p class="imperial-intro__text" data-reveal="up">Our vision is to work closely and partner with a diverse range
+        of customers, including distributors, restaurants, retail, institutions, and food service operators across
+        Canada. Our commitment and our passion for excellence will be to provide premium steak products that will
+        help their business grow.</p>
     </div>
   </section>
 
