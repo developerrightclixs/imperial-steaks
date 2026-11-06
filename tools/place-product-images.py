@@ -100,8 +100,8 @@ save(pad_to_ratio(src('Premium Philly \u2013 NS.PNG').crop((60, 715, 1224, 1255)
      'product-ns.jpg', (1200, 800))
 
 # RE - Rib Eye. Client-supplied JPEG, already 1400x933 with the steaks set smaller
-# on white. Copied byte for byte: re-encoding would only soften it. ~280 KB, a
-# touch over the 250 KB budget.
+# on white. Copied byte for byte: re-encoding would only soften it. ~345 KB, over
+# the 250 KB budget.
 shutil.copyfile(os.path.join(SRC, 'ribeye-small.jpg'), os.path.join(OUT, 'product-re.jpg'))
 
 # EPIC - Signature Blend. Stacked sliced portions on white.

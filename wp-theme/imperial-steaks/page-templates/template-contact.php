@@ -58,6 +58,7 @@ get_header();
 
         <div class="imperial-contact-card" data-reveal="up" data-reveal-delay="2">
           <p class="imperial-contact-card__label">Email</p>
+          <p class="imperial-contact-card__value"><a href="mailto:kougiek@gmail.com">kougiek@gmail.com</a></p>
           <p class="imperial-contact-card__value"><a href="mailto:info@imperialsteaks.com">info@imperialsteaks.com</a></p>
         </div>
 

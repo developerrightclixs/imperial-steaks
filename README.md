@@ -106,6 +106,18 @@ backup. Full detail: `docs/SITE_AUDIT.md` §3.
 
 ---
 
+## What changed in this round (6 Nov 2026 — second email, Rib Eye photo)
+
+* **`kougiek@gmail.com` is back, listed first.** It sits above
+  `info@imperialsteaks.com` in every footer and on the Contact card. This
+  supersedes the "only email on the site" notes below. The Customizer field
+  `imperial_steaks_email_alt` and `[imperial_contact field="email_alt"]` return.
+* The "Contact us" button, the Contact meta description and the form routing
+  note still use `info@imperialsteaks.com`.
+* **Rib Eye – RE photo updated** to a newer `ribeye-small.jpg` from the client,
+  with the steaks larger and better centred. Same 1400 × 933 size.
+* Theme templates and `wp-theme/imperial-steaks.zip` were rebuilt.
+
 ## What changed in this round (6 Nov 2026 — Rib Eye photo)
 
 * **Rib Eye – RE has a new photo:** the client's `ribeye-small.jpg`, the same

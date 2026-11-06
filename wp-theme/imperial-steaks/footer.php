@@ -87,6 +87,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 					 */
 					$tel   = get_theme_mod( 'imperial_steaks_phone', '514-944-8628' );
 					$email = get_theme_mod( 'imperial_steaks_email', 'info@imperialsteaks.com' );
+					$email_alt = get_theme_mod( 'imperial_steaks_email_alt', 'kougiek@gmail.com' );
 					$web   = get_theme_mod( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' );
 					// One address line per row; .imperial-footer__address keeps each row unbroken.
 					$place    = get_theme_mod( 'imperial_steaks_location', "130 Rue J.-A.-Bombardier\nBoucherville, QC J4B\xc2\xa08N4\nCanada" );
@@ -107,6 +108,12 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 								<span><?php echo esc_html( $tel ); ?></span>
 							<?php endif; ?>
 						</li>
+						<?php if ( $email_alt ) : ?>
+						<li class="imperial-footer__contact-item">
+							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email:', 'imperial-steaks' ); ?></span>
+							<a href="mailto:<?php echo esc_attr( $email_alt ); ?>"><?php echo esc_html( $email_alt ); ?></a>
+						</li>
+						<?php endif; ?>
 						<li class="imperial-footer__contact-item">
 							<span class="imperial-footer__contact-label"><?php esc_html_e( 'Email:', 'imperial-steaks' ); ?></span>
 							<a href="mailto:<?php echo esc_attr( $email ); ?>"><?php echo esc_html( $email ); ?></a>

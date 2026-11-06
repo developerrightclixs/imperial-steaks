@@ -117,6 +117,7 @@ content and the footer never drift apart:
 
 ```
 [imperial_contact field="phone"]      → linked tel:
+[imperial_contact field="email_alt"]  → linked mailto: (kougiek@gmail.com, shown first)
 [imperial_contact field="email"]      → linked mailto:
 [imperial_contact field="website"]    → linked, protocol stripped for display
 [imperial_contact field="location"]

@@ -37,6 +37,11 @@ function imperial_steaks_customize_register( $wp_customize ) {
 			'default' => '514.944.8628',
 			'sanitize' => 'sanitize_text_field',
 		),
+		'imperial_steaks_email_alt'      => array(
+			'label'   => esc_html__( 'Email (shown first, optional)', 'imperial-steaks' ),
+			'default' => 'kougiek@gmail.com',
+			'sanitize' => 'sanitize_email',
+		),
 		'imperial_steaks_email'          => array(
 			'label'   => esc_html__( 'Email', 'imperial-steaks' ),
 			'default' => 'info@imperialsteaks.com',
@@ -107,6 +112,7 @@ function imperial_steaks_contact_shortcode( $atts ) {
 	$map = array(
 		'phone'    => array( 'imperial_steaks_phone', '514-944-8628' ),
 		'email'    => array( 'imperial_steaks_email', 'info@imperialsteaks.com' ),
+		'email_alt' => array( 'imperial_steaks_email_alt', 'kougiek@gmail.com' ),
 		'website'  => array( 'imperial_steaks_website', 'https://www.imperialsteaks.com/' ),
 		'location' => array( 'imperial_steaks_location', "130 Rue J.-A.-Bombardier\nBoucherville, QC J4B\xc2\xa08N4\nCanada" ),
 		'approved' => array( 'imperial_steaks_approved', "CFIA Approved \xe2\x80\x93 HACCP" ),
@@ -121,7 +127,7 @@ function imperial_steaks_contact_shortcode( $atts ) {
 
 	$value = get_theme_mod( $map[ $key ][0], $map[ $key ][1] );
 
-	if ( 'email' === $key ) {
+	if ( 'email' === $key || 'email_alt' === $key ) {
 		return '<a href="mailto:' . esc_attr( $value ) . '">' . esc_html( $value ) . '</a>';
 	}
 
